@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17434413.svg)](https://doi.org/10.5281/zenodo.17434413)
+
 # The Unifying Information Field (UIF)
 
 # 🧩 The Unifying Information Field (UIF)  
