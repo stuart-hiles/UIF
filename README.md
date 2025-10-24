@@ -24,7 +24,7 @@ Reality is informational: each collapse redistributes ΔI between local systems 
 Physics, computation, and consciousness are expressions of one recursive law—**collapse, recursion, return**.
 
 ### 🔬 Repository structure
-/papers/ → LaTeX sources for Papers I–VII
-/bib/ → Unified reference library
-/code/ → Python & analysis notebooks (EEG, CHREM, quasar fits)
-/figures/ → Operator diagrams & empirical plots
+- /papers/ → LaTeX sources for Papers I–VII.
+- /bib/ → Unified reference library.
+- /code/ → Python & analysis notebooks (EEG, CHREM, quasar fits).
+- /figures/ → Operator diagrams & empirical plots.
