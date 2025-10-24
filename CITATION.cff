@@ -1,33 +1,14 @@
 cff-version: 1.2.0
 message: >
+  If you use this repository, please cite it as below.
 
 authors:
   - family-names: Hiles
     given-names: Stuart E. N.
     affiliation: Independent Researcher
-    orcid: https://orcid.org/0000-0000-0000-0000  # replace with your actual ORCID if you have one
-title: "UIF Series — Initial Publication Set (Papers I–VII and Companion)
+    orcid: https://orcid.org/0000-0000-0000-0000   # replace if you have an actual ORCID
 
-**APA**
-
-> Hiles, S. E. N. (2025). *UIF Series — Initial Publication Set (Papers I–VII and Companion)* (Version v1.0) [Computer software].  
-> [https://doi.org/10.5281/zenodo.17434413](https://doi.org/10.5281/zenodo.17434413)
-
-**BibTeX**
-
-```bibtex
-@software{Hiles_UIF_Series_2025,
-  author  = {Hiles, Stuart E. N.},
-  doi     = {10.5281/zenodo.17434413},
-  license = {GPL-3.0},
-  month   = oct,
-  title   = {{UIF Series — Initial Publication Set (Papers I–VII and Companion)}},
-  url     = {https://github.com/stuart-hiles/UIF},
-  version = {v1.0},
-  year    = {2025}
-}
-
-
+title: "UIF Series — Initial Publication Set (Papers I–VII and Companion)"
 version: "v1.0"
 doi: 10.5281/zenodo.17434413
 date-released: 2025-10-24
@@ -47,3 +28,22 @@ abstract: >
   framework linking physics, cosmology, biology, and cognition under collapse–return
   informational dynamics. This release (v1.0) represents the initial publication set,
   encompassing Papers I–VII and the Companion Experiments.
+
+# ------------------------------
+# Recommended citation formats
+# ------------------------------
+# APA:
+# Hiles, S. E. N. (2025). UIF Series — Initial Publication Set (Papers I–VII and Companion)
+# (Version v1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.17434413
+#
+# BibTeX:
+# @software{Hiles_UIF_Series_2025,
+#   author  = {Hiles, Stuart E. N.},
+#   doi     = {10.5281/zenodo.17434413},
+#   license = {GPL-3.0},
+#   month   = oct,
+#   title   = {{UIF Series — Initial Publication Set (Papers I–VII and Companion)}},
+#   url     = {https://github.com/stuart-hiles/UIF},
+#   version = {v1.0},
+#   year    = {2025}
+# }
