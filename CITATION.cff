@@ -1,12 +1,33 @@
 cff-version: 1.2.0
 message: >
-  If you use UIF or cite its concepts, please cite this release.
+
 authors:
   - family-names: Hiles
     given-names: Stuart E. N.
     affiliation: Independent Researcher
     orcid: https://orcid.org/0000-0000-0000-0000  # replace with your actual ORCID if you have one
-title: "UIF Series — Initial Publication Set (Papers I–VII and Companion)"
+title: "UIF Series — Initial Publication Set (Papers I–VII and Companion)
+
+**APA**
+
+> Hiles, S. E. N. (2025). *UIF Series — Initial Publication Set (Papers I–VII and Companion)* (Version v1.0) [Computer software].  
+> [https://doi.org/10.5281/zenodo.17434413](https://doi.org/10.5281/zenodo.17434413)
+
+**BibTeX**
+
+```bibtex
+@software{Hiles_UIF_Series_2025,
+  author  = {Hiles, Stuart E. N.},
+  doi     = {10.5281/zenodo.17434413},
+  license = {GPL-3.0},
+  month   = oct,
+  title   = {{UIF Series — Initial Publication Set (Papers I–VII and Companion)}},
+  url     = {https://github.com/stuart-hiles/UIF},
+  version = {v1.0},
+  year    = {2025}
+}
+
+
 version: "v1.0"
 doi: 10.5281/zenodo.17434413
 date-released: 2025-10-24
