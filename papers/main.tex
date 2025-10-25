@@ -1,0 +1,148 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Page geometry ----------
+\usepackage[a4paper,margin=1in]{geometry}
+
+% ---------- Fonts & microtypography ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+% ---------- Math ----------
+\usepackage{amsmath,amssymb,amsfonts,bm} % amsmath needed for subequations
+% Math niceties
+\usepackage{siunitx}
+\sisetup{detect-all}
+\usepackage{mathtools}
+
+% ⟨...⟩ paired delimiters (renamed to avoid clash with siunitx's \ang)
+\DeclarePairedDelimiter\angbrak{\langle}{\rangle}
+% handy auto-sizing wrapper (use \braket{...} for ⟨...⟩)
+\newcommand{\braket}[1]{\angbrak*{#1}}
+
+\DeclareMathOperator{\Var}{Var}
+% argmin typeset as "arg min", with limits beneath in display math
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\defeq}{\vcentcolon=}
+
+% ---------- Tables ----------
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+% Column types for ragged/centered p-columns (used by longtable/tabularx)
+\usepackage{ragged2e}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+% ---------- Figures / captions ----------
+% load caption ONCE with all options you want
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\usepackage{graphicx}
+\usepackage{float}        % for [H]
+\usepackage{capt-of}      % if \captionof is needed
+\usepackage{subcaption}   % sub-figures and sub-captions
+
+% ---------- Lists ----------
+\usepackage{enumitem}
+\setlist{leftmargin=*,itemsep=0.25em,topsep=0.3em}
+
+% ---------- Floats & layout helpers ----------
+\usepackage{needspace}
+
+% ---------- Abstract formatting ----------
+% (ragged2e already loaded above for column types)
+\renewenvironment{abstract}{
+  \begin{center}\normalfont\bfseries Abstract\end{center}
+  \noindent\justifying
+}{\par\vspace{1em}}
+
+% ---------- Paragraph rhythm (match Paper I) ----------
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{1.5em}
+
+% ---------- Series numbering: per-paper only (N.k), never per section ----------
+\usepackage{chngcntr}
+\counterwithout{equation}{section}
+\counterwithout{figure}{section}
+\counterwithout{table}{section}
+
+% ---------- Citations ----------
+\usepackage{cite}
+% \usepackage[round,authoryear]{natbib} % (leave commented unless you switch styles)
+
+% ---------- Hyperlinks (load LAST) ----------
+\usepackage[unicode,psdextra,hidelinks]{hyperref}
+
+% ---------- Page footer ----------
+\usepackage{fancyhdr}
+\usepackage{url} % ensure URL formatting
+
+\pagestyle{fancy}
+\fancyhf{} % clear headers/footers
+
+% ---- Two-line footer: large page number + single-line copyright ----
+\fancyfoot[C]{%
+  \normalsize Page \thepage\\[8pt]%
+  \scriptsize
+  \makebox[\textwidth][c]{%
+    \textcopyright~2025\ Stuart E.\,N.\ Hiles.\ UIF Series v1.0 (Oct 2025).\ CC BY-NC 4.0 \(\) %
+    \url{https://github.com/stuart-hiles/UIF}%
+  }%
+}
+
+% Clean, rule-free footer
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Add bottom margin space so footer doesn’t collide with text
+\setlength{\footskip}{30pt}
+
+
+% ---------- UIF series macros (defined ONCE here) ----------
+\makeatletter
+\newcommand{\UIFpaper}[1]{%
+  \def\UIFprefix{#1}%
+  \renewcommand{\theequation}{\UIFprefix.\arabic{equation}}%
+  \renewcommand{\theparentequation}{\UIFprefix.\arabic{equation}}%
+  \renewcommand{\thefigure}{\UIFprefix.\arabic{figure}}%
+  \renewcommand{\thetable}{\UIFprefix.\arabic{table}}%
+  \setcounter{equation}{0}\setcounter{figure}{0}\setcounter{table}{0}%
+}
+\newcommand{\UIFbib}[1]{%
+  \bibliographystyle{unsrt}%
+  \bibliography{bib/#1}%
+}
+\makeatother
+
+% Use \UIFmetadata{Title}{Author}{Subject/Keywords}
+\newcommand{\UIFmetadata}[3]{%
+  \hypersetup{%
+    pdftitle    = {#1},
+    pdfauthor   = {#2},
+    pdfsubject  = {#3},
+    pdfkeywords = {#3}
+  }%
+}
+
+% If you do NOT want keywords printed on the page, make \keywords a no-op:
+\newcommand{\keywords}[1]{}
+% (If you *do* want them printed below the title, comment the line above and use:)
+% \renewcommand{\keywords}[1]{\vspace{0.6em}\noindent\textbf{Keywords: }#1}
+
+\begin{document}
+
+% --- Choose which paper to compile ---
+\input{papers/uif1_core}   % Only one active at a time
+
+\end{document}
