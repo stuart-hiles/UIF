@@ -40,18 +40,24 @@ They have **not yet undergone peer review** and should be cited as *preprints* v
 ### ⚙️ Build Instructions
 To compile any paper locally or in Overleaf:
 
-```bash
+```
 pdflatex main.tex
+```
 
 Then edit the `\input{papers/...}` line in `main.tex` to select which paper to build.  
 For example:
-```latex
-\input{papers/Paper_1_CoreTheory/UIF_Paper_1_CoreTheory}
 
-### 📚 Citation
-Hiles, S. E. N. (2025). *UIF Series — Initial Publication Set (Papers I–VII and Companion)*.  
-Version v1.0 (October 2025). Zenodo.  
-[https://doi.org/10.5281/zenodo.17434413](https://doi.org/10.5281/zenodo.17434413)
+```
+\input{papers/Paper_1_CoreTheory/UIF_Paper_1_CoreTheory}
+```
+---
+
+📚 Citation
+Hiles, S. E. N. (2025). UIF Series — Initial Publication Set (Papers I–VII and Companion).
+Version v1.0 (October 2025). Zenodo.
+https://doi.org/10.5281/zenodo.17434413
+
+---
 
 ### 🧠 Notes
 This structure supports full reproducibility and Zenodo integration:
