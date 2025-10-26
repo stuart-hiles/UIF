@@ -60,3 +60,5 @@ This structure supports full reproducibility and Zenodo integration:
 - Future releases (v1.1, v2.0, etc.) can update individual PDFs while preserving DOIs.  
 - The `/output/` directory collects compiled PDFs for each tagged release.  
 - Zenodo automatically snapshots tagged versions, ensuring DOI traceability.
+
+
