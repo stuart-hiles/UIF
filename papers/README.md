@@ -1,17 +1,26 @@
 # 📄 UIF Papers — LaTeX Sources
+This directory contains the LaTeX source files for the **Unifying Information Field (UIF)** scientific paper series.  
+Each paper is stored in its own folder for version tracking, compilation, and DOI-based release management.
 
-This directory contains the LaTeX source files for the **Unifying Information Field (UIF)** paper series:
+| Paper | Title | Folder |
+|-------|--------|---------|
+| I | **Core Theory** | `Paper_1_CoreTheory/` |
+| II | **Symmetry Principles** | `Paper_2_SymmetryPrinciples/` |
+| III | **Field and Lagrangian Formalism** | `Paper_3_FieldLagrangian/` |
+| IV | **Cosmology and Astrophysical Case Studies** | `Paper_4_Cosmology/` |
+| V | **Energy and the Potential Field** | `Paper_5_Energy/` |
+| VI | **The Seven Pillars and Invariants** | `Paper_6_SevenPillars/` |
+| VII | **Predictions and Experiments** | `Paper_7_PredictionsExperiments/` |
+| — | **Companion Experiments** | `CompanionExperiments/` |
 
-1. `uif1_core.tex` — *Paper I: Core Theory*  
-2. `uif2_symmetry.tex` — *Paper II: Symmetry Principles*  
-3. `uif3_field.tex` — *Paper III: Field and Lagrangian Formalism*  
-4. `uif4_cosmology.tex` — *Paper IV: Cosmology and Astrophysical Case Studies*  
-5. `uif5_energy.tex` — *Paper V: Energy and the Potential Field*  
-6. `uif6_pillars.tex` — *Paper VI: The Seven Pillars and Invariants*  
-7. `uif7_experiments.tex` — *Paper VII: Predictions and Experiments*
+Each folder includes:
+- LaTeX source (`UIF_Paper_X_<Title>.tex`)
+- Local bibliography file (`paperX.bib`)
+- Output PDF (`UIF_Paper_X_<Title>.pdf`)
+- Local README with DOI, version, and metadata
 
-Each paper compiles independently using the shared `main.tex` template and `bib/` references.  
-Output PDFs are stored in `/output/` for release builds.
+All papers compile independently using the shared `main.tex` template and `/bib/` reference directory.  
+Compiled PDFs are exported to `/output/` for release packaging.
 
 ---
 
@@ -29,14 +38,25 @@ They have **not yet undergone peer review** and should be cited as *preprints* v
 ---
 
 ### ⚙️ Build Instructions
-Compile any paper locally or via Overleaf:
+To compile any paper locally or in Overleaf:
 
 ```bash
 pdflatex main.tex
 
-Then select which paper to compile by toggling the \input{papers/...} line in main.tex.
+Then edit the `\input{papers/...}` line in `main.tex` to select which paper to build.  
+For example:
+```latex
+\input{papers/Paper_1_CoreTheory/UIF_Paper_1_CoreTheory}
 
 ### 📚 Citation
-Hiles, S. E. N. (2025). *UIF Series — Initial Publication Set (Papers I–VII and Companion)*  
-(Version v1.0) [Computer software]. Zenodo.  
+Hiles, S. E. N. (2025). *UIF Series — Initial Publication Set (Papers I–VII and Companion)*.  
+Version v1.0 (October 2025). Zenodo.  
 [https://doi.org/10.5281/zenodo.17434413](https://doi.org/10.5281/zenodo.17434413)
+
+### 🧠 Notes
+This structure supports full reproducibility and Zenodo integration:
+- Each folder is self-contained and version-locked.  
+- The `main.tex` file acts as a shared master template.  
+- Future releases (v1.1, v2.0, etc.) can update individual PDFs while preserving DOIs.  
+- The `/output/` directory collects compiled PDFs for each tagged release.  
+- Zenodo automatically snapshots tagged versions, ensuring DOI traceability.
