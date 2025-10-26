@@ -81,9 +81,9 @@ Version v1.1 (October 2025). Zenodo. [https://doi.org/10.5281/zenodo.17434413](h
 ### 📬 Contact & Correspondence
 For correspondence, data access, or collaboration inquiries:  
 **Stuart E. N. Hiles** — *Independent Researcher*  
-📧 contact@stuarthiles.org  
+📧 stuart.hiles@unifying.info
 🌐 https://github.com/stuart-hiles/UIF  
-ORCID: https://orcid.org/0000-0000-0000-0000
+ORCID: https://orcid.org/0009-0000-6898-0453
 
 ---
 
