@@ -68,3 +68,35 @@ Version v1.1 (October 2025). Zenodo. [https://doi.org/10.5281/zenodo.17434413](h
 ---
 
 ### 🔬 Repository Structure
+
+```text
+/papers/                      → LaTeX sources for Papers I–VII  
+/papers/CompanionExperiments/ → empirical companion volume  
+/bib/                         → per-paper reference files  
+/output/                      → compiled PDFs  
+/code/                        → Python & analysis notebooks (EEG, CHREM, quasar fits)  
+/figures/                     → operator diagrams & empirical plots
+
+---
+
+### 📬 Contact & Correspondence
+For correspondence, data access, or collaboration inquiries:  
+**Stuart E. N. Hiles** — *Independent Researcher*  
+📧 stuart.hiles@unifying.info
+🌐 [https://github.com/stuart-hiles/UIF](https://github.com/stuart-hiles/UIF)  
+ORCID: [0009-0000-6898-0453](https://orcid.org/0009-0000-6898-0453)
+
+---
+
+### 🧾 Release Notes (v1.1)
+- Repository restructured with per-paper sub-folders (`Paper_1_CoreTheory/` → `Paper_7_PredictionsExperiments/`)  
+- Added Companion Experiments volume and updated build/readme templates  
+- Updated `CITATION.cff` to v1.1 with cross-references for all papers and dual licenses  
+- Normalised LaTeX metadata (`UIFmetadata{}` block restored) and footer format across papers  
+- Introduced consistent page numbering and copyright footers  
+- Added contact section and release notes for Zenodo indexing  
+
+---
+
+**DOI:** [10.5281/zenodo.17434413](https://doi.org/10.5281/zenodo.17434413)  
+**License:** © 2025 Stuart E. N. Hiles — CC BY-NC 4.0 / GPL-3.0
