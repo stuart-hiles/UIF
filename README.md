@@ -70,7 +70,7 @@ Version v1.1 (October 2025). Zenodo. [https://doi.org/10.5281/zenodo.17434413](h
 ### 🔬 Repository Structure
 
     /papers/                      → LaTeX sources for Papers I–VII
-    /papers/CompanionExperiments/ → empirical companion volume
+    /CompanionExperiments/        → empirical companion volume
     /bib/                         → per-paper reference files
     /output/                      → compiled PDFs
     /code/                        → Python & analysis notebooks (EEG, CHREM, quasar fits)
