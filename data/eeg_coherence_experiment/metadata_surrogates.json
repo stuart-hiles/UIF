@@ -1,0 +1,8 @@
+{
+  "experiment": "Surrogate coherence analysis",
+  "derived_from": ["EEG_surrogates_HCR.csv"],
+  "operators": ["k", "Γ"],
+  "description": "Randomised phase-surrogate tests for coherence recovery rate (k) under shuffled ΔI windows. Estimates τ = 1/k and compares with biological τEEG ≈ 1.1 s.",
+  "outputs": ["EEG_surrogates_HCR.csv"],
+  "notes": "Establishes empirical hysteresis decay constant; supports UIF prediction of finite coherence recovery rate independent of random noise control."
+}
