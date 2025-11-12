@@ -1,19 +1,24 @@
 {
   "schema": "uif-data-metadata/1.0.2",
   "title": "UIF EEG Subset – PhysioNet BCI2000 Motor/Imagery (Prepared for RSIPP/CHREM)",
-  "description": "Subset manifest and provenance for EEG data used in the UIF Companion Experiments (Papers I–IV). Raw EEG is NOT redistributed here. This folder provides manifests, checksums of derived files, and exact source links to PhysioNet (eegmmidb v1.0.0).",
+  "description": "Subset manifest, provenance, and derived coherence metrics for EEG data used in the UIF Companion Experiments (Papers I–IV). Raw EEG is NOT redistributed here. This folder provides manifests, checksum verification, and exact source links to PhysioNet (eegmmidb v1.0.0).",
   "version": "v1.0.2",
   "uif_series_refs": ["UIF-I", "UIF-II", "UIF-III", "UIF-IV", "Companion2025"],
   "creators": [
     {
       "name": "Stuart E. N. Hiles",
-      "orcid": "0000-0000-0000-0000"
+      "orcid": "0000-0000-0000-0000",
+      "affiliation": "Independent Researcher, Unifying Information Field Project"
     }
   ],
   "contributors": [
     {
       "name": "PhysioNet / BCI2000 Team",
       "role": "Original Data Provider"
+    },
+    {
+      "name": "OpenAI GPT-5 (assisting analytical model)",
+      "role": "Analytical Co-processing (non-authorial)"
     }
   ],
   "provenance": {
@@ -27,11 +32,11 @@
   "license": {
     "name": "ODC-By 1.0 (source dataset)",
     "url": "https://opendatacommons.org/licenses/by/1-0/",
-    "note": "This repo does not re-host raw EEG. Only manifests and derived metrics may appear here under CC BY-NC 4.0."
+    "note": "This repository does not re-host raw EEG data. Only derived metrics and manifests are shared here under CC BY-NC 4.0."
   },
   "access": {
     "distribution": "external",
-    "instructions": "Download raw EDF files directly from PhysioNet. Use subset_manifest.csv to reproduce the exact selection used in UIF experiments.",
+    "instructions": "Download raw EDF files directly from PhysioNet (DOI above). Use subset_manifest.csv to reproduce the exact selection used in UIF experiments.",
     "accessed": "2025-11-12"
   },
   "reproducibility": {
@@ -42,10 +47,12 @@
       "code/eeg/make_eeg_HC_surrogates.ipynb"
     ],
     "derived_outputs": [
-      "coherence_matrix.csv",
-      "deltaI_spectral.csv"
+      "EEG_recording_summary_R.csv",
+      "EEG_effects_EC_vs_EO.json",
+      "EEG_surrogates_HCR.csv",
+      "EEG_windows_HCR.csv"
     ],
-    "notes": "Windows of 1 s; channels C3,C4,Cz; conditions: eyes-open/eyes-closed/task; sampling 160 Hz; identical H–C metrics as quasar analysis."
+    "notes": "1 s windows; channels C3,C4,Cz; sampling 160 Hz; eyes-open/eyes-closed/task; UIF coherence R mapped to R∞, λᴿ, k. Metrics parallel those used in the quasar-coherence analysis."
   },
   "uif_operators": ["ΔI", "Γ", "λR", "η*", "R∞", "k"],
   "funding": [],
