@@ -1,0 +1,13 @@
+subject_id,edf_path,run_id,condition,start_sec,duration_sec,channels,samplerate_hz,notes
+S001,S001/S001R01.edf,R01,eyes_open,0,60,"C3;C4;Cz",160,"R=0.811119"
+S001,S001/S001R02.edf,R02,eyes_closed,0,60,"C3;C4;Cz",160,"R=0.893441"
+S001,S001/S001R03.edf,R03,task,0,60,"C3;C4;Cz",160,"R=0.845243"
+S001,S001/S001R04.edf,R04,task,0,60,"C3;C4;Cz",160,"R=0.846384"
+S001,S001/S001R05.edf,R05,task,0,60,"C3;C4;Cz",160,"R=0.830950"
+S001,S001/S001R06.edf,R06,task,0,60,"C3;C4;Cz",160,"R=0.755156"
+S001,S001/S001R07.edf,R07,task,0,60,"C3;C4;Cz",160,"R=0.876342"
+S001,S001/S001R08.edf,R08,task,0,60,"C3;C4;Cz",160,"R=0.738638"
+S001,S001/S001R09.edf,R09,task,0,60,"C3;C4;Cz",160,"R=0.841974"
+S001,S001/S001R10.edf,R10,task,0,60,"C3;C4;Cz",160,"R=0.797343"
+...
+S109,S109/S109R14.edf,R14,task,0,60,"C3;C4;Cz",160,"R=0.822369"
