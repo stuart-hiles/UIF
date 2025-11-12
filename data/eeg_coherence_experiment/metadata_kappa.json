@@ -1,0 +1,8 @@
+{
+  "experiment": "Kappa-plane analysis",
+  "derived_from": ["EEG_recording_summary_R.csv", "EEG_windows_HCR.csv"],
+  "operators": ["Γ", "R∞", "λR"],
+  "description": "Generated κappa convergence surfaces to map coherence (R) stability regions across ΔI–Γ–R∞ parameter space.",
+  "outputs": ["kappa_map.png", "kappa_ps.csv", "kappa_ps.png"],
+  "notes": "Replicates UIF Figure S6 κ-plane behaviour; identifies stable/unstable attractor boundaries corresponding to empirical EEG coherence ranges (R ≈ 0.7–1.1)."
+}
