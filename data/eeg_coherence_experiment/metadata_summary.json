@@ -1,0 +1,12 @@
+{
+  "experiment": "Aggregate EEG experiment summary",
+  "derived_from": [
+    "EEG_recording_summary_R.csv",
+    "EEG_state_summary_R.csv",
+    "EEG_subject_summary_R.csv"
+  ],
+  "operators": ["ΔI", "Γ", "λR", "η*", "R∞", "k"],
+  "description": "Compiled cross-condition summary of UIF operators from all EEG experiments (eyes-open/closed/task, surrogate, κappa, H–C).",
+  "outputs": ["summary.json", "summary.png"],
+  "notes": "Primary dataset summary used for UIF Companion Experiments Table 3; provides statistical means and confidence intervals for operator calibration."
+}
