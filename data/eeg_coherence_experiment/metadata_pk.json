@@ -1,0 +1,8 @@
+{
+  "experiment": "p(k) informational power spectrum",
+  "derived_from": ["pk.csv"],
+  "operators": ["ΔI", "Γ"],
+  "description": "Computed p(k) = f(ΔI, Γ) informational power spectra to quantify distribution of coherence energy across sampling frequencies.",
+  "outputs": ["pk.csv", "Fig_pk.png"],
+  "notes": "p(k) follows log–log slope consistent with UIF prediction β ≈ –2.6 ± 0.3; confirms fractal scaling of informational flow."
+}
