@@ -1,0 +1,8 @@
+{
+  "experiment": "HMF spectral analysis",
+  "derived_from": ["hmf.csv"],
+  "operators": ["λR", "R∞"],
+  "description": "High-magnitude frequency (HMF) cutoff computation from EEG spectra; parallels cosmological HMF suppression in UIF Paper V.",
+  "outputs": ["hmf.csv", "hmf.png"],
+  "notes": "Demonstrates cross-scale correspondence of spectral energy damping (EEG ↔ cosmological power spectrum)."
+}
