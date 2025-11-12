@@ -1,0 +1,59 @@
+{
+  "schema": "uif-data-metadata/1.0.2",
+  "title": "UIF EEG Subset – PhysioNet BCI2000 Motor/Imagery (Prepared for RSIPP/CHREM)",
+  "description": "Subset manifest and provenance for EEG data used in the UIF Companion Experiments (Papers I–IV). Raw EEG is NOT redistributed here. This folder provides manifests, checksums of derived files, and exact source links to PhysioNet (eegmmidb v1.0.0).",
+  "version": "v1.0.2",
+  "uif_series_refs": ["UIF-I", "UIF-II", "UIF-III", "UIF-IV", "Companion2025"],
+  "creators": [
+    {
+      "name": "Stuart E. N. Hiles",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "PhysioNet / BCI2000 Team",
+      "role": "Original Data Provider"
+    }
+  ],
+  "provenance": {
+    "source_name": "BCI2000 EEG Motor Movement/Imagery Dataset",
+    "publisher": "PhysioNet",
+    "doi": "10.13026/C28G6P",
+    "url": "https://physionet.org/content/eegmmidb/1.0.0/",
+    "citation": "Schalk, G., McFarland, D.J., Hinterberger, T., Birbaumer, N., & Wolpaw, J.R. BCI2000 EEG Motor Movement/Imagery Dataset (v1.0.0). PhysioNet. doi:10.13026/C28G6P",
+    "primary_resource": "Goldberger AL et al. PhysioBank, PhysioToolkit, and PhysioNet. Circulation. 2000;101(23):e215–e220. doi:10.1161/01.CIR.101.23.e215"
+  },
+  "license": {
+    "name": "ODC-By 1.0 (source dataset)",
+    "url": "https://opendatacommons.org/licenses/by/1-0/",
+    "note": "This repo does not re-host raw EEG. Only manifests and derived metrics may appear here under CC BY-NC 4.0."
+  },
+  "access": {
+    "distribution": "external",
+    "instructions": "Download raw EDF files directly from PhysioNet. Use subset_manifest.csv to reproduce the exact selection used in UIF experiments.",
+    "accessed": "2025-11-12"
+  },
+  "reproducibility": {
+    "subset_manifest": "subset_manifest.csv",
+    "checksums_file": "SHA256SUMS.txt",
+    "scripts": [
+      "code/eeg/make_eeg_HC_analysis.ipynb",
+      "code/eeg/make_eeg_HC_surrogates.ipynb"
+    ],
+    "derived_outputs": [
+      "coherence_matrix.csv",
+      "deltaI_spectral.csv"
+    ],
+    "notes": "Windows of 1 s; channels C3,C4,Cz; conditions: eyes-open/eyes-closed/task; sampling 160 Hz; identical H–C metrics as quasar analysis."
+  },
+  "uif_operators": ["ΔI", "Γ", "λR", "η*", "R∞", "k"],
+  "funding": [],
+  "related_identifiers": [
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "https://doi.org/10.5281/zenodo.17478715",
+      "description": "UIF Companion Experiments (v1.0.2)"
+    }
+  ]
+}
