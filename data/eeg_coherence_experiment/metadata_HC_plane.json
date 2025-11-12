@@ -1,0 +1,8 @@
+{
+  "experiment": "Entropy–coherence (H–C) plane",
+  "derived_from": ["EEG_effects_EC_vs_EO.json", "EEG_recording_summary_R.csv"],
+  "operators": ["ΔI", "Γ", "R∞"],
+  "description": "Constructed H–C (informational entropy vs coherence) planes for eyes-open/closed and task states, showing convergence on UIF theoretical curve C ≈ 1 – e^{–ΔI}.",
+  "outputs": ["Fig_EEG_HC_plane.png"],
+  "notes": "Used for Figure S3; validated UIF coherence law in biological systems by reproducing theoretical informational saturation curve."
+}
