@@ -1,0 +1,61 @@
+# SHA256SUMS.txt — UIF EEG Coherence Experiment (v1.0.2)
+# -------------------------------------------------------------------------
+# Description:
+#   This file lists SHA-256 checksums for all derived CSV, JSON, and PNG
+#   data artifacts within /output/eeg_coherence_experiment/ and its
+#   /baseline/ subfolder. Documentation files (README.md) and this file
+#   itself are excluded from the checksum ledger.
+#
+#   These values verify data integrity and reproducibility for UIF
+#   EEG coherence analyses reported in:
+#     Hiles, S.E.N. (2025). UIF Companion Experiments (v1.0.2)
+#     DOI: https://doi.org/10.5281/zenodo.17478715
+#
+# -------------------------------------------------------------------------
+# Parent Directory: /output/eeg_coherence_experiment/
+# -------------------------------------------------------------------------
+
+<hash>  EEG_effects_EC_vs_EO.json
+<hash>  EEG_recording_summary_R.csv
+<hash>  EEG_state_summary_R.csv
+<hash>  EEG_subject_summary_R.csv
+<hash>  EEG_surrogates_HCR.csv
+<hash>  EEG_windows_HCR.csv
+<hash>  Fig_EC_minus_EO_hist.png
+<hash>  Fig_EC_vs_EO.png
+<hash>  Fig_EEG_HC_plane.png
+<hash>  Fig_pk.png
+<hash>  hmf.csv
+<hash>  hmf.png
+<hash>  kappa_map.png
+<hash>  kappa_ps.csv
+<hash>  kappa_ps.png
+<hash>  pk.csv
+<hash>  summary.json
+<hash>  summary.png
+
+# -------------------------------------------------------------------------
+# Subdirectory: /output/eeg_coherence_experiment/baseline/
+# -------------------------------------------------------------------------
+
+<hash>  baseline/EEG_effects_EC_vs_EO.json
+<hash>  baseline/EEG_recording_summary_R.csv
+<hash>  baseline/EEG_state_summary_R.csv
+<hash>  baseline/EEG_subject_summary_R.csv
+<hash>  baseline/EEG_surrogates_HCR.csv
+<hash>  baseline/EEG_windows_HCR.csv
+<hash>  baseline/Fig_EC_minus_EO_hist.png
+<hash>  baseline/Fig_EC_vs_EO.png
+<hash>  baseline/Fig_EEG_HC_plane.png
+
+# -------------------------------------------------------------------------
+# Instructions:
+#   Replace <hash> with computed SHA-256 values using a standard tool.
+#   Example (Linux/macOS):
+#       shasum -a 256 filename.ext
+#   Example (Windows PowerShell):
+#       Get-FileHash filename.ext -Algorithm SHA256
+#
+#   Ensure this file remains at the top level of /output/eeg_coherence_experiment/
+#   prior to Zenodo archiving.
+# -------------------------------------------------------------------------
