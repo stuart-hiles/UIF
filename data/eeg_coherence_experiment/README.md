@@ -1,38 +1,45 @@
 # UIF EEG Subset — PhysioNet BCI2000 Motor/Imagery (eegmmidb v1.0.0)
 
-**Purpose.**  
-This folder documents the exact EEG subset and preprocessing used in the *UIF Companion Experiments* to compute informational metrics (ΔI, Γ, λᴿ, R∞, k) under the RSIPP/CHREM pipeline.  
+**Purpose**  
+This folder documents the exact EEG subset and preprocessing used in the *UIF Companion Experiments* to compute informational metrics (ΔI, Γ, λᴿ, R∞, k) under the RSIPP/CHREM pipeline.
 
-**Note:**  
-We *do not* redistribute raw EEG data. Please obtain EDF files directly from PhysioNet.
+> ⚠️ *No raw EEG data are redistributed.*  
+> Obtain EDF files directly from PhysioNet (see provenance below).
 
 ---
 
 ## 🧩 Source (Provenance)
+
 - Dataset: **BCI2000 EEG Motor Movement/Imagery** (v1.0.0)  
   PhysioNet: <https://physionet.org/content/eegmmidb/1.0.0/>  
   DOI: **10.13026/C28G6P**  
+
 - Primary citation:  
-  Goldberger AL *et al.* (2000). *PhysioBank, PhysioToolkit, and PhysioNet.* **Circulation**, 101(23):e215–e220.  
+  Goldberger A.L. *et al.* (2000). *PhysioBank, PhysioToolkit, and PhysioNet.*  
+  **Circulation**, 101(23): e215–e220.  
   doi:[10.1161/01.CIR.101.23.e215](https://doi.org/10.1161/01.CIR.101.23.e215)
 
 ---
 
-## 📂 What’s in this folder
-- **`subset_manifest.csv`** — list of subjects/runs used (relative to PhysioNet paths).  
-- **`metadata.json`** — machine-readable metadata (Zenodo-ready).  
-- **`physionet_link.txt`** — DOI, URL, license, and access date.  
-- **`SHA256SUMS.txt`** — *public* checksums for local manifest and derived artifacts only.  
-  (Full raw EDF checksums are retained privately for provenance, not redistributed.)
+## 📂 Folder Contents
+
+| File | Description |
+|------|--------------|
+| **`subset_manifest.csv`** | Subject/run manifest (relative to PhysioNet paths). |
+| **`metadata.json`** | Full machine-readable metadata (v1.0.2, Zenodo-ready). |
+| **`metadata_*.json`** | Derived experiment descriptors — `kappa`, `H–C plane`, `surrogates`, `hmf`, `p(k)`, and `summary`. |
+| **`manifest_README.txt`** | Human-readable data manifest linking this folder to `/output/eeg_coherence_experiment`. |
+| **`SHA256SUMS.txt`** | Public checksums for derived artifacts only. (Raw EDF checksums retained privately.) |
+| **`physionet_link.txt`** | DOI, URL, license, and access date for the original dataset. |
 
 ---
 
-## 🧠 Subset used in UIF
-We focused on eyes-open, eyes-closed, and simple task epochs:
-- **Subjects:** S001–S020 (baseline); extendable to full S001–S109.  
-- **Channels:** C3, C4, Cz (primary); full montage available for replication.  
-- **Sampling:** 160 Hz, window length 1 s (non-overlapping).  
-- **Metrics:** Spectral entropy (H), Lempel–Ziv complexity (C), coherence indices (R), ΔI/Γ/λᴿ estimates.
+## 🧠 Subset Used in UIF
+
+- **Subjects:** S001–S020 (baseline subset; scalable → S001–S109)  
+- **Channels:** C3, C4, Cz (primary; full 64-ch montage optional)  
+- **Sampling:** 160 Hz (1 s non-overlapping windows)  
+- **Metrics:** Spectral entropy (H), Lempel–Ziv complexity (C), coherence (R), and derived ΔI/Γ/λᴿ operators.  
 
 ### Example `subset_manifest.csv` header
 ```csv
