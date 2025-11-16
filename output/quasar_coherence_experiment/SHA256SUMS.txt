@@ -1,0 +1,34 @@
+# SHA256SUMS.txt — UIF EEG Coherence Experiment (v1.0.2)
+# Generated automatically on 2025-11-12 22:15 UTC
+# ------------------------------------------------------
+# SHA-256 checksums for all derived CSV/JSON/PNG artifacts under
+# ./eeg_coherence_experiment/ and its subfolders.
+# (Excludes this file and any .md/.txt docs.)
+
+1a63a577d0b8fe75baf6e254c7707dc31fd25f40d2f38b67d9a8da0a377cbce9  baseline/EEG_effects_EC_vs_EO.json
+646297339b893db86e862cb9e889392cf8bb1e4c14386e649a60ec1ed1539eb9  baseline/EEG_recording_summary_R.csv
+b4ead0a11ac5ae4588d57a07b79188db89bda39cd8fafa2d06c557cb240151af  baseline/EEG_state_summary_R.csv
+20e89b0e72441537397628415f9a6a7c944cf09f19ad5aee40e3e4336e458a4d  baseline/EEG_subject_summary_R.csv
+8a58e63cc4dd8938e5ea742dd4cd25be9f994f55ec3d2c37925abb93c482775a  baseline/EEG_surrogates_HCR.csv
+5e10e1c1f7b10e8b3aaf5cc947f6d73211b7745ec1d22573619efc23886d16f1  baseline/EEG_windows_HCR.csv
+6577837ac36bb29cba6671c9de55a6f0a6dc0d010818a43e1811215a34c7c4a3  baseline/Fig_EC_minus_EO_hist.png
+ff11ea02631d1b9d505da709f05de1401a5c4738c5fbba3e3ee7931684bf8b77  baseline/Fig_EC_vs_EO.png
+82c54c31ed4778410f53ffd49e8da10297337e313cee32809af14e34e18e3d16  baseline/Fig_EEG_HC_plane.png
+ea0abf0152c517070e1488e59f61118ed7290d144c26ebd42f41b1d0902a295d  EEG_effects_EC_vs_EO.json
+5f0cb5f7cd6bda86ee3375368402955a5c5083e409b74f9087339021bc985fcb  EEG_recording_summary_R.csv
+8a59502c54adc4db2794f596609afd4fc1aaf5b20d7130f3ce3f75289c750c2a  EEG_state_summary_R.csv
+f683c4d01b7bf873156c8006363cf5cda098d6f0acd13f86658acb5a307317b1  EEG_subject_summary_R.csv
+8fcf1d86e8c1df11e879faf925d4968498562f3487eadf0d80cbb15793fbfb89  EEG_surrogates_HCR.csv
+3476bbc5dcb60580c5fa2e47328caabd90cc251e278cbe5df75004a897bd3dbd  EEG_windows_HCR.csv
+60e627639b6dea3178112f134fe7673ed3df4c8ea9244099acab297c81dab49b  Fig_EC_minus_EO_hist.png
+65f35d0de21596d685e606d2569ad5d586b0df2338edd8aee07660ed19b6fd9b  Fig_EC_vs_EO.png
+5ce6e5a2899e28d175045653e22a55198c214bb06972049e0d906e498c0ad5c0  Fig_EEG_HC_plane.png
+6cb203f8fcd9247dc5fe7c6b1828fe663d81a6da0f45b771d5a4f5ef3a5b7a0f  Fig_pk.png
+8bd098dadc26875687ea3dc535fd9384e3722b39f7899c55604f831da8e38a73  hmf.csv
+0f025e7dd2d0c652deaab5c320f08bf70b0e63487a270b05438b4071571e2282  hmf.png
+f05ca36c89b1fc3c71297aef81b29388948817d36ff12b690a88ee5f1ed4496b  kappa_map.png
+f3b417387eddd67631326a497f9e3ec4cfbfe51b712c2611d31b20c6dbbdf644  kappa_ps.csv
+64039dae14dccb254bdb97abe05c99d05f558492613ddf4e91627479a763c844  kappa_ps.png
+b76d2afdf8b711fde1d45bd893f282c8c4f83d1913b0d7f2fdd8c8c76e67ad27  pk.csv
+2f37fe2d25bf01ee2f6dff890d2f3c828216aecf62c29c1a7b3bed77fed5239f  summary.json
+b9b0c0cff34e7a8848e9484173ec51f6538015fd2ca96a8e4acbcb6d6ee797ae  summary.png
