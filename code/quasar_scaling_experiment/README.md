@@ -1,4 +1,4 @@
-UIF Quasar Scaling Experiment — Code
+# UIF Quasar Scaling Experiment — Code
 
 This directory contains all Python scripts used for the UIF Quasar Scaling Experiment. 
 These scripts reproduce the quasar mass–timescale relations, logistic scaling fits, 
