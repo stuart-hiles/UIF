@@ -1,4 +1,4 @@
-UIF Quasar Cosmology Experiment — Code
+#UIF Quasar Cosmology Experiment — Code
 
 This directory contains all Python scripts used in the UIF Quasar Cosmology Experiment. 
 These scripts reproduce every result and figure from the cosmology-lite operator sweeps, 
