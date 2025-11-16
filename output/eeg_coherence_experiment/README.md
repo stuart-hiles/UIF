@@ -1,4 +1,4 @@
-UIF EEG Output — PhysioNet BCI2000 Motor/Imagery (eegmmidb v1.0.0)
+# UIF EEG Output — PhysioNet BCI2000 Motor/Imagery (eegmmidb v1.0.0)
 
 This folder contains all derived outputs used in the UIF Companion Experiments for the EEG coherence study.
 These files were produced by the RSIPP/CHREM pipeline using the PhysioNet BCI2000 EEG Motor Movement/Imagery dataset (eegmmidb v1.0.0).
