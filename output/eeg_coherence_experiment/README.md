@@ -1,69 +1,81 @@
 UIF EEG Output — PhysioNet BCI2000 Motor/Imagery (eegmmidb v1.0.0)
 
-This folder contains all derived outputs used in the UIF Companion Experiments for the EEG coherence study. These files were produced by the RSIPP/CHREM processing pipeline from the PhysioNet BCI2000 EEG Motor Movement/Imagery (eegmmidb v1.0.0) dataset.
+This folder contains all derived outputs used in the UIF Companion Experiments for the EEG coherence study.
+These files were produced by the RSIPP/CHREM pipeline using the PhysioNet BCI2000 EEG Motor Movement/Imagery dataset (eegmmidb v1.0.0).
 
-Important: No raw EEG is redistributed here. All .edf recordings must be obtained directly from PhysioNet. See /data/eeg_coherence_experiment/README.md for details and provenance.
+Important: No raw EEG is redistributed here. All .edf recordings must be obtained directly from PhysioNet.
+See /data/eeg_coherence_experiment/README.md for provenance and data-access details.
 
 1. Top-Level Contents (this folder)
 
-These files are the main outputs used in the UIF Companion paper.
+These files represent the final processed outputs analysed in the UIF Companion paper.
+
+Summary and metrics files
 
 EEG_effects_EC_vs_EO.json
-– JSON file summarising condition-wise effects (eyes-closed vs eyes-open) in terms of ΔI, Γ and R∞.
+Condition-wise differences (eyes-closed minus eyes-open), including ΔI, Γ and R∞ estimates.
 
 EEG_recording_summary_R.csv
-– Per-recording coherence metric R for all selected subjects and runs.
+Coherence metric 
+𝑅
+R per recording.
 
 EEG_state_summary_R.csv
-– Per-state (e.g. eyes-open, eyes-closed, task) summary statistics of R.
+Summary of 
+𝑅
+R by state (eyes-open, eyes-closed, task).
 
 EEG_subject_summary_R.csv
-– Subject-level aggregation of coherence metrics across recordings.
+Subject-level aggregation of coherence values.
 
 EEG_surrogates_HCR.csv
-– Surrogate-based entropy/complexity/coherence metrics (H, C, R) for baseline and perturbed data.
+Surrogate-based entropy/complexity/coherence metrics (H, C, R).
 
 EEG_windows_HCR.csv
-– Windowed (1-second) H, C, R values used to estimate ΔI and Γ.
+1-second windows of H, C, R used to estimate ΔI and Γ.
 
-Fig_EC_minus_EO_hist.png
-– Histogram of R(Eyes-Closed) − R(Eyes-Open), showing the shift in coherence.
+Figures
 
-Fig_EC_vs_EO.png
-– Scatter plot of eyes-closed vs eyes-open coherence values.
+Fig_EC_minus_EO_hist.png – Histogram of coherence differences EC−EO.
 
-Fig_EEG_HC_plane.png
-– H–C plane with coherence overlaid (UIF operator visualisation).
+Fig_EC_vs_EO.png – Scatter plot of EC vs EO coherence.
 
-Fig_pk.png
-– Power spectrum P(k) for EEG-derived coherence (analogue to cosmological P(k)).
+Fig_EEG_HC_plane.png – H–C plane visualisation with EEG coherence.
 
-hmf.csv / hmf.png
-– “Halo mass function” style aggregation of coherence/complexity statistics (UIF cross-domain check).
+Fig_pk.png – Power spectrum 
+𝑃
+(
+𝑘
+)
+P(k) of EEG-derived coherence.
 
-kappa_ps.csv / kappa_ps.png
-– Power spectrum of the EEG-based κ field (coherence) and corresponding plot.
+Additional CSV/PNG outputs
 
-kappa_map.png
-– 2D κ-map visualisation of EEG coherence structure.
+hmf.csv / hmf.png – UIF-style HMF coherence distribution.
 
-pk.csv
-– CSV representation of the P(k) spectrum (frequency vs power).
+kappa_map.png – 2D coherence (κ) map.
 
-summary.json
-– Machine-readable summary of key UIF operator estimates (ΔI, Γ, β, λᴿ, R∞, k) and global metrics.
+kappa_ps.csv / kappa_ps.png – κ power spectrum.
 
-summary.png
-– Visual overview of the main EEG coherence and operator results (used in the Companion paper).
+pk.csv – Power spectrum data for 
+𝑃
+(
+𝑘
+)
+P(k).
+
+summary.json / summary.png – High-level summary of UIF operator estimates.
+
+Integrity file
 
 SHA256SUMS.txt
-– SHA-256 checksums for all derived files in this folder and its baseline/ subdirectory (integrity check).
+Checksums for all files in this directory and in the baseline/ folder.
 
-2. baseline/ Subfolder
+2. Baseline Subfolder
 
-/baseline/ contains the baseline (v1.0.1) outputs used as a reference in the Companion paper. They are the same types of metrics and figures, but generated from the earlier baseline run of the RSIPP/CHREM pipeline.
+/baseline/ contains the earlier (“v1.0.1”) baseline run of the same EEG processing pipeline.
 
-Contents include:
+Includes:
 
 EEG_effects_EC_vs_EO.json
 
@@ -83,79 +95,68 @@ Fig_EC_vs_EO.png
 
 Fig_EEG_HC_plane.png
 
-README.md describing that baseline snapshot
+README.md (baseline description)
 
-These files are used to cross-check stability of the operator estimates (ΔI, Γ, λᴿ, R∞, k) across independent runs.
+This baseline snapshot is used to validate stability of operator estimation (ΔI, Γ, λᴿ, R∞, k).
 
 3. How These Outputs Were Generated
 
-All outputs in this folder were produced by running the RSIPP/CHREM EEG pipeline (see /code/eeg_coherence_experiment/ in this repository) with the following key steps:
+All files in this folder were produced by running the UIF EEG pipeline (/code/eeg_coherence_experiment/) with:
 
-Data source:
+Dataset: PhysioNet BCI2000 Motor/Imagery (eegmmidb v1.0.0)
 
-PhysioNet BCI2000 EEG Motor Movement/Imagery Dataset (eegmmidb v1.0.0).
+Channels: C3, C4, Cz
 
-Selected subjects: S001–S0XX (as documented in subset_manifest.csv under /data/eeg_coherence_experiment/).
+Sampling rate: 160 Hz
 
-Preprocessing:
+Window size: 1 second (non-overlapping)
 
-Channels: C3, C4, Cz.
+Metrics per window:
 
-Sampling rate: 160 Hz.
+H — spectral entropy
 
-1-s non-overlapping windows.
+C — Lempel–Ziv complexity
 
-Standard EEG pre-processing (re-referencing, bandpass filtering as described in the Companion paper).
-
-Metric computation per window:
-
-H — spectral entropy.
-
-C — Lempel–Ziv complexity (sequence-based complexity).
-
-R — coherence‐like measure (UIF coherence operator proxy).
+R — coherence proxy (UIF coherence operator analogue)
 
 UIF operator estimation:
 
-ΔI — informational difference per window/histogram (from H and R).
+ΔI – informational difference
 
-Γ — recursion / temporal coherence from window-to-window dynamics.
+Γ – recursion rate / temporal coherence
 
-β — bias / elasticity from softmax fits to state-dependent differences.
+β – bias/elasticity from softmax fits
 
-λᴿ — receive–return coupling, estimated from surrogate analyses and echo behaviour.
+λᴿ – receive–return coupling
 
-R∞ — coherence ceiling from logistic fits to R(t).
+R∞ – coherence ceiling
 
-k — recharge / recovery constant from hysteresis / return-to-baseline fits.
+k – recharge / recovery constant
 
-Plot generation:
+All figures (Fig_*.png, hmf.png, kappa_map.png, etc.) were generated directly from these metrics.
 
-All Fig_*.png figures and CSVs (pk.csv, hmf.csv, kappa_ps.csv) were generated directly from these metrics and saved here.
+4. Checksums
 
-4. Checksums and Integrity
+SHA256SUMS.txt provides SHA-256 hashes for all files in this folder and the baseline folder.
+Use sha256sum or an equivalent utility to verify file integrity.
 
-The file SHA256SUMS.txt contains SHA-256 hashes for all files in this folder and the baseline/ subfolder.
-Use standard tools (for example sha256sum) to verify integrity after download.
-
-5. Citation and Provenance
+5. Citation
 
 If you use these outputs, please cite:
 
-Hiles, S. E. N. (2025).
+Hiles, S.E.N. (2025).
 UIF Companion Experiments — EEG Coherence Study (Derived Outputs).
-In: The Unifying Information Field (UIF) — Companion Experiments.
-Zenodo. DOI: 10.5281/zenodo.17478715 (and series DOI 10.5281/zenodo.17434412).
+Zenodo. DOI: 10.5281/zenodo.17478715
+(Or cite all versions via series DOI 10.5281/zenodo.17434412.)
 
-And the original EEG dataset:
+And the dataset:
 
 Goldberger, A. L., et al. (2000).
-PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals.
-Circulation, 101(23), e215–e220.
-DOI: 10.1161/01.CIR.101.23.e215.
+PhysioBank, PhysioToolkit, and PhysioNet.
+Circulation, 101(23): e215–e220.
+https://doi.org/10.1161/01.CIR.101.23.e215
 
 6. License
 
-Derived EEG outputs in this folder are released under the Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0) license.
-
-The original PhysioNet data are subject to their own license terms; please consult the PhysioNet website for details.
+All derived EEG outputs are released under CC BY-NC 4.0.
+Original PhysioNet data are governed by the PhysioNet license.
