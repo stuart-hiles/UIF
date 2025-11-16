@@ -10,39 +10,41 @@ See /data/eeg_coherence_experiment/README.md for provenance and data-access deta
 
 These files represent the final processed outputs analysed in the UIF Companion paper.
 
-Summary and metrics files
+## Summary and metrics files
 
-EEG_effects_EC_vs_EO.json
+- EEG_effects_EC_vs_EO.json
 Condition-wise differences (eyes-closed minus eyes-open), including ΔI, Γ and R∞ estimates.
 
-EEG_recording_summary_R.csv
+- EEG_recording_summary_R.csv
 Coherence metric 
 𝑅
 R per recording.
 
-EEG_state_summary_R.csv
+- EEG_state_summary_R.csv
 Summary of 
 𝑅
 R by state (eyes-open, eyes-closed, task).
 
-EEG_subject_summary_R.csv
+- EEG_subject_summary_R.csv
 Subject-level aggregation of coherence values.
 
-EEG_surrogates_HCR.csv
+- EEG_surrogates_HCR.csv
 Surrogate-based entropy/complexity/coherence metrics (H, C, R).
 
-EEG_windows_HCR.csv
+- EEG_windows_HCR.csv
 1-second windows of H, C, R used to estimate ΔI and Γ.
 
-Figures
+## Contents
 
-Fig_EC_minus_EO_hist.png – Histogram of coherence differences EC−EO.
+### 🔶 **Figures**
 
-Fig_EC_vs_EO.png – Scatter plot of EC vs EO coherence.
+- Fig_EC_minus_EO_hist.png – Histogram of coherence differences EC−EO.
 
-Fig_EEG_HC_plane.png – H–C plane visualisation with EEG coherence.
+- Fig_EC_vs_EO.png – Scatter plot of EC vs EO coherence.
 
-Fig_pk.png – Power spectrum 
+- Fig_EEG_HC_plane.png – H–C plane visualisation with EEG coherence.
+
+- Fig_pk.png – Power spectrum 
 𝑃
 (
 𝑘
