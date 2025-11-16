@@ -103,8 +103,9 @@ ApJ 721, 1014.
 
 And cite UIF:
 
-**Hiles, S.E.N. (2025).**  
-*UIF Companion Experiments – Cosmology-Lite Emulator Dataset.*  
-Zenodo. DOI: 10.5281/zenodo.[to-be-minted].
-
+### UIF Companion Experiments (processed datasets)
+Hiles, S.E.N. (2025).  
+*UIF Companion Experiments – Data and Reproducibility Archive.*  
+Zenodo. **Concept DOI:** https://doi.org/10.5281/zenodo.17434412  
+(This DOI cites *all versions* of the UIF Companion dataset.)
 ---
