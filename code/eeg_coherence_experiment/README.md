@@ -1,90 +1,99 @@
 UIF EEG Coherence Experiment — Code
 ===================================
 
-This folder contains the Python code used to generate the EEG results in the
+This directory contains the Python code used to generate the EEG results for the
 UIF Companion Experiments (Empirical Validation of Papers I–IV).
 
-The scripts here implement the RSIPP/CHREM-style pipeline that:
-- reads EEG recordings from the PhysioNet BCI2000 motor/imagery dataset,
-- extracts 1-second windows,
+The scripts implement the RSIPP/CHREM-style pipeline that:
+
+- reads EEG windows from the PhysioNet BCI2000 motor/imagery dataset,
+- extracts 1-second windows for each recording/state,
 - computes informational metrics (H, C, R),
-- produces subject/recording/state summaries,
-- generates the figures used in the UIF Companion (EC vs EO, H–C plane, etc.).
+- produces subject / state / recording summaries,
+- generates all figures used in the UIF Companion (EC vs EO, HC-plane, etc.).
 
-For DATA and OUTPUTS, refer to the following folders in the repository:
+No raw EEG data are stored in this repository; manifests and metadata only.
 
-DATA:
-    UIF/data/eeg_coherence_experiment/
-        subset_manifest.csv
-        metadata.json
-        physionet_link.txt
-        (no raw EEG; only manifests and metadata)
+---
 
-OUTPUTS:
-    UIF/output/eeg_coherence_experiment/
-        baseline/
-            EEG_recording_summary_R.csv
-            EEG_state_summary_R.csv
-            EEG_subject_summary_R.csv
-            EEG_surrogates_HCR.csv
-            EEG_windows_HCR.csv
-            Fig_EC_vs_EO.png
-            Fig_EC_minus_EO_hist.png
-            Fig_EEG_HC_plane.png
-            EEG_effects_EC_vs_EO.json
-            README.md
-        hmf.csv
-        kappa_ps.csv
-        pk.csv
-        (additional plots .png)
-        SHA256SUMS.txt
+## Data & Outputs
+
+### DATA
+UIF/data/eeg_coherence_experiment/
+    subset_manifest.csv
+    metadata.json
+    physionet_link.txt
+
+### OUTPUTS
+UIF/output/eeg_coherence_experiment/
+    baseline/
+        EEG_recording_summary_R.csv
+        EEG_state_summary_R.csv
+        EEG_subject_summary_R.csv
+        EEG_surrogates_HCR.csv
+        EEG_windows_HCR.csv
+        Fig_EC_vs_EO.png
+        Fig_EC_minus_EO_hist.png
+        Fig_EEG_HC_plane.png
+        EEG_effects_EC_vs_EO.json
         README.md
 
-This folder (UIF/code/eeg_coherence_experiment) is code-only.
+    pk.csv
+    kappa_ps.csv
+    hmf.csv
+    (additional figures)
+    SHA256SUMS.txt
+    README.md
 
+This folder (UIF/code/eeg_coherence_experiment/) contains code-only.
 
-------------------------------------------------------------
-Scripts Included
-------------------------------------------------------------
+---
+
+## Scripts Included
 
 ut26_eeg_pipeline.py
-    Main processing pipeline. Loads EDFs using the subset manifest,
-    slices windows, computes H, C, R metrics, writes window-level outputs.
+    Main processing pipeline:
+    - loads EDFs via the subset manifest
+    - extracts 1-second windows
+    - computes H, C, R metrics
+    - writes window-level outputs
 
 ut26_eeg_p.py
-    Mathematical helper functions: entropy, Lempel–Ziv complexity,
-    coherence computation, surrogate generation.
+    Mathematical utilities:
+    - entropy, Lempel–Ziv complexity,
+    - coherence and recursion metrics,
+    - surrogate generation helpers.
 
 eeg_subject_level_summary.py
-    Aggregates window-level data into:
+    Aggregates window-level outputs into:
         - recording-level summaries
         - state-level summaries
         - subject-level summaries
-    Produces the CSVs found in the output baseline folder.
 
 plot_ec_vs_eo.py
-    Produces EC vs EO comparison plots:
+    Produces the EC vs EO comparison figures:
         - EC–EO histogram
         - EC vs EO scatter
-        - H–C plane visualisation
+        - HC-plane projection
 
+plot_pk_only.py
+    Generates the power-spectrum / pk diagnostic plot used in Appendix C and
+    operator-stability checks.
 
-------------------------------------------------------------
-Dependencies
-------------------------------------------------------------
+---
 
-Python >= 3.9
-numpy
-scipy
-pandas
-matplotlib
-seaborn
+## Dependencies
+
+Python >= 3.9  
+numpy  
+scipy  
+pandas  
+matplotlib  
 (optional) mne for EDF file handling
 
+---
 
-------------------------------------------------------------
-Running the Pipeline
-------------------------------------------------------------
+## Running the Pipeline
 
 1. Ensure subset_manifest.csv is present under:
        UIF/data/eeg_coherence_experiment/
@@ -92,45 +101,45 @@ Running the Pipeline
 2. Run:
        python ut26_eeg_pipeline.py
 
-3. Generate subject/state summaries:
+3. Generate summaries:
        python eeg_subject_level_summary.py
 
 4. Produce figures:
        python plot_ec_vs_eo.py
+       python plot_pk_only.py     # optional pk diagnostic
 
 Outputs will be written to:
        UIF/output/eeg_coherence_experiment/
 
+---
 
-------------------------------------------------------------
-Reproducibility and Integrity
-------------------------------------------------------------
+## Reproducibility & Integrity
 
 Provenance:
-    UIF/data/eeg_coherence_experiment/subset_manifest.csv
-    UIF/data/eeg_coherence_experiment/metadata.json
+    UIF/data/eeg_coherence_experiment/subset_manifest.csv  
+    UIF/data/eeg_coherence_experiment/metadata.json  
 
 Integrity:
-    UIF/output/eeg_coherence_experiment/SHA256SUMS.txt
+    UIF/output/eeg_coherence_experiment/SHA256SUMS.txt  
     (Generated by SHA256SUMS_auto.py)
 
 Checksum file includes:
-    all CSV, JSON, and PNG artifacts
+    all CSV, JSON, and PNG artifacts  
     excluding README.md and documentation files
 
+---
 
-------------------------------------------------------------
-UIF Context
-------------------------------------------------------------
+## UIF Context
 
-The EEG coherence experiment provides biological-scale validation of UIF
-operator behaviour across Papers I–IV. The metrics H, C, and R reveal:
+The EEG coherence experiment provides biological-scale empirical validation of UIF
+operator behaviour across Papers I–IV. Window-level H, C, and R metrics reveal:
 
-- ΔI sensitivity under state changes (eyes-open vs eyes-closed),
-- Γ recursion stability,
-- λR receive–return coherence behaviour,
-- R∞ coherence ceiling values matching cosmological-scale models,
-- k recharge behaviour under alternating state patterns.
+- ΔI sensitivity to state transitions (eyes-open → eyes-closed),
+- Γ recursion/coherence stability across recordings,
+- λR receive–return coupling in neural ensembles,
+- R∞ logistic coherence ceilings consistent with cosmology-lite predictions,
+- k recharge behaviour under alternating state conditions.
 
-These results link human neurodynamics to the universal informational
-behaviours predicted by the Unifying Information Field (UIF).
+Together, these results show that human neurodynamics obey the same informational
+operator relations measured in quasars, cosmology-lite fields, and AI hysteresis,
+demonstrating UIF’s cross-domain invariance.
