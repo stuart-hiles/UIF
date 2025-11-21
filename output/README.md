@@ -18,7 +18,7 @@ All outputs are fully reproducible using the code in `/UIF/code/` and the data i
 
 ## 📁 Directory Structure
 
-### `/cosmology_lite_experiment/`
+### `/informational_difference_calibration_experiement/`
 Outputs from the UIF *cosmology-lite* emulator:
 - HC-plane maps  
 - γ-sweep curves  
