@@ -60,6 +60,25 @@ Reality is informational: each collapse redistributes ΔI between local systems 
 Physics, computation, and consciousness are expressions of one recursive law — **collapse → recursion → return**.
 
 ---
+### 🔷 Experiments
+- **Experiment I – informational_difference_calibration_experiement** calibrates the informational diffusion–coherence floor and establishes a baseline operator readouts
+for (∆I, λR) under controlled conditions.It shows that informational difference and receive–return dynamics produce a
+finite coherence ceiling and lawful pruning in synthetic fields.
+- Experiment II  - Validates symmetry-breaking and threshold behaviour under γ-like forcing; measure (Γ, η∗, β). It also confirms the softmax bias law.
+- **Experiment III - Identifies the bounded “Goldilocks” stability region in (η∗, λR) space and
+recovered the coherence ceiling R∞ and recharge rate k from variational dynamics.It Validate the Lagrangian/variational behaviour of the collapse–return law, including the coherence
+ceiling (R∞), recharge rate (k), and hysteresis memory; connect to observational analogues (e.g.,
+M87 variability).
+• Experiment IV - Tests the UIF prediction that every collapse leaves a trace, producing persistent informational memory visible as hysteresis when the system is driven strongly and then released.demonstrates hysteresis and informational memory, providing direct evidence that collapse–return cycles leave persistent traces in the substrate.
+- **Experiment V - informational_differeunifies these diagnostics and produced consolidated operator calibrations
+consistent with the field and energetic laws of UIF III–V.
+- **Experiment VI - eeg_coherence_experiment** extends UIF into the biological domain, recovering the same operator set
+from human EEG coherence and showing that neural dynamics follow the same collapse–return
+grammar.
+- **Experiment VII - quasar_variability_experiment** establishes the first astrophysical validation of UIF, recovering all seven
+operators from quasar variability and demonstrating that the collapse–return law governs the
+brightest persistent engines in the universe.
+
 
 ### 📚 Citation
 Hiles, S. E. N. (2025). *The Unifying Information Field (UIF) Series — Papers I–VII and Companion.*  
