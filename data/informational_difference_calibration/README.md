@@ -17,7 +17,7 @@ All metrics used in the UIF Companion Experiments are generated internally by th
 - Collapse-return equilibrium diagnostics (R∞, k, Γ, η*, λᴿ)
 
 The inputs to the emulator are model parameters only, supplied via:
-`UIF/code/cosmology_lite_experiment/`
+`UIF/code/informational_difference_calibration_experiement/`
 
 The outputs are stored in:
 `UIF/output/cosmology_lite_experiment/`
