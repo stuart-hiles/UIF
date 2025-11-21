@@ -14,7 +14,7 @@ supports full reproducibility of all reported results.
 
 ## Contents
 
-### 1. `cosmology_lite_experiment/`
+### 1. `informational_difference_calibration_experiment/`
 Python scripts for running and analysing the UIF cosmology-lite emulator:
 
 - collapse–return field simulation (`ut26_cosmo3d.py`)
