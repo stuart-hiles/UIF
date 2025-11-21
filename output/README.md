@@ -44,6 +44,9 @@ No raw EEG is included.
 
 ---
 
+### `/informational_difference_calibration_experiemnt/`
+Outputs from quasar coherence estimation:
+
 ### `/quasar_coherence_experiment/`
 Outputs from quasar coherence estimation:
 - logistic fits  
