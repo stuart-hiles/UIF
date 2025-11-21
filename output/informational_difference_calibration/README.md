@@ -1,4 +1,4 @@
-# Informational Difference Calibration - UIF Experiement 1 (Cosmology-Lite Emulator) — Output Directory  
+# Informational Difference Calibration - UIF Experiment 1 (Cosmology-Lite Emulator) — Output Directory  
 (Experiments I–V)
 
 This folder contains documentation for the data dependencies of the UIF Informational Difference Calibration experiment (UIF Companion Experiments Paper - **Experiment 1**) which utilised the Cosmology-Lite synthetic 3-D lattice universe emulator used for operator exploration and validation (Experiments I–V). It contains the data for the synthetic collapse–return fields, operator sweeps, and diagnostic figures that appear in the Companion and in **UIF Paper IV**.
