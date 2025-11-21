@@ -1,0 +1,67 @@
+UIF — Quasar Variability Experiment
+Provenance Notes
+-------------------------------
+
+This folder contains the processed datasets used in the
+UIF Companion Experiment VII — Quasar Variability and Informational Coherence.
+
+Raw astronomical time-series and SDSS catalogs are *not* redistributed here.
+All data products in this directory were derived from publicly available
+surveys and cleaned into analysis-ready CSV tables.
+
+Source Catalogs (Raw Inputs)
+----------------------------
+The following raw SDSS Stripe 82 quasar catalogs were used:
+
+- master_QSO_S82.dat
+- DB_QSO_S82.dat
+- DRW variability parameter tables: s82drw_*.dat
+
+These files are publicly available from the SDSS Southern Stripe 82 QSO
+catalogue maintained by MacLeod et al.:
+
+  https://faculty.washington.edu/ivezic/macleod/qso_s82/
+
+Processing Summary
+------------------
+The processed CSVs in this folder were generated using the UIF Python
+pipelines under:
+
+    UIF/code/quasar_scaling_experiment/
+    UIF/code/quasar_variability_experiment/
+
+Processing steps included:
+1. Import Stripe 82 master catalog and DRW parameter tables.
+2. Merge photometric, redshift, and DRW timescale/amplitude data.
+3. Clean missing/invalid entries and enforce quality flags.
+4. Compute:
+      - entropy H
+      - complexity C
+      - coherence index R
+      - ΔIσ variability metric
+      - τ–M_BH and τ–M_i scaling quantities
+5. Export final analysis tables used in UIF Experiment VII.
+
+Files Included (Processed Outputs)
+----------------------------------
+- quasar_raw_HC_all.csv
+    Combined H–C–R feature table for all quasars.
+
+- quasar_variability_operators.csv
+    Redshift-binned UIF operator estimates
+    (ΔI_sigma_std, Γ_slope, λR_highR_fraction, Rinf_proxy, k_proxy).
+
+- UT26_quasar_scaling_slopes.csv
+    Mass, luminosity, and variability scaling-law slopes and uncertainties.
+
+Citation
+--------
+Please cite the UIF Companion Dataset if using these tables:
+
+Hiles, S.E.N. (2025). UIF Companion Experiments. Zenodo.
+DOI: 10.5281/zenodo.17434412 (all versions)
+
+Notes
+-----
+These files contain only *processed* and *reduced* datasets.
+No raw SDSS survey data are redistributed in this repository.
