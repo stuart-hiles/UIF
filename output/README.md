@@ -78,9 +78,19 @@ Outputs supporting quasar scaling experiments (Figure 5.x in the UIF Companion p
 ---
 
 ### `/quasar_variability_experiment/`
-Reserved for future variability experiments (structure-function, DRW, extended timescales).
+Outputs from Experiment VII — Quasar Variability and Informational Coherence, using the processed SDSS Stripe 82 light-curve sample.
 
-This folder is intentionally **empty**.
+- HC-plane diagrams (low-z / mid-z / high-z / combined)
+- operator estimates (ΔIσ, Γ, λᴿ, R∞, k)
+- redshift-binned distribution plots
+- summary CSVs and intermediate diagnostic tables
+- publication-ready PNGs of operator bars/radar plots
+
+These files provide the astrophysical operator measurements used in
+Figures 9–12 of the UIF Companion paper and complete the cross-domain
+validation of the UIF operator set.
+
+Derived from processed Stripe-82 variability data (no raw SDSS light curves redistributed).
 
 ---
 
