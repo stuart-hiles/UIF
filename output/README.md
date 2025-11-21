@@ -1,7 +1,7 @@
 # UIF Output Directory
 
 This directory contains all *derived outputs* produced by the UIF Companion Experiments
-across EEG, quasar, cosmology-lite, and coherence-scaling studies. These outputs mirror
+across informational difference calibration (cosmology-lite), EEG, quasar, and coherence-scaling studies. These outputs mirror
 the structure of `/UIF/data/` and correspond directly to the scripts in `/UIF/code/`.
 
 Each subfolder contains its own README.md with detailed descriptions of:
