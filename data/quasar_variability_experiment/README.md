@@ -87,6 +87,8 @@ These processed datasets were derived from SDSS Stripe 82:
 - DRW parameter files:  
   `s82drw_*.dat`
 
+*For further details please refer to provenance_notes.txt provided in this folder.*  
+
 ### **Preprocessing Steps**
 1. Import DRW variability tables  
 2. Merge with photometric & luminosity metadata  
