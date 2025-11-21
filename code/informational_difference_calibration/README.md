@@ -1,4 +1,4 @@
-# UIF Informational Difference Calibration — Experiment 1 Code (cosmology_lite_experiment)
+# UIF Informational Difference Calibration — Experiment 1 Code (Cosmology-lite Emulator)
 
 This folder contains the Python code for the Informational Difference Calibration experiment (UIF Companion Experiments Paper - **Experiment 1**) which utilised the Cosmology-Lite synthetic 3-D lattice universe emulator used for operator exploration and validation (Experiments I–V). It generates the synthetic collapse–return fields, operator sweeps, and diagnostic figures that appear in the Companion and in **UIF Paper IV**.
 
