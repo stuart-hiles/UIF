@@ -2,16 +2,16 @@
 This directory contains the LaTeX source files for the **Unifying Information Field (UIF)** scientific paper series.  
 Each paper is stored in its own folder for version tracking, compilation, and DOI-based release management.
 
-| Paper | Title | Folder |
+| Paper | Title | Abstract |
 |-------|--------|---------|
-| I | **Core Theory** | `Paper_1_CoreTheory/` |
-| II | **Symmetry Principles** | `Paper_2_SymmetryPrinciples/` |
-| III | **Field and Lagrangian Formalism** | `Paper_3_FieldLagrangian/` |
-| IV | **Cosmology and Astrophysical Case Studies** | `Paper_4_Cosmology/` |
-| V | **Energy and the Potential Field** | `Paper_5_Energy/` |
-| VI | **The Seven Pillars and Invariants** | `Paper_6_SevenPillars/` |
-| VII | **Predictions and Experiments** | `Paper_7_PredictionsExperiments/` |
-| — | **Companion Experiments** | `CompanionExperiments/` |
+| I | **Core Theory** | `Paper_1_CoreTheory` |
+| II | **Symmetry Principles** | `Paper_2_SymmetryPrinciples` |
+| III | **Field and Lagrangian Formalism** | `Paper_3_FieldLagrangian` |
+| IV | **Cosmology and Astrophysical Case Studies** | `Paper_4_Cosmology` |
+| V | **Energy and the Potential Field** | `Paper_5_Energy` |
+| VI | **The Seven Pillars and Invariants** | `Paper_6_SevenPillars` |
+| VII | **Predictions and Experiments** | `Paper_7_PredictionsExperiments` |
+| — | **Companion Experiments** | `CompanionExperiments` |
 
 Each folder includes:
 - LaTeX source (`UIF_Paper_X_<Title>.tex`)
