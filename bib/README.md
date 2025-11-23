@@ -49,5 +49,5 @@ Versioning
 
 All .bib files in this directory are maintained under Git version control.
 
-Commit messages should reference the relevant UIF paper or Zenodo release when making updates.
+Commit messages should reference the relevant UIF paper or Zenodo release when making updates. 
 ------------------------------------------------------------
