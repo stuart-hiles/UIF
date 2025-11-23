@@ -55,7 +55,7 @@ For example:
 📚 Citation
 Hiles, S. E. N. (2025). UIF Series — Initial Publication Set (Papers I–VII and Companion).
 Version v1.0 (October 2025). Zenodo.
-https://doi.org/10.5281/zenodo.17434413
+https://doi.org/10.5281/zenodo.17434412
 
 ---
 
