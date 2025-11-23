@@ -9,8 +9,8 @@
 *A unified informational physics framework linking quantum, cosmological, biological, and cognitive systems.*
 
 **Author:** Stuart E. N. Hiles  
-**Series Version:** v1.1 (October 2025)  
-**Paper Versions:** v1.0 (each)  
+**Series Version:** v2.0 (November 2025)  
+**Paper Versions:** (see individual papers)  
 **License:** CC BY-NC 4.0 (text, figures)  
 **Software License:** GPL-3.0 (code, data, scripts)  
 **DOI:** [10.5281/zenodo.17434412](https://doi.org/10.5281/zenodo.17434412)  
@@ -103,6 +103,9 @@ For correspondence, data access, or collaboration inquiries:
 ORCID: https://orcid.org/0009-0000-6898-0453
 
 ---
+### 🧾 Release Notes (v2.0)
+- Major release with restructured contents
+- Complete Papers I - VI (Paper VII forthcoming)
 
 ### 🧾 Release Notes (v1.1)
 - Repository restructured with per-paper subfolders (`Paper_1_CoreTheory/` → `Paper_7_PredictionsExperiments/`)
@@ -114,5 +117,5 @@ ORCID: https://orcid.org/0009-0000-6898-0453
 
 ---
 
-**DOI:** https://doi.org/10.5281/zenodo.17434413  
+**DOI:** https://doi.org/10.5281/zenodo.17434412  
 **License:** © 2025 Stuart E. N. Hiles — CC BY-NC 4.0 / GPL-3.0
