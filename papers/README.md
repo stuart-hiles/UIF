@@ -2,17 +2,55 @@
 This directory contains the LaTeX source files for the **Unifying Information Field (UIF)** scientific paper series.  
 Each paper is stored in its own folder for version tracking, compilation, and DOI-based release management.
 
-| Paper | Title | LaTeX Filename | Corresponding PDF | DOI (All Versions) | Description |
-|-------|--------|----------------|--------------------|---------------------|-------------|
-| I | **Core Theory** | uif1_core.tex | UIF_Paper_1_CoreTheory.pdf | https://doi.org/10.5281/zenodo.17460040 | Foundational operator grammar (ΔI, Γ, β, λR)<br>and collapse–return dynamics |
-| II | **Symmetry Principles** | uif2_core.tex | UIF_Paper_2_SymmetryPrinciples.pdf | https://doi.org/10.5281/zenodo.17468871 | Conservation, invariance,<br>and informational Noether structure |
-| III | **Field & Lagrangian Formalism** | uif3_field.tex | UIF_Paper_3_Lagrangian.pdf | https://doi.org/10.5281/zenodo.17471559 | Continuous variational formulation<br>and Euler–Lagrange derivations |
-| IV | **Cosmology & Astrophysical Case Studies** | uif4_cosmology.tex | Paper_4_Cosmology.pdf | https://doi.org/10.5281/zenodo.17475119 | Coherence analysis of M87,<br>CMB residuals, and dark-sector coupling |
-| V | **Energy & the Potential Field** | uif5_energy.tex | Paper_5_Energy.pdf | https://doi.org/10.5281/zenodo.17478131 | Operator–level energy mapping<br>and potential functions |
-| VI | **The Seven Pillars & Invariants** | uif6_pillars.tex | Paper_6_SevenPillars.pdf | https://doi.org/10.5281/zenodo.17478484 | Unified operator–invariant architecture<br>across physical and cognitive domains |
-| VII | **Predictions & Experiments (forthcoming)** | uif7_predictions.tex | Paper_7_PredictionsExperiments.pdf | TBC | Cross-domain validation,<br>coherence decay constants,<br>stochastic resonance, and agency thresholds |
-| — | **Companion Experiments** | companion_uif.tex | CompanionExperiments.pdf | https://doi.org/10.5281/zenodo.17478715 | Empirical validation datasets,<br>notebooks, and calibration scripts |
+# 📄 UIF Papers — LaTeX Sources and Outputs
 
+This directory contains the LaTeX source files for the **Unifying Information Field (UIF)** scientific paper series.  
+Each paper is organised in its own folder for version tracking, compilation, and DOI-based release management.
+
+---
+
+## 📘 Table of Papers
+
+| Paper | Title | LaTeX Filename | PDF | DOI |
+|------|--------|----------------|------|------|
+| I | **Core Theory** | `uif1_core.tex` | `UIF_Paper_1_CoreTheory.pdf` | https://doi.org/10.5281/zenodo.17460040 |
+| II | **Symmetry Principles** | `uif2_core.tex` | `UIF_Paper_2_SymmetryPrinciples.pdf` | https://doi.org/10.5281/zenodo.17468871 |
+| III | **Field & Lagrangian Formalism** | `uif3_field.tex` | `UIF_Paper_3_Lagrangian.pdf` | https://doi.org/10.5281/zenodo.17471559 |
+| IV | **Cosmology & Astrophysical Case Studies** | `uif4_cosmology.tex` | `Paper_4_Cosmology.pdf` | https://doi.org/10.5281/zenodo.17475119 |
+| V | **Energy & the Potential Field** | `uif5_energy.tex` | `Paper_5_Energy.pdf` | https://doi.org/10.5281/zenodo.17478131 |
+| VI | **The Seven Pillars & Invariants** | `uif6_pillars.tex` | `Paper_6_SevenPillars.pdf` | https://doi.org/10.5281/zenodo.17478484 |
+| VII | **Predictions & Experiments** *(forthcoming)* | `uif7_predictions.tex` | `Paper_7_PredictionsExperiments.pdf` | *TBC* |
+| — | **Companion Experiments** | `companion_uif.tex` | `CompanionExperiments.pdf` | https://doi.org/10.5281/zenodo.17478715 |
+
+---
+
+## 📄 **Paper Descriptions**
+
+### **Paper I — Core Theory**
+Foundational operator grammar (ΔI, Γ, β, λR) and the collapse–return dynamics defining the informational substrate of UIF.
+
+### **Paper II — Symmetry Principles**
+Establishes the conservation and invariance structure of UIF and introduces the informational Noether correspondence.
+
+### **Paper III — Field & Lagrangian Formalism**
+Continuous variational formulation, Euler–Lagrange derivations, receive–return terms, and the canonical UIF field equations.
+
+### **Paper IV — Cosmology & Astrophysical Case Studies**
+Applies UIF to cosmology: M87 coherence, CMB phase-residuals, quasar variability, dark-sector coupling, and receive–return effects.
+
+### **Paper V — Energy & the Potential Field**
+Defines the operator-level informational–energetic mapping, potential functions, and the conversion coefficient α linking energy and ΔI.
+
+### **Paper VI — The Seven Pillars & Invariants**
+Unifies all operators into an invariant architecture across physical, biological, cognitive, and artificial systems.
+
+### **Paper VII — Predictions & Experiments** *(forthcoming)*
+Cross-domain validation framework: coherence decay constants, stochastic resonance, collapse thresholds, and proto-agency signatures.
+
+### **Companion Experiments**
+Empirical validation datasets, symbolic notebooks, emulator sweeps, quasar/EEG operator calibration, and reproducibility scripts.
+
+---
 
 Each folder includes:
 - LaTeX source (`UIF_Paper_X_<Title>.tex`)
