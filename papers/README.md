@@ -27,7 +27,7 @@ Compiled PDFs are exported to `/output/` for release packaging.
 ### ⚠️ Preprint Status
 All UIF papers are **pre-release research manuscripts** shared for open scientific communication.  
 They have **not yet undergone peer review** and should be cited as *preprints* via the Zenodo DOI:  
-[**10.5281/zenodo.17434413**](https://doi.org/10.5281/zenodo.17434413)
+[**10.5281/zenodo.17434412**](https://doi.org/10.5281/zenodo.17434412)
 
 ---
 
