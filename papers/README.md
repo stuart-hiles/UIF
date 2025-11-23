@@ -34,7 +34,7 @@ They have **not yet undergone peer review** and should be cited as *preprints* v
 ### 🧾 License
 - **Text and figures:** [Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)  
 - **Code, data, and scripts:** [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-
+Copyright (C) 2005 Stuart E. N. Hiles
 ---
 
 ### ⚙️ Build Instructions
