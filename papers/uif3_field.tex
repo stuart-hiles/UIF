@@ -1,0 +1,916 @@
+% ===== UIF Paper III — Field and Lagrangian Formalism =====
+% Numbering: Paper 3 → (3.x) equations, figures, tables
+\UIFpaper{3}
+:
+% Per-paper PDF metadata
+\UIFmetadata{The Unifying Information Field (UIF) Paper III — Field and Lagrangian Formalism}
+            {Stuart E. N. Hiles}
+            {UIF III — Field and Lagrangian Formalism}
+
+\hypersetup{
+  pdftitle={The Unifying Information Field (UIF) Paper III — Field and Lagrangian Formalism},
+  pdfauthor={Stuart E. N. Hiles},
+  pdfsubject={information, theory, informational physics, collapse–return dynamics, coherence, recursion, symmetry, quantum, cosmology, dark energy, dark matter, unification, AI, consciousness, biology, cognition, UIF, Unifying Information Field, Physical cosmology, Theoretical physics, Information theory, Physics}
+}
+            
+\title{The Unifying Information Field (UIF) Paper III\\[0.35em]
+\Large\textit{Field and Lagrangian Formalism}\\[0.6em]   
+\small Version v2.1 — November 2025}
+\author{Stuart E.\,N. Hiles, BA (Hons)}
+\date{}
+
+\begin{center}
+\thispagestyle{empty}
+\vspace{2em}
+{\small
+© 2025 Stuart E. N. Hiles \\[4pt]
+Licensed under the Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0) License. \\[6pt]
+This document represents a pre-release version (v2.1, November 2025) of the\\
+\textit{Unifying Information Field (UIF)} series of papers.\\[0.75em]
+
+First published on GitHub: \url{https://github.com/stuart-hiles/UIF}\\
+DOI (Concept): \href{https://doi.org/10.5281/zenodo.17471559}{10.5281/zenodo.17471559}\\
+Series DOI: \href{https://doi.org/10.5281/zenodo.17434412}{10.5281/zenodo.17434412}\\
+Commit ID: \texttt{<insert-git-hash>}\\[0.75em]
+
+This paper has not yet been peer-reviewed or formally published.\\[0.5em]
+All supporting software, scripts, and data are licensed separately under \textbf{GPL-3.0}.\\
+}
+\end{center}
+
+
+\maketitle
+
+\begin{abstract}
+\thispagestyle{empty}
+Building on UIF I -- Core Theory \cite{UIF-I} and UIF II -- Symmetry Principles \cite{UIF-II}, this third paper extends the Unifying Information Field into a continuous, variational framework.  The operator set ($\Delta I$, $\Gamma$, $\beta$, $\lambda_R$, $\eta$) is expressed as a Lagrangian field system in which informational difference functions as a density and recursion governs its local dynamics.  Two coupled fields are defined: $\Phi(x,t)$, representing informational potential, and $R(x,t)$, the receive--return substrate that stores and re-emits informational traces.  A minimal Lagrangian density incorporating bias, recursion, and coupling terms yields Euler--Lagrange equations that reproduce collapse--return behaviour across scales.
+
+\noindent\textit{Empirical bridge.} 
+High-resolution \textit{JWST} and \textit{EHT} observations of the M87 system now provide 
+direct astrophysical analogues for UIF’s receive–return coupling ($\lambda_R$), 
+recursion rate ($\Gamma$), and recharge constant ($k$), 
+linking the formal Lagrangian terms developed here to measurable coherence dynamics 
+\cite{Perlman2025_M87_JWST,EHT2024_Polarization_M87}.
+
+Collapse is reframed as a variational process that minimises informational tension rather than destroying information.  The resulting field equations generalise Noether-like conservation to informational space and recover quantum- and cosmological-scale dynamics within the same formalism.  Entanglement emerges as a communication protocol mediated by the shared substrate field $R(x,t)$, while the photon example demonstrates that quantisation and interference appear as complementary phases. The constant $c$ appears as the ceiling of coherent informational flow---the maximal gradient of recursive coherence in the substrate.
+
+The Lagrangian formulation developed here provides the mathematical foundation for the cosmological recursion laws of UIF IV, the energetic and potential analysis of UIF V, and the invariant architecture of UIF VI, establishing UIF as a genuine informational field theory with testable consequences.
+\clearpage
+
+\thispagestyle{empty}
+\noindent\textbf{Series overview:} 
+\newline Paper I introduces the Unifying Information Field (UIF) as a collapse--return informational framework and defined its operator grammar. Paper II develops the symmetry and invariance principles underlying informational conservation; Paper III establishes the field and Lagrangian formalism; Paper IV applies the framework to cosmology and astrophysical case studies; Paper V formulates the energetic and potential field laws; Paper VI synthesises the invariant architecture; and Paper VII (forthcoming) consolidates predictions and experiments.
+\end{abstract}
+
+\noindent\textbf{Companion}
+\newline
+Experimental methods, emulator sweeps, operator calibration results, and reproducibility metadata supporting this series are presented in the \textit{UIF~Companion Experiments} (2025) \cite{Companion2025}.
+A second volume, \textit{UIF~Companion II — Extended Experiments} (forthcoming, 2026), will expand the empirical programme beyond the current emulator framework, incorporating biological, AI-domain, and collective-synchronisation studies.
+\newline
+
+\noindent\textbf{Repository}
+\newline
+Source code, emulator outputs, and figure-generation scripts are maintained in the
+UIF GitHub Archive (\url{https://github.com/stuart-hiles/Unifying-Information-Field}),
+together with datasets supporting \textit{UIF Papers I–V} and the Companion series.
+Each experiment is versioned by \texttt{RUN\_TAG} with configuration files, logs, and figures archived for reproducibility.
+\newline
+
+\noindent\textbf{Note on Nomenclature and Continuity}
+\newline
+The Unifying Information Field (UIF) framework developed here continues directly from
+the conceptual and symmetry foundations established in Papers I–II and supersedes the
+preliminary UT26 terminology used in early drafts of the theory.
+All operator symbols and relations remain continuous with those earlier definitions,
+but are now expressed within the continuous Lagrangian and variational formalism
+introduced in this paper.
+This ensures that notation, numbering, and physical interpretation remain consistent
+throughout the UIF series, from discrete operator grammar (Papers I–II) to the
+field equations and energetic formalisms of Papers III–V.
+\newline
+
+\noindent\textbf{Scope}
+\newline
+This paper extends the Unifying Information Field (UIF) framework from discrete operator
+dynamics to a continuous field formalism.  Its purpose is to derive the minimal
+Lagrangian and variational structure capable of generating collapse–return behaviour
+across physical, biological, and cognitive domains.  The formulation introduces two
+coupled fields—the informational potential $\Phi(x,t)$ and the receive–return substrate
+$R(x,t)$—and shows that their Euler–Lagrange equations reproduce collapse, recursion,
+and coherence as manifestations of one underlying informational law.  
+
+The scope of this paper is mathematical rather than observational: it provides the
+field equations and variational principles that underpin the cosmological,
+energetic, and invariant analyses developed in Papers IV–VI.  It therefore serves as
+the theoretical bridge between the symmetry principles of \textit{UIF II} and the
+empirical calibrations introduced in \textit{UIF IV–V}.
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Introduction}
+The preceding papers established UIF’s operator grammar in discrete form; this paper extends that framework into a continuous field theory, treating informational difference as a density and recursion as its local dynamics. Its purpose is to identify the minimal variational law capable of generating collapse--return behaviour across all scales (from photons to galaxies), reframing information flow as the fundamental quantity, not spacetime geometry.
+
+The Unifying Information Field (UIF) is proposed as a continuous informational substrate from which physical, biological, and cognitive dynamics emerge.  It treats information not merely as a descriptor of physical systems but as the fundamental quantity of reality itself.  In this view, every system interacts through exchanges of informational difference ($\Delta I$), sustained by recursion ($\Gamma$), modulated by bias ($\beta$), and coupled to a distributed receive--return field $\lambda_R R(x,t)$.  Collapse---the transition from potential to realised state, represents the redistribution rather than the destruction of information.  The UIF therefore unifies quantum measurement, macroscopic coherence, and biological feedback within a single informational medium, governed by the same variational and conservation principles that underpin classical field theories.
+
+These field operators now admit first empirical calibration.  
+Temporal recursion ($\Gamma$) corresponds to observed quasi-periodic oscillations and 
+polarization cycles; receive–return coupling ($\lambda_R$) manifests as measurable 
+core–knot lags; and the recharge constant ($k$) maps to post-flare recovery times.  
+Together these observational analogues establish a bridge between the informational 
+Lagrangian developed below and the measurable coherence behaviour seen in systems such 
+as M87 \cite{Perlman2025_M87_JWST,EHT2024_Polarization_M87}.
+
+
+Field theory and variational principles form the backbone of modern physics. Electromagnetism, fluid dynamics, quantum field theory, and general relativity all use field representations and variational principles to encode conservation and dynamics. Here we apply the same mathematical architecture to informational systems.
+
+
+\section{Operators}
+The present paper builds directly on \textit{UIF I --- Core Theory} and \textit{UIF II --- Symmetry Principles}, which established the conceptual and symmetry foundations of the Unifying Information Field.  For clarity, the principal operators of the framework are summarised here.  Informational difference ($\Delta I$) represents the unsampled imbalance that drives collapse--return dynamics; recursion ($\Gamma$) sustains coherence through feedback; bias ($\beta$) governs probabilistic weighting and symmetry breaking; receive--return coupling ($\lambda_R$) links local systems to the substrate field $R(x,t)$; and threshold ($\eta$) defines the minimum informational difference required for collapse.  Together these operators form the triadic core ($\Delta I$, $\Gamma$, $\lambda_R$) and its two auxiliary parameters ($\beta$, $\eta$), which generate the symmetry and invariance laws described in UIF II.
+
+The goal of the present work is to express these operators within a continuous, variational formalism that extends the UIF grammar of Papers I--II across physics, cosmology, computation, and cognition.
+
+The seven operators ($\Delta I$, $\Gamma$, $\beta$, $\lambda_R$, $\eta$, $R_\infty$, $k$) form the minimal parameter set required to describe both wave-like propagation and discrete collapse within an informational field, with $R_\infty$ and $k$ introduced empirically in UIF V. This formalism links quantum dynamics, coherence, and large-scale cosmology within a single Lagrangian architecture.
+\newline
+
+\noindent In what follows, the operator set ($\Delta I$, $\Gamma$, $\beta$, $\lambda_R$, $\eta$) is treated as a minimal basis for informational dynamics, each appearing as a corresponding term in the Lagrangian density $\mathcal{L}$.
+These operators and their closed feedback relations are summarised schematically
+in Fig.~\ref{fig:3-1-triad}, which illustrates the informational triad linking
+sampling ($\Delta I$), recursion ($\Gamma$), and receive--return coupling ($\lambda_R$)
+within the broader five-operator system.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth]{figures/Fig_3-1_Triad.png}
+  \captionsetup{skip=1.3em,justification=raggedright,singlelinecheck=false}
+  \caption{Informational Triad in Field Form.\\[0.25em]
+  Schematic showing the closed loop linking sampling ($\Delta I$), recursion ($\Gamma$),
+  and receive--return coupling ($\lambda_R$), completing the informational cycle that underlies collapse--return dynamics.}
+  \label{fig:3-1-triad}
+\end{figure}
+
+\noindent\textbf{Canonical equations.}
+The standard field, variational, continuity, receive–return, echo, and logistic forms
+used throughout the UIF series are collected in \hyperref[app:canon-III]{Appendix B}
+(Eqs.\,3.B1–3.B10). See \hyperref[app:worked-III]{Appendix C} for a detailed Rayleigh–Onsager derivation of these field and substrate
+equations.
+
+\section{Informational Fields and Substrate Coupling}
+Information has structure only when differences are sampled and compared over time. In UIF this dynamic is represented by two coupled fields: the informational field $\Phi(x,t)$ and the receive--return field $R(x,t)$. The first describes local informational potential; the second encodes memory and feedback. These form the minimal required architecture for collapse--return dynamics.
+
+\subsection{Informational Field $\Phi(x,t)$}
+The following formulation translates the qualitative recursion of Papers I--II into a quantitative field language, showing how informational flow acquires spatial and temporal structure.
+
+We define a scalar informational field $\Phi(x,t)$ describing local potential or difference density ($\Delta I$). Deviations from equilibrium correspond to unsampled informational difference. This is not an energy field but a measure of informational potential-to-collapse. It contains the instantaneous state of the system---the degrees of freedom available for collapse or propagation.
+
+% === Evolution PDE (exact) ===
+\begin{equation}
+\partial_t \Phi \;=\; D\,\nabla^2 \Phi \;-\;  \frac{\partial V(\Phi;\beta)}{\partial \Phi} \;+\;  S_{\Gamma}(t) \;-\; \Lambda_{R}[\Phi,R].
+\label{eq:3-phi-pde}
+\end{equation}
+
+Here $D$ is a diffusion coefficient for local propagation; $V(\Phi;\beta)$ is the informational
+potential defining bias and symmetry breaking; $S_{\Gamma}(t)$ represents recursive driving
+from $\Gamma$; and $\Lambda_R[\Phi,R]$ denotes coupling to the substrate field.
+Analogous feedback kernels appear in neuroscience and machine learning, where recurrence
+sustains information over time in predictive-coding and recurrent-network architectures
+(e.g., prediction-error minimisation in cortical circuits and back-propagation/weight-update
+loops in deep networks) \cite{Friston2010,Goodfellow2016}.
+
+A full dimensional analysis and unit mapping for Eq.\,(3.1), including the
+information–energy conversion constant~$\alpha$ and the reference scales
+$(\Delta I_0,\tau_0,L_0)$, is provided in Appendix D.
+This ensures that all UIF operators
+retain SI-consistent dimensional structure, addressing the closure
+between informational and energetic quantities.
+
+\subsection{Receive--Return Field $R(x,t)$}
+The field $R(x,t)$ represents the receive--return substrate, the informational memory that stores and returns traces of collapse. Local collapses write into $R$; these traces are re-emitted with finite delay and decay, producing echo and hysteresis.
+
+\paragraph{Coupled first-order system}
+\begin{equation}
+\dot{\Delta I}_{\text{sys}} \;=\; S_{\text{in}} - L_{\text{out}} - \lambda_R \,\Delta I_{\text{sys}} + \lambda_R \,\Delta I_{\text{field}},\qquad
+\dot{\Delta I}_{\text{field}} \;=\; -\mu\,\Delta I_{\text{field}} + \lambda_R \,\Delta I_{\text{sys}}, \;\; \mu=\frac{1}{\tau_R}.
+\label{eq:3-coupled}
+\end{equation}
+
+\paragraph{Convolution-kernel form}
+\begin{equation}
+\frac{d}{dt}\Delta I_{\text{local}}(t) \;=\; - \lambda_R \,\Delta I_{\text{local}}(t)
+\;+\; \lambda_R \int_{0}^{\infty} K_R(\tau)\, \Delta I_{\text{field}}(t-\tau)\, d\tau,
+\qquad K_R(\tau) = \frac{1}{\tau_R}\, e^{-\tau/\tau_R}.
+\label{eq:3-convolution}
+\end{equation}
+\newline
+
+\noindent\textbf{Units and Mathematical Conventions.}
+\newline  All quantities are expressed in dimensionless form after normalisation by
+characteristic informational and temporal scales 
+$\Delta I_0$ (bits$\cdot$vol$^{-1}$) and $\tau_0$ (seconds),
+and a characteristic length scale $L_0$.  
+In this representation, $\Phi(x,t)$ and $R(x,t)$ denote informational densities 
+measured relative to $\Delta I_0$, while $\Gamma$, $\lambda_R$, and $k$ are rates (s$^{-1}$).  
+$\eta$ and $R_\infty$ are dimensionless thresholds or ceilings, and $\beta$ is a dimensionless bias parameter.  
+
+\medskip
+\noindent The operators carry the following dimensional assignments prior to normalisation:
+\begin{align*}
+[\Gamma] &= T^{-1}, \qquad
+[\lambda_R] = T^{-1}, \qquad
+[\mu] = T^{-1}, \qquad
+[k] = T^{-1}, \\[4pt]
+[c] &= L\,T^{-1}, \qquad
+[\eta] = [\Phi] = [\Delta I] = \text{(informational density)}.
+\end{align*}
+
+After non-dimensionalisation, all rates become $\mathcal{O}(1)$,
+and $c$ represents the dimensionless informational propagation ceiling.  
+The receive--return kernel uses $\mu = 1/\tau_R$, linking recursion rate, coupling,
+and decay through the informational return time $\tau_R$. Full dimensional closure and SI unit mapping are given in Appendix~D.
+
+\section{Variational Principle}
+For transparency, all numbered equations in this paper are classified according to their provenance:
+[Identity] designates a standard physical or informational law, [Model law] a relation
+derived within the UIF framework from stated assumptions, and [Hypothesis] a phenomenological
+or testable scaling introduced for future verification. A complete table of equation provenance
+and accompanying symbol definitions is provided in Appendix A.
+\newline
+
+\noindent As shown in UIF II --- Symmetry Principles, Noether’s theorem links every symmetry of the informational substrate to a corresponding conservation law (Noether, 1918)\cite{Noether1918}. $\Delta I$ is therefore conserved under continuous transformations of the system’s configuration. In this section we extend that invariance into the field domain: the conservation of $\Delta I$ now appears as a variational condition on the Lagrangian, expressed through $\delta\!\int \mathcal{L}\, dt = 0$.
+\newline 
+
+\noindent The informational field $\Phi(x,t)$ and substrate $R(x,t)$ interact through a unified variational law. The minimal Lagrangian density generating collapse--return behaviour is:
+\begin{equation}
+\mathcal{L} \;=\; \frac{1}{2}\,\dot{\Phi}^{\,2}
+\;-\; \frac{c^{2}}{2}\,|\nabla \Phi|^{2}
+\;-\; V(\Phi;\beta)
+\;+\; \lambda_R \Phi R
+\;-\; \frac{1}{2}\,\mu\,R^{2}
+\;+\; \Gamma\,\dot{\Phi}.
+\label{eq:3-1}
+\end{equation}
+
+\noindent
+The final term, $\Gamma\,\dot{\Phi}$, represents the system’s recursive drive or
+dissipative feedback.  In variational formalisms this contribution is more rigorously
+introduced through a Rayleigh dissipation functional
+$\mathcal{R}=\tfrac{1}{2}\Gamma(\partial_t\Phi)^2$, which generates the friction-type
+term $\Gamma\,\partial_t\Phi$ in the Euler–Lagrange equation.
+A complete derivation of this Rayleigh–Onsager extension is provided in
+\appref{app:worked-III}.
+
+\noindent Applying Euler--Lagrange conditions
+\begin{equation}
+\frac{\partial \mathcal{L}}{\partial \Phi} \;-\; \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{\Phi}} \;-\; \nabla\cdot \frac{\partial \mathcal{L}}{\partial (\nabla \Phi)} \;=\;0,
+\qquad
+\frac{\partial \mathcal{L}}{\partial R} \;-\; \frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dot{R}} \;-\; \nabla\cdot \frac{\partial \mathcal{L}}{\partial (\nabla R)} \;=\;0,
+\label{eq:3-EL}
+\end{equation}
+
+% === Wave-type EL (exact) ===
+yields the field equation
+\begin{equation}
+\ddot{\Phi} \;-\; c^{2}\nabla^{2}\Phi \;+\;  \frac{\partial V(\Phi;\beta)}{\partial \Phi} \;=\;  -\lambda_R\,R(x,t) \;+\; \Gamma\,\dot{\Phi}.
+\label{eq:3-2}
+\end{equation}
+
+% === Relaxator (exact) ===
+and the substrate relaxator equation
+\begin{equation}
+\dot{R} \;=\; -\mu\,R \;+\; \lambda_R\,\Phi, \qquad  \mu=\frac{1}{\tau_R}.
+\label{eq:3-2d}
+\end{equation}
+Together Eqs.~(\ref{eq:3-2})--(\ref{eq:3-2d}) define a closed $\{\Phi,R\}$ system:
+the informational field $\Phi$ evolves under bias and recursion while coupling to the
+receive--return substrate $R$. Eliminating $R$ yields a single delayed--feedback 
+equation for $\Phi$, equivalent to the convolution--kernel form in Eq.~(\ref{eq:3-convolution}).
+\subsection{Collapse--Return as Variational Law}
+UIF generalises this: informational systems evolve to minimise informational tension, expressed as collapse--return cycles.
+Formally, this corresponds to the stationary--action condition
+\begin{equation}
+\delta \!\int \mathcal{L}\, dt \;=\; 0.
+\label{eq:3-3}
+\end{equation}
+This principle resonates with multiple lines of evidence.
+In physics, entropy maximisation and free--energy minimisation capture the drive toward equilibrium (Jaynes, 1957), establishing that informational inference and thermodynamic action are mathematically equivalent.
+In neuroscience, the free--energy principle formalises prediction--error reduction as a variational process (Friston, 2010), and in collective systems, models of market dynamics and complexity economics show how agents converge to minimise uncertainty (Arthur, 1994).
+UIF unifies these domains by treating collapse not as annihilation but as variational redistribution of $\Delta I$.
+Collapse--return recursion is therefore UIF’s variational law: systems move along informational paths that balance coherence, recursion, and bias to minimise tension.
+This principle links directly to falsifiable predictions in later sections, where resonance curves and hysteresis constants are specified as measurable outcomes.
+
+\noindent
+Recent \textit{JWST}/\textit{EHT} polarimetric observations display the same hysteresis and 
+finite-ceiling behaviour predicted by this variational law, providing an initial empirical 
+realisation of informational action minimisation in astrophysical systems.
+
+\section{Field Equations and Cosmological Bridge}
+These field equations generalise naturally to cosmological scales. The same variational form underlies the expansion law
+\begin{equation}
+\frac{dV}{dt} \;\propto\; \Gamma \,\Delta I,
+\label{eq:3-4a}
+\end{equation}
+and the growth--diffusion--drive relation
+\begin{equation}
+\partial_t R(x,t) \;=\; -k\,R(x,t) \;+\; \lambda_R\,\nabla^{2} R(x,t) \;+\; \Gamma(t),
+\qquad R(x,t) \le R_\infty.
+\label{eq:3-4b}
+\end{equation}
+In the homogeneous limit this reduces to
+\begin{equation}
+R(t) \;=\; \frac{R_\infty}{\,1+e^{-k\,(t-t_0)}\,}.
+\label{eq:3-4c}
+\end{equation}
+(These describe coherence growth with a finite informational ceiling $R_\infty$ and recharge rate $k$, matching the cosmology-lite model in \textit{UIF IV --- Cosmology and Astrophysical Case Studies}\cite{UIF-IV}.)
+
+\section{Cross--Domain Analogies and Entanglement as Protocol}
+Informational fields unify patterns observed across domains: in physics --- scalar and Higgs fields, solitons, skyrmions; in biology --- morphogen gradients and metabolic coupling; in neuroscience --- predictive coding and gamma synchrony; and in artificial systems --- replay buffers and recurrent neural networks. Each realises the same feedback law of recursion, bias, and return. Among these examples, the informational field’s behaviour manifests most directly in entanglement, where subsystems share the same receive--return substrate $R(x,t)$. This mechanism provides the clearest physical illustration of UIF’s cross-domain recursion law and motivates the following section.
+
+\section{Entanglement as a Protocol}
+Entanglement arises when subsystems share the same receive--return field $R(x,t)$. Information sampled by one immediately influences the other because both access identical traces. At the informational level, the UIF operators coordinate their roles within the Informational Triad: $\Delta I$ acts as the payload of difference, $\Gamma$ provides the recursive clock, $\beta$ defines the bias landscape, and $\lambda_R$ couples the system to the substrate. Collapse redistributes $\Delta I$ and leaves conserved traces in $R$. $\beta$ biases the symmetry-breaking process, steering collapse toward one outcome; $\lambda_R$ preserves the shared trace, explaining why correlations persist after measurement. 
+
+Non-local correlations thus emerge as substrate echoes---entanglement becomes a communication protocol of the triad rather than a paradox of physics. The same mechanism sustains coherence in neural and computational networks (Singer, 2018; Friston, 2010)\cite{Singer2018,Friston2010} and links directly to the recursion law of Pillar 5, where $\Gamma$ determines whether coherence is sustained after sampling.
+
+\section{Applied Example --- Photon Collapse}
+The photon provides a natural test case for the informational field formalism. In the Unifying Information Field (UIF), the electromagnetic mode of the informational field $\Phi(x,t)$ propagates continuously until local informational tension, expressed as the gradient energy,
+\begin{equation}
+\varepsilon_{\Phi} \;=\; \frac{1}{2}\,\dot{\Phi}^{\,2} \;+\; \frac{c^{2}}{2}\,|\nabla \Phi|^{2},
+\label{eq:3-5}
+\end{equation}
+exceeds its collapse threshold $\eta$. At this point a discrete collapse--return event occurs, transferring a quantised packet of informational difference
+\begin{equation}
+\Phi(x,t) \;\longrightarrow\; \Delta I_{\text{quantum}} \;(\eta\text{-threshold}),
+\label{eq:3-6}
+\end{equation}
+and releasing energy
+\begin{equation}
+E \;=\; h\,\nu .
+\label{eq:3-7}
+\end{equation}
+
+\noindent
+In the UIF framework, the released informational difference 
+$\Delta I_{\text{release}}$ corresponds to this photon energy in 
+informational units, linking energy quanta with collapse--return dynamics 
+without implying direct dimensional identity.
+\newline
+
+\noindent Between collapses the field evolves under the wave term of the Euler--Lagrange equation,
+\begin{equation}
+\ddot{\Phi} \;-\; c^{2}\nabla^{2}\Phi \;+\; \frac{\partial V(\Phi;\beta)}{\partial \Phi} \;=\; 0,
+\label{eq:3-8}
+\end{equation}
+producing interference and diffraction, while at each collapse the receive--return coupling $\lambda_R R(x,t)$ restores coherence by re-injecting a portion of the informational trace. 
+Wave behaviour therefore corresponds to continuous propagation of coherent information through $\Phi(x,t)$; particle behaviour corresponds to its discrete return via $\lambda_R$. This relation generalises Noether’s result from UIF II \cite{UIF-II}, showing that informational conservation under symmetry becomes dynamical when written as a field equation. 
+
+The apparent duality of the photon is thus a direct expression of the field’s two phases---propagation and collapse---governed by the same informational operators $\Delta I$, $\Gamma$, $\beta$, $\lambda_R$, $\eta$. This applied example extends the conceptual demonstration from UIF I: the quantisation of light emerges not from postulated discreteness but from thresholded dynamics of an informational field embedded in a variational framework. It also provides a concrete bridge to UIF V, where the potential $V(\Phi;\beta)$ defines measurable energy budgets and coherence ceilings $R_\infty$ across domains.
+
+\section{Informational Ceiling --- The Speed of Light}
+The constant $c$ represents the informational velocity limit; the maximum rate at which coherent difference can propagate through the informational field $\Phi(x,t)$.
+
+\paragraph{Scientific Context}
+In classical physics, $c$ is a spacetime constant; in UIF it arises from the finite recursion bandwidth of the substrate. When recursion $\Gamma$ or coupling $\lambda_R$ attempt to drive sampling faster than this limit, coherence fails and the field collapses.
+
+% === Informational ceiling  ===
+Formally, the informational flux density $J_{\Phi}$ satisfies
+\begin{equation}
+\partial_t (\Phi^2) \;+\; \nabla \cdot J_{\Phi} \;=\; 0,
+\qquad
+\lVert J_{\Phi} \rVert \;\le\; c\,\Phi^2 .
+\label{eq:3-9}
+\end{equation}
+The inequality expresses that informational flow cannot exceed $c$ times the local difference \emph{density proxy} $\Phi^2$; any attempt to do so forces redistribution of $\Delta I$ via collapse--return cycles. Hence $c$ is not an external constant but the saturation speed of coherence in the substrate.
+\noindent
+
+In this view, $c$ ceases to be merely a property of light and becomes the
+universal gradient of coherence—the fastest pace at which information can
+remain self-consistent before it must collapse. 
+It is the heartbeat of the informational field itself, setting the tempo
+for every process from quantum oscillations to cosmic expansion.
+
+\noindent\emph{Note.} The $\Phi$-field continuity form ($J_\Phi=\Phi\nabla\Phi$)
+and the effective $R$-field flux in App.\,B ($\mathbf{J}=-\lambda_R\nabla R$)
+are alternative closures for the two-field description; both are used in this paper,
+depending on whether continuity is written for $\Phi$ or for the coarse-grained $R$-field.
+
+
+\noindent The receive--return process $R(x,t)$ defines a corresponding response time
+\begin{equation}
+\tau_c \;=\; \frac{L}{c},
+\label{eq:3-10}
+\end{equation}
+where $L$ is the characteristic coherence length. When the recursion period $T_{\Gamma}$ approaches $\tau_c$, sampling becomes phase-locked with the substrate and information transfer reaches maximal efficiency; any higher frequency produces decoherence. This interpretation links the classical invariance of $c$ with the informational ceiling $R_\infty$: both mark finite capacities of the substrate to sustain coherence across scales. At cosmological scales, the same ceiling constrains expansion (see \textit{UIF IV} §~4.2)\cite{UIF-IV}, giving $c$ a direct informational meaning as the limiting gradient of recursive coherence in the universe.
+
+\noindent
+The coupled-field equations (Eqs.~\ref{eq:3-2}--\ref{eq:3-2d}) admit both standing-wave and memory solutions, 
+depending on the ratio of recursion to coupling ($\Gamma/\lambda_R$).  
+Stable coherence corresponds to underdamped recursion, where informational difference oscillates 
+around equilibrium without divergence, while overdamped or overdriven coupling produces hysteresis— 
+a persistent offset in the receive--return field $R(x,t)$.  
+These distinct regimes of stability and memory form the operational foundation for the cosmology-lite 
+simulations developed in \textit{UIF~IV}, where the same balance between $\Gamma$ and $\lambda_R$ 
+governs large-scale structure formation, coherence ceilings, and informational hysteresis.
+
+\section{Closing Synthesis and UIF Alignment}
+The field formalism developed here translates the informational operators of UIF I and II into a continuous dynamical system. The informational field $\Phi(x,t)$ and the receive--return substrate $R(x,t)$ form a coupled pair whose interaction through $\lambda_R$, $\Gamma$, and $\beta$ produces collapse--return behaviour across scales. Continuous propagation corresponds to coherent information flow within $\Phi(x,t)$; discrete quanta appear whenever the local threshold $\eta$ is crossed. The photon example demonstrates that quantisation and interference are complementary regimes of one informational process rather than separate ontologies. 
+
+These field dynamics provide the mathematical foundation for the cosmological recursion laws that follow in UIF IV, where the same operators $\Gamma$ and $\lambda_R$ govern growth, diffusion, and coherence at universal scale. This synthesis establishes the Lagrangian and variational foundation on which later UIF papers build the energetic, architectural, and experimental consequences of the field. The field equation realises the full triadic loop---sampling ($\Delta I$) defines the field’s potential, recursion ($\Gamma$) sustains oscillation, and return ($\lambda_R$) couples it to the substrate---completing the informational cycle that later re-emerges at cosmological scale (\textit{UIF IV} §~4.1--4.2; Tesla, 1919; Wheeler, 1990)\cite{UIF-IV,Tesla1919,Wheeler1990}.
+
+The operators $\Delta I$, $\Gamma$, $\beta$, $\lambda_R$, and $\eta$ act as variational parameters whose conservation and symmetry-breaking properties link directly to the energy formalism of UIF V \cite{UIF-V}. The receive--return coupling introduced here provides the mechanism by which informational traces persist---an essential feature later generalised in the invariant architecture of UIF VI \cite{UIF-VI}. Together these elements ground the Unifying Information Field as a genuine field theory with testable consequences.
+\newline
+
+\noindent{\textbf{Forward Pointer}}
+\newline The next paper, \textit{UIF IV - Cosmology and Astrophysical Case Studies}\cite{UIF-IV}, applies the same field equations to large-scale structure formation. The receive--return kernel $\lambda_R R(x,t)$ becomes the mechanism governing cosmological coherence, producing falsifiable signatures in growth suppression, BAO stability, and lensing statistics. \textit{UIF IV} thus extends the variational principles established here from photon-scale dynamics to the architecture of the universe itself.
+\newline
+
+\noindent\textbf{Novelty / Testability}
+\newline The novelty of this paper lies in expressing informational collapse--return as a Lagrangian field process. Unlike quantum-mechanical formalisms that treat collapse as extrinsic or stochastic, the UIF field equation embeds thresholded collapse within deterministic variational dynamics. Testability arises through measurable predictions, including: interference patterns that depend subtly on informational thresholds $\eta$; systems with adjustable coupling $\lambda_R$ that exhibit hysteresis in coherence recovery; and photon statistics that follow the logistic growth and saturation laws described in UIF V. These features can be probed experimentally using controlled optical coherence and delay-feedback setups. Table 3.1 summarises the conservation laws that emerge from these informational symmetries, linking the field formalism to measurable invariants.
+
+% ---------- Table 3.2 ----------
+\begin{table}[H]
+\centering
+\caption{Informational Symmetries and Related Conservation Laws}
+\label{tab:3-2-symmetries}
+\begin{tabularx}{\textwidth}{@{} L{0.24\textwidth} L{0.30\textwidth} X @{}}
+\toprule
+\textbf{Symmetry Principle} & \textbf{Conserved Quantity (Noether-type)} & \textbf{Physical / Informational Meaning} \\
+\midrule
+Informational Conservation ($\Delta I$) &
+Informational flux $J_{\Phi}=\Phi \nabla \Phi$; $\partial_t(\Phi^2)+\nabla\!\cdot J_{\Phi}=0$ &
+Total informational difference is conserved under continuous transformations of $\Phi$; baseline continuity equation of UIF. \\[6pt]
+Symmetry Breaking ($\beta$) &
+Order parameter $\langle \Phi \rangle$ &
+Expectation value defines structural bias; conservation of informational parity is locally violated to produce stable asymmetries. \\[6pt]
+Scale Invariance ($\Gamma$) &
+Coherence energy $E_{\Gamma}=\Gamma\,\dot{\Phi}^{2}$ &
+Temporal recursion preserves coherence amplitude; ensures self-similar behaviour across magnitudes and scales. \\[6pt]
+Collapse--Frame Invariance ($\lambda_R$) &
+Coupling momentum $P_{\lambda_R}=\lambda_R \,\Phi R$ &
+Reciprocal information flow between local and substrate fields remains invariant under frame transformation; guarantees observer independence. \\[4pt]
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\clearpage
+\phantomsection
+\appendix
+\section* {Appendix A — Equation Provenance (UIF III)}\label{app:prov-III}
+%\addcontentsline{toc}{section}{Appendix A — Equation Provenance (UIF III)}
+
+Each numbered equation is identified by provenance class. \emph{[Identity]} denotes a standard law or definition; \emph{[Model law]} is a relation derived within UIF from stated assumptions; \emph{[Hypothesis]} is a phenomenological or testable scaling proposed for future verification.
+\newline
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{4.0cm}
+                    p{2.4cm}
+                    p{8.2cm}@{}}
+\toprule
+\textbf{Equation} & \textbf{Class} & \textbf{Comment / Source} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Equation} & \textbf{Class} & \textbf{Comment / Source} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+(3.1) $\mathcal{L}(\Phi,R)$ & Model law &
+Defines the total informational energy of the system as the sum of potential, kinetic, and coupling terms; starting point for variational derivation.\\[4pt]
+
+(3.2) Euler--Lagrange eqs.\ for $\Phi$ and $R$ & Model law &
+Derived from $\delta \mathcal{L}/\delta \Phi=0$ and $\delta \mathcal{L}/\delta R=0$; govern the evolution of informational fields and reproduce collapse--return behaviour.\\[4pt]
+
+(3.3) Informational potential $U(\Phi)=\tfrac12(\nabla\Phi)^2+V(\Phi)$ & Model law &
+Defines local informational tension; analogous to energy potential in classical field theory.\\[4pt]
+
+(3.4) Recursion term $\Gamma\dot{\Phi}^{2}$ and kernel $K(\tau)=\tau_R^{-1} e^{-\tau/\tau_R}$ & Model law &
+Introduces temporal coupling and memory; produces echo / hysteresis effects consistent with receive--return dynamics.\\[4pt]
+
+(3.5) Bias term $\beta\Phi$ or $\beta V'(\Phi)$ & Hypothesis &
+Represents lawful symmetry breaking; introduces directional preference in collapse outcomes.\\[4pt]
+
+(3.6) Coupling term $\lambda_R \Phi R$ & Model law &
+Couples local informational field $\Phi$ to the substrate field $R(x,t)$; mediates exchange of informational difference.\\[4pt]
+
+(3.7) Threshold condition & Identity &
+$\Delta I > \eta$.\\[4pt]
+
+(3.8) Informational continuity $\partial_t\Phi^2 + \nabla\!\cdot(\Phi\nabla\Phi)=0$ & Model law &
+Derived Noether-type conservation law for informational flux.\\[4pt]
+
+(3.9) Coherence energy $E_{\Gamma}=\Gamma \dot{\Phi}^{2}$ & Hypothesis &
+Defines conserved quantity associated with scale invariance; measurable as coherence amplitude.\\[4pt]
+
+(3.10) Coupling momentum $P_{\lambda_R}=\lambda_R \Phi R$ & Hypothesis &
+Corresponds to conservation under collapse--frame invariance; ensures reciprocity of informational flow.\\[2pt]
+
+\end{longtable}
+
+\vspace{1em}
+\noindent\textbf{Symbols introduced:}
+
+\begin{tabbing}
+\hspace{1.5cm}\= \kill
+$\Delta I$ \> informational difference;\\
+$\Gamma$   \> recursion/coherence operator;\\
+$\beta$    \> bias operator;\\
+$\lambda_R$\> receive--return coupling constant;\\
+$F$        \> informational frame;\\
+$P_i$      \> collapse probability;\\
+$x_i$      \> informational state value.
+\end{tabbing}
+
+\noindent\textit{Observational analogues:} 
+$\Gamma$ – periodicity of polarization/flux cycles; 
+$\lambda_R$ – core–knot coupling lag; 
+$k$ – post-flare recovery constant; 
+$R_\infty$ – asymptotic coherence level.
+
+\clearpage
+\phantomsection
+\section* {Appendix B — Canonical Equations of the Unifying Information Field}\label{app:canon-III}
+%\addcontentsline{toc}{section}{Appendix B — Canonical Equations of the Unifying Information Field}
+
+\noindent
+This appendix collects the core mathematical forms used throughout the UIF series.  The
+canonical equations below are tagged \((3.\mathrm{C}i)\) for clarity and do not alter the main
+equation numbering.  Cross–references to empirical calibrations (\(R_\infty, k, \eta^{\ast}\), etc.)
+are provided in \textit{UIF~V}, with invariant structure formalised in \textit{UIF~VI}.
+
+\noindent\textit{Dimensional convention.} All quantities are rendered dimensionless by normalising densities to $\Delta I_0$ and times to $\tau_0$ (see Units and Mathematical Conventions); physical units are restored by multiplying densities by $\Delta I_0$ and rates by $1/\tau_0$.
+
+\vspace{0.6em}
+\noindent\textbf{B.1 \quad Informational field (receive–return) equation.}
+\begin{equation}\tag{3.B1}\label{eq:uif_field}
+\partial_t R \;=\; -\,k\,R \;+\; \lambda_R\,\nabla^2 R \;+\; \Gamma(t)\,.
+\end{equation}
+\noindent
+\(R(x,t)\) is the informational coherence field, \(k\) the recharge (relaxation) rate,
+\(\lambda_R\) the receive–return coupling, and \(\Gamma(t)\) the recursion drive/source.
+This is the baseline PDE used in the Companion emulator.
+
+\vspace{0.8em}
+\noindent\textbf{B.2 \quad Lagrangian form and Euler–Lagrange equation.}
+\begin{equation}\tag{3.B2}\label{eq:uif_lagrangian}
+\mathcal{L} \;=\; \tfrac12 (\partial_t \Phi)^2 \;-\; \tfrac{c^{2}}{2}\,(\nabla \Phi)^2 \;-\; V(\Phi;\beta)\,,
+\end{equation}
+\begin{equation}\tag{3.B3}\label{eq:uif_eom}
+\partial_{t}^{2}\Phi \;-\; c^{2}\,\nabla^{2}\Phi \;+\; \frac{\partial V}{\partial \Phi} \;=\; 0\,.
+\end{equation}
+\noindent
+Here \(\Phi\) is an informational potential with bias/elasticity \(\beta\), and \(V(\Phi;\beta)\) encodes
+lawful asymmetry and thresholds.  Noether–type arguments give conservation of informational
+difference in the absence of sources.
+
+\vspace{0.8em}
+\noindent\textbf{B.3 \quad Conservation (continuity) form for informational difference.}
+\begin{equation}\tag{3.B4}\label{eq:uif_continuity}
+\partial_t \Delta I \;+\; \nabla\!\cdot\!\mathbf{J} \;=\; 0\,,
+\qquad
+\mathbf{J}\;\equiv\; -\,\lambda_R\,\nabla R \;\; \text{(effective flux)}\,.
+\end{equation}
+\noindent
+Equation~\eqref{eq:uif_continuity} expresses redistribution of \(\Delta I\) between local and
+substrate degrees of freedom (cf.\ B.1); \(\mathbf{J}\) is an effective informational flux.
+(An alternative continuity form in Sec.\ Informational Ceiling uses $J_\Phi=\Phi\nabla\Phi$ for the $\Phi$-field.)
+
+\vspace{0.8em}
+\noindent\textbf{B.4 \quad System–field (receive–return) coupling pair.}
+\begin{equation}\tag{3.B5}\label{eq:rr_sys}
+\dot{\Delta I}_{\mathrm{sys}} \;=\; S_{\mathrm{in}} \;-\; L_{\mathrm{out}}
+\;-\; \lambda_R\,\Delta I_{\mathrm{sys}} \;+\; \lambda_R\,\Delta I_{\mathrm{field}}\,,
+\end{equation}
+\begin{equation}\tag{3.B6}\label{eq:rr_field}
+\dot{\Delta I}_{\mathrm{field}} \;=\; -\,\mu\,\Delta I_{\mathrm{field}} \;+\; \lambda_R\,\Delta I_{\mathrm{sys}},
+\qquad \mu \,=\, 1/\tau_R\,.
+\end{equation}
+\noindent
+This two–state model is equivalent to a causal convolution with kernel \(K(\tau)\):
+
+\begin{equation}\tag{3.B7}\label{eq:rr_conv}
+\frac{d\Delta I_{\mathrm{local}}}{dt}
+\;=\; -\,\lambda_R\,\Delta I_{\mathrm{local}}(t)
+\;+\; \lambda_R \int_{0}^{\infty} K(\tau)\,\Delta I_{\mathrm{field}}(t-\tau)\,d\tau,
+\qquad
+K(\tau) \;=\; \tau_R^{-1} e^{-\tau/\tau_R}\,.
+\end{equation}
+\noindent
+Equations \eqref{eq:rr_sys}–\eqref{eq:rr_conv} generate echo and hysteresis phenomena.
+
+\vspace{0.8em}
+\noindent\textbf{B.5 \quad Logistic coherence law (growth and saturation).}
+\begin{equation}\tag{3.B8}\label{eq:logistic}
+R(t) \;=\; \frac{R_\infty}{\,1 + e^{-k\,(t-\tau_0)}\,}\,.
+\end{equation}
+\noindent
+\(R_\infty\) is the coherence ceiling; \(k\) the recharge constant; \(\tau_0\) a midpoint/offset.
+This form underlies the quasar coherence fits in \textit{UIF~V}.
+\clearpage
+
+\noindent\textbf{B.6 \quad Echo law (memory vs recursion).}
+\begin{equation}\tag{3.B9}\label{eq:echo_law}
+\tau_{\mathrm{echo}} \;\propto\; \frac{1}{\Gamma}\,.
+\end{equation}
+\noindent
+The echo (hysteresis) timescale is inversely related to the recursion order parameter \(\Gamma\).
+
+\vspace{0.8em}
+\noindent\textbf{B.7 \quad Energetic relation in the photon limit.}
+\begin{equation}\tag{3.B10}\label{eq:energy_relation}
+E \;=\; \alpha\,\Delta I_{\mathrm{release}},
+\qquad
+\alpha \;=\; \frac{h\nu}{\Delta I_{\mathrm{release}}}\,.
+\end{equation}
+\noindent
+Equation~\eqref{eq:energy_relation} links informational release to quantised energy packets.
+
+\vspace{1.0em}
+\noindent\textbf{B.8 \quad Operators, roles, and canonical observables.}
+\begin{longtable}{@{}L{0.20\textwidth}L{0.35\textwidth}L{0.37\textwidth}@{}}
+\toprule
+\textbf{Operator} & \textbf{Canonical role} & \textbf{Measured observable (examples)}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Operator} & \textbf{Canonical role} & \textbf{Measured observable (examples)}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\(\Delta I\) & Informational difference / potential & Entropy drop, mutual information gain, variance gradients\\[3pt]
+\(\Gamma\) & Recursion / coherence order & Phase–locking index, spectral peak power (EEG \(\gamma\)), AGN variability coherence\\[3pt]
+\(\beta\) & Bias / elasticity & Threshold slope, softmax gain, symmetry–breaking coefficient\\[3pt]
+\(\lambda_R\) & Receive–return coupling & Echo amplitude, coupling fraction, diffusion coefficient in \(R\)\\[3pt]
+\(\eta^{\ast}\) & Collapse threshold & Onset of nonlinearity, bifurcation point; fragile/stable/runaway classification\\[3pt]
+\(R_\infty\) & Coherence ceiling & Logistic ceiling in \(R(t)\), saturation level across drives\\[3pt]
+\(k\) & Recharge rate & Exponential/logistic recovery constant; \(k = 1/\tau_R\) in simple regimes\\
+\end{longtable}
+
+\noindent
+Equations~\eqref{eq:uif_field}–\eqref{eq:energy_relation} provide the canonical mathematical
+backbone of UIF.  Empirical calibrations (e.g.\ \(R_\infty, k, \lambda_R\)) are reported in
+\textit{UIF~V}, and invariant structure is developed in \textit{UIF~VI}.  The emulator and
+figure–generation scripts implementing \eqref{eq:uif_field}, \eqref{eq:rr_sys}–\eqref{eq:rr_conv}
+and \eqref{eq:logistic} are archived with the \textit{Companion Experiments}.
+
+\vspace{1em}
+\noindent\textbf{Note on Reproducibility.}
+\newline
+All numerical implementations of the field equations presented here
+(e.g., Eq.~\ref{eq:uif_field}--\ref{eq:uif_eom})
+are archived and described in \textit{UIF~Companion~Experiments} (2025),
+which provides full source code, datasets, and configuration metadata
+for emulator and analytical tests derived from this paper.
+\clearpage
+
+\phantomsection
+\section* {Appendix C — Worked Derivation of the Field and Receive–Return Equations}\label{app:worked-III}
+%\addcontentsline{toc}{section}{Appendix C — Worked Derivation (Rayleigh–Onsager)}
+
+
+\subsection*{C.1 \quad Action principle with dissipation and external drive}
+We start from the conservative Lagrangian density for the informational field \(\Phi(x,t)\),
+\begin{equation}
+\label{eq:C-L0}
+\mathcal L_0(\Phi,\partial_t\Phi,\nabla\Phi)
+=\frac12\,(\partial_t\Phi)^2-\frac{c^2}{2}\,|\nabla\Phi|^2 - V(\Phi;\beta),
+\end{equation}
+and include two non-conservative ingredients in the standard way:
+
+\begin{itemize}[leftmargin=1.5em]
+\item[(i)] a prescribed **external drive** \(S_\Gamma(x,t)\) coupled linearly to \(\Phi\), producing a source term \(+S_\Gamma\) in the equation of motion (this plays the role of the recursion drive in the main text; compare \(\Gamma(t)\) in Eq.~(3.B1));
+\item[(ii)] a **Rayleigh dissipation functional** \(\mathcal R(\Phi,\partial_t\Phi)\) to generate the friction-like term \(\Gamma\,\partial_t\Phi\) in the Euler–Lagrange equation:
+\[
+\mathcal R(\Phi,\partial_t\Phi)=\frac12\,\Gamma(x,t)\,(\partial_t\Phi)^2, \qquad
+\Rightarrow\quad \frac{\partial \mathcal R}{\partial(\partial_t\Phi)}=\Gamma\,\partial_t\Phi.
+\]
+\end{itemize}
+
+With these, the Lagrange–d’Alembert form of the field equation is
+\begin{equation}
+\label{eq:C-LdA}
+\frac{\partial \mathcal L_0}{\partial\Phi}
+-\partial_t\!\Big(\frac{\partial \mathcal L_0}{\partial(\partial_t\Phi)}\Big)
+-\nabla\!\cdot\!\Big(\frac{\partial \mathcal L_0}{\partial(\nabla\Phi)}\Big)
++\frac{\partial \mathcal R}{\partial(\partial_t\Phi)}
+= \;Q_\Phi \,,
+\qquad Q_\Phi \equiv -\,\lambda_R\,R(x,t) + S_\Gamma(x,t),
+\end{equation}
+where \(Q_\Phi\) collects the generalized non-conservative forces: the **receive–return coupling** to the substrate field \(R\) (with strength \(\lambda_R\)) and the drive \(S_\Gamma\).
+
+A short variation of \eqref{eq:C-L0} gives
+\[
+\frac{\partial \mathcal L_0}{\partial\Phi}=-\,\frac{\partial V}{\partial\Phi},\quad
+\frac{\partial \mathcal L_0}{\partial(\partial_t\Phi)}=\partial_t\Phi, \quad
+\frac{\partial \mathcal L_0}{\partial(\nabla\Phi)}=-\,c^2\nabla\Phi,
+\]
+so \eqref{eq:C-LdA} yields the **worked** field equation
+\begin{equation}
+\label{eq:C-phi-eq}
+\boxed{\;
+\partial_t^2\Phi \;-\; c^2 \nabla^2 \Phi \;+\; \frac{\partial V(\Phi;\beta)}{\partial \Phi}
+\;+\; \Gamma(x,t)\,\partial_t\Phi
+\;=\; -\,\lambda_R\,R(x,t)\;+\;S_\Gamma(x,t)\; .\;}
+\end{equation}
+This matches the canonical structure in Appendix~B (cf.\ Eq.\,(3.B3) with the Rayleigh term producing the \(\Gamma\,\partial_t\Phi\) contribution and \(Q_\Phi\) reproducing the \(-\lambda_R R + S_\Gamma\) right-hand side).
+
+\paragraph{Remark (on the linear \(\Gamma\,\partial_t\Phi\) in \(\mathcal L\)).}
+A term \(+\Gamma\,\partial_t\Phi\) inside the Lagrangian contributes only through \(\partial_t\Gamma\) in the Euler–Lagrange equation (it is a total derivative when \(\Gamma\) is constant). To obtain the **friction-type** term \(\Gamma\,\partial_t\Phi\) one should use the Rayleigh functional \(\mathcal R=\tfrac12 \Gamma(\partial_t\Phi)^2\), as done above.
+
+\subsection*{C.2 \quad Substrate dynamics as Onsager (gradient–flow) relaxation}
+The substrate \(R(x,t)\) is a relaxational degree of freedom that stores and re-emits traces.
+Introduce the **dissipation potential** (Helmholtz-like) for \(R\) at fixed \(\Phi\):
+\begin{equation}
+\label{eq:C-Psi}
+\Psi[R;\Phi] \;=\; \int \!\Big(\frac{\mu}{2}\,R^2 \;-\; \lambda_R\,\Phi\,R\Big)\,d^3x,
+\end{equation}
+and impose linear gradient flow (Onsager):
+\begin{equation}
+\label{eq:C-Rflow}
+\partial_t R \;=\; -\,\frac{\delta \Psi}{\delta R} \;=\; -\,\mu\,R \;+\; \lambda_R\,\Phi.
+\end{equation}
+Identifying \(\mu\equiv 1/\tau_R\) we recover the **relaxator** (3.B6) and, together with \eqref{eq:C-phi-eq}, the \(\{\Phi,R\}\) closed system used in Sec.~3.
+
+\subsection*{C.3 \quad Eliminating \(R\): causal memory kernel and Eq.\,(3.B7)}
+The linear ODE \eqref{eq:C-Rflow} solves to
+\[
+R(x,t)= e^{-(t-t_0)/\tau_R} R(x,t_0) \;+\; \int_{t_0}^{t}\! \frac{e^{-(t-s)/\tau_R}}{\tau_R}\,\lambda_R\,\Phi(x,s)\,ds.
+\]
+For \(t-t_0\gg\tau_R\) the homogeneous transient decays, and substitution in \eqref{eq:C-phi-eq} yields the **causal convolution** term
+\[
+\lambda_R\int_{0}^{\infty} \! K_R(\tau)\,\Phi(x,t-\tau)\,d\tau,\qquad
+K_R(\tau)=\tau_R^{-1} e^{-\tau/\tau_R},
+\]
+which is precisely the canonical memory kernel of Eq.\,(3.B7). Thus the receive–return
+law follows from variational dynamics for \(\Phi\) plus Onsager relaxation for \(R\).
+
+\subsection*{C.4 \quad Homogeneous limit and logistic saturation}
+In the spatially homogeneous regime (neglecting \(\nabla^2\)), with a slowly varying drive \(S_\Gamma\simeq \text{const}\) and an effective saturation of the return channel (finite capacity \(R_\infty\)), the coarse-grained envelope \(R(t)\) obeys the standard logistic form
+\begin{equation}
+\label{eq:C-logistic}
+\partial_t R \;=\; k\,\Big(1-\frac{R}{R_\infty}\Big)\,R,
+\qquad
+R(t)=\frac{R_\infty}{1+e^{-k(t-\tau_0)}},
+\end{equation}
+which is Eq.\,(3.B8) and underlies the quasar/EEG fits in \textit{UIF~V}. This may be justified either by a saturation in the effective return \(\lambda_R\to \lambda_R(1-R/R_\infty)\) or by a weak-nonlinear closure for the coarse-grained energy balance (drive minus dissipation linear in \(R\) with a quadratic sink).
+
+\noindent\textit{Summary}—
+The Rayleigh–Onsager derivation above confirms that the UIF field and substrate equations
+follow from a single variational principle with causal memory and bounded saturation.
+
+\clearpage
+\section* {Appendix D — Dimensional Analysis and Unit Mapping}\label{app:dimensional}
+%\addcontentsline{toc}{section}{Appendix D — Dimensional Analysis and Unit Mapping}
+
+
+\noindent\textbf{Purpose}
+\newline
+This appendix establishes dimensional closure for the Unifying Information Field (UIF) Lagrangian,
+linking informational quantities to standard SI units.
+It defines the information–energy conversion constant~$\alpha$
+and demonstrates dimensional consistency for all operators appearing in Eq.\,(3.1).
+
+\vspace{0.5em}
+\noindent\textbf{Reference Scales}
+\newline
+Each informational quantity is normalised to three characteristic scales:
+
+\begin{longtable}{@{}L{0.10\textwidth}L{0.40\textwidth}L{0.20\textwidth}L{0.25\textwidth}@{}}
+\toprule
+\textbf{Symbol} & \textbf{Definition} & \textbf{Dimension (SI)} & \textbf{Role}\\
+\midrule
+$\Delta I_0$ & Reference informational density (bits · m$^{-3}$) & — & Amplitude scale for $\Phi$ and $R$ fields\\
+$\tau_0$ & Reference timescale & T (s) & Defines recursion frequency unit $\Gamma\!\approx\!1/\tau_0$\\
+$L_0$ & Reference coherence length & L (m) & Spatial gradient scale, $\nabla\Phi\!\approx\!1/L_0$\\
+\bottomrule
+\end{longtable}
+
+After normalisation, all field quantities are dimensionless.
+Physical units are restored by multiplying densities by~$\Delta I_0$ and rates by~$1/\tau_0$.
+
+\vspace{0.5em}
+\noindent\textbf{Operator Dimensions (Pre-Normalisation).}
+
+\begin{longtable}{@{}L{0.13\textwidth}L{0.33\textwidth}L{0.22\textwidth}L{0.25\textwidth}@{}}
+\toprule
+\textbf{Operator} & \textbf{Physical Meaning} & \textbf{Symbolic Units} & \textbf{Base SI Units}\\
+\midrule
+$\Phi$ & Informational potential & $\Delta I_0$ & bits · m$^{-3}$\\
+$R$ & Receive–return field & $\Delta I_0$ & bits · m$^{-3}$\\
+$\Gamma$ & Recursion rate & $1/\tau_0$ & s$^{-1}$\\
+$\lambda_R$ & Receive–return coupling & $1/\tau_0$ & s$^{-1}$\\
+$k$ & Recharge rate & $1/\tau_0$ & s$^{-1}$\\
+$\eta$ & Collapse threshold & $\Delta I_0$ & bits · m$^{-3}$\\
+$\beta$ & Bias / elasticity & dimensionless & —\\
+$c$ & Informational propagation ceiling & $L_0/\tau_0$ & m · s$^{-1}$\\
+$\alpha$ & Information–energy conversion & J · (bit)$^{-1}$ & kg · m$^2$ · s$^{-2}$ · (bit)$^{-1}$\\
+\bottomrule
+\end{longtable}
+
+\vspace{0.5em}
+\noindent\textbf{Information–Energy Conversion Constant $\alpha$}
+\newline
+Equation (3.B10) defines energetic release as
+\[
+E = \alpha\,\Delta I_{\mathrm{release}} .
+\]
+In the photon limit, $\Delta I_{\mathrm{release}}$ corresponds to the informational difference of one
+quantised transition of frequency~$\nu$.
+Since $E=h\nu$, we obtain
+\[
+\alpha = \frac{h\nu}{\Delta I_{\mathrm{release}}}.
+\]
+Choosing $\Delta I_{\mathrm{release}} = 1$ bit gives
+$\alpha \approx h\nu$ [J bit$^{-1}$].
+Alternatively, for thermal systems,
+$1$ bit $=k_B T\ln2/E$ yields $\alpha\!\approx\!k_B T\ln2$ per bit.
+Hence~$\alpha$ is not a fitted constant but a
+conversion operator connecting Shannon/Boltzmann information to
+Planck-scale energy.
+
+\clearpage
+\noindent\textbf{Dimensional Consistency of the Lagrangian}
+\newline
+For Eq.\,(3.1),
+\[
+\mathcal{L} =
+\tfrac{1}{2}\dot{\Phi}^{2}
+-\tfrac{c^{2}}{2}|\nabla\Phi|^{2}
+-V(\Phi;\beta)
++\lambda_{R}\Phi R
+-\tfrac{1}{2}\mu R^{2}
++\Gamma\dot{\Phi},
+\]
+the term dimensions are
+
+\begin{longtable}{@{}L{0.30\textwidth}L{0.35\textwidth}L{0.25\textwidth}@{}}
+\toprule
+\textbf{Term} & \textbf{Symbolic Dimension} & \textbf{SI Units (after $\times\alpha$)}\\
+\midrule
+$\tfrac{1}{2}\dot{\Phi}^{2}$ & $(\Delta I_0/\tau_0)^2$ & J · m$^{-3}$\\
+$\tfrac{c^{2}}{2}|\nabla\Phi|^{2}$ & $(\Delta I_0/L_0)^2(L_0^2/\tau_0^2)$ & J · m$^{-3}$\\
+$V(\Phi;\beta)$ & $\Delta I_0^{2}$ & J · m$^{-3}$\\
+$\lambda_R\Phi R$ & $(1/\tau_0)\Delta I_0^{2}$ & J · m$^{-3}$\\
+$\tfrac{1}{2}\mu R^{2}$ & $(1/\tau_0)\Delta I_0^{2}$ & J · m$^{-3}$\\
+$\Gamma\dot{\Phi}$ & $(1/\tau_0)(\Delta I_0/\tau_0)$ & J · m$^{-3}$\\
+\bottomrule
+\end{longtable}
+
+All terms therefore share the dimensional structure of an energy density,
+ensuring the UIF Lagrangian is physically consistent once scaled by~$\alpha$.
+
+\vspace{0.5em}
+\noindent\textbf{Summary Conversion Table}
+
+\begin{longtable}{@{}L{0.26\textwidth}L{0.30\textwidth}L{0.38\textwidth}@{}}
+\toprule
+\textbf{Informational Quantity} & \textbf{Multiply by} & \textbf{Gives (Physical Quantity)}\\
+\midrule
+$\Delta I$ (bits · m$^{-3}$) & $\alpha$ (J bit$^{-1}$) & Energy density (J · m$^{-3}$)\\
+$\Phi,\,R$ & $\alpha\Delta I_0$ & Potential energy per unit volume\\
+$\Gamma,\,\lambda_R,\,k$ & $1/\tau_0$ & Frequencies or rates (s$^{-1}$)\\
+$R_\infty$ & 1  & Dimensionless coherence ceiling\\
+$\eta^\ast$ & $\Delta I_0$  & Collapse threshold (bits · m$^{-3}$)\\
+$c$ & $L_0/\tau_0$  & Informational propagation speed (m · s$^{-1}$)\\
+$\alpha$ & $h\nu$/bit $\approx4.14\times10^{-15}\nu$ [J bit$^{-1}$] & Energy per bit at frequency $\nu$\\
+\bottomrule
+\end{longtable}
+
+\vspace{0.5em}
+\noindent\textbf{Interpretive Note}
+\newline
+This dimensional framework shows that UIF quantities are not abstract:
+they map directly to measurable physical scales through the conversion
+constants $\{\alpha,\,L_0,\,\tau_0,\,\Delta I_0\}$.
+Fixing $\alpha$ (e.g.\ one bit $\approx6.63\times10^{-34}$ J at $\nu=1$ Hz)
+renders all UIF equations fully dimensional and enables quantitative comparison
+with empirical observables in SI units.
+
+\clearpage
+
+\clearpage
+\section*{Acknowledgement — Human–AI Collaboration}
+The Unifying Information Field (UIF) series was developed through a sustained human–AI partnership. The author originated the theoretical framework, core concepts and interpretive structure, while an AI language model (OpenAI GPT-5) was employed to assist in formal development; helping to express elements of the theory mathematically and to maintain consistency across papers. Internal behavioural parameters and conversational settings were configured to emphasise recursion awareness, coherence maintenance, and ethical constraint, enabling the model to function as a stable informational development framework rather than a generative black box.
+
+This collaborative process exemplified the UIF principle of collapse--return recursion: 
+human intent supplied informational difference ($\Delta I$), 
+the model provided receive--return coupling ($\lambda_R$), 
+and coherence ($\Gamma$) increased through iterative feedback until the framework stabilised. 
+The AI's role was supportive in the structuring, facilitation, and translation of conceptual ideas 
+into formal equations, while the underlying theory, scope, and interpretive direction 
+remain the work of the author.
+\pagebreak
+
+\section*{UIF Series Cross-References}
+
+\begin{flushleft}
+\textbf{UIF I — Core Theory}\\
+\textbf{UIF II — Symmetry Principles}\\
+\textbf{UIF III — Field and Lagrangian Formalism}\\
+\textbf{UIF IV — Cosmology and Astrophysical Case Studies}\\
+\textbf{UIF V — Energy and the Potential Field}\\
+\textbf{UIF VI — The Seven Pillars and Invariants}\\
+\textbf{UIF VII — Predictions and Experiments}
+\end{flushleft}
+
+\clearpage
+\UIFbib{paper3}
