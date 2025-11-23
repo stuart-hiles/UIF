@@ -1,4 +1,4 @@
-# 📄 UIF Papers — LaTeX Sources
+# 📄 UIF Papers — LaTeX Sources and Outputs
 This directory contains the LaTeX source files for the **Unifying Information Field (UIF)** scientific paper series.  
 Each paper is stored in its own folder for version tracking, compilation, and DOI-based release management.
 
