@@ -2,7 +2,7 @@
 This directory contains the LaTeX source files for the **Unifying Information Field (UIF)** scientific paper series.  
 Each paper is stored in its own folder for version tracking, compilation, and DOI-based release management.
 
-| Paper | Title | Latex Filename | Corresponding PDF| DOI | Description
+| Paper | Title | Latex Filename | Corresponding PDF| DOI (All Versions)| Description
 |-------|--------|---------|---------|---------|---------|
 | I | **Core Theory** | uif1_core.tex |UIF_Paper_1_CoreTheory.pdf|https://doi.org/10.5281/zenodo.17460040|Foundational operator grammar (ΔI, Γ, β, λR) and collapse–return dynamics
 | II | **Symmetry Principles** |uif2_core.tex |UIF_Paper_2_SymmetryPrinciples.pdf|https://doi.org/10.5281/zenodo.17468871|Conservation, invariance, and informational Noether structure
