@@ -12,8 +12,8 @@ Each paper is stored in its own folder for version tracking, compilation, and DO
 | VI | **The Seven Pillars and Invariants** | `Paper_6_SevenPillars` |https://doi.org/10.5281/zenodo.17478484| Unified operator–invariant architecture across physical and cognitive 
 | VII | **Predictions and Experiments (forthcoming)** | `Paper_7_PredictionsExperiments` |TBC|Cross-domain validation, coherence decay constants, stochastic resonance, and agency thresholds
   
-| — | **Companion Experiments** | `CompanionExperiments` |https://doi.org/10.5281/zenodo.17478715 | Empirical validation datasets, symbolic notebooks, and calibration scripts ||
-
+| — | **Companion Experiments** | `CompanionExperiments` |https://doi.org/10.5281/zenodo.17478715 | Empirical validation datasets, symbolic notebooks, and calibration scripts 
+|-------|--------|---------|---------|---------|
 Each folder includes:
 - LaTeX source (`UIF_Paper_X_<Title>.tex`)
 - Local bibliography file (`paperX.bib`)
