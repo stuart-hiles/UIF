@@ -2,16 +2,16 @@
 This directory contains the LaTeX source files for the **Unifying Information Field (UIF)** scientific paper series.  
 Each paper is stored in its own folder for version tracking, compilation, and DOI-based release management.
 
-| Paper | Title | Filename | DOI | Description
-|-------|--------|---------|---------|---------|
-| I | **Core Theory** | `Paper_1_CoreTheory` |https://doi.org/10.5281/zenodo.17460040|Foundational operator grammar (ΔI, Γ, β, λR) and collapse–return dynamics
-| II | **Symmetry Principles** | `Paper_2_SymmetryPrinciples` |https://doi.org/10.5281/zenodo.17468871|Conservation, invariance, and informational Noether structure
-| III | **Field and Lagrangian Formalism** | `Paper_3_FieldLagrangian` |https://doi.org/10.5281/zenodo.17471559|Continuous variational formulation and Euler–Lagrange derivations
-| IV | **Cosmology and Astrophysical Case Studies** | `Paper_4_Cosmology` |https://doi.org/10.5281/zenodo.17475119|Coherence analysis of M87, CMB residuals, and dark-sector coupling
-| V | **Energy and the Potential Field** | `Paper_5_Energy` |https://doi.org/10.5281/zenodo.17478131|Operator–level energy mapping and potential functions 
-| VI | **The Seven Pillars and Invariants** | `Paper_6_SevenPillars` |https://doi.org/10.5281/zenodo.17478484| Unified operator–invariant architecture across physical and cognitive 
-| VII | **Predictions and Experiments (forthcoming)** | `Paper_7_PredictionsExperiments` |TBC|Cross-domain validation, coherence decay constants, stochastic resonance, and agency thresholds
-| — | **Companion Experiments** | `CompanionExperiments` |https://doi.org/10.5281/zenodo.17478715 | Empirical validation datasets, symbolic notebooks, and calibration scripts 
+| Paper | Title | Latex Filename | Corresponding PDF| DOI | Description
+|-------|--------|---------|---------|---------|---------|
+| I | **Core Theory** | uif1_core.tex |UIF_Paper_1_CoreTheory.pdf|https://doi.org/10.5281/zenodo.17460040|Foundational operator grammar (ΔI, Γ, β, λR) and collapse–return dynamics
+| II | **Symmetry Principles** |uif2_core.tex |UIF_Paper_2_SymmetryPrinciples.pdf|https://doi.org/10.5281/zenodo.17468871|Conservation, invariance, and informational Noether structure
+| III | **Field and Lagrangian Formalism** | uif3_field.tex |UIF Paper 3 - Lagrangian.pdf|https://doi.org/10.5281/zenodo.17471559|Continuous variational formulation and Euler–Lagrange derivations
+| IV | **Cosmology and Astrophysical Case Studies** |uif4_cosmology.tex| Paper_4_Cosmology |https://doi.org/10.5281/zenodo.17475119|Coherence analysis of M87, CMB residuals, and dark-sector coupling
+| V | **Energy and the Potential Field** |uif5_energy.tex|Paper_5_Energy|https://doi.org/10.5281/zenodo.17478131|Operator–level energy mapping and potential functions 
+| VI | **The Seven Pillars and Invariants** |uif6_pillars.tex|Paper_6_SevenPillars|https://doi.org/10.5281/zenodo.17478484| Unified operator–invariant architecture across physical and cognitive 
+| VII | **Predictions and Experiments (forthcoming)** |uif7_predictions.tex|Paper_7_PredictionsExperiments|TBC|Cross-domain validation, coherence decay constants, stochastic resonance, and agency thresholds
+| — | **Companion Experiments** |companion_uif.tex|CompanionExperiments|https://doi.org/10.5281/zenodo.17478715 | Empirical validation datasets, symbolic notebooks, and calibration scripts 
 
 Each folder includes:
 - LaTeX source (`UIF_Paper_X_<Title>.tex`)
