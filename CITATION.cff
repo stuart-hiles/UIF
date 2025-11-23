@@ -1,4 +1,4 @@
-cff-version: 1.2.0
+cff-version: "1.2.0"
 message: >
   If you use this repository, please cite it as below.
 
@@ -6,15 +6,15 @@ authors:
   - family-names: Hiles
     given-names: Stuart E. N.
     affiliation: Independent Researcher
-    orcid: https://orcid.org/0009-0000-6898-0453   # replace with your real ORCID if desired
+    orcid: "https://orcid.org/0009-0000-6898-0453"
 
-title: "The Unifying Information Field (UIF) — Series v1.1 (Papers I–VII and Companion)"
-version: "v1.1"
-doi: 10.5281/zenodo.17434413
-date-released: 2025-10-26
+title: "The Unifying Information Field (UIF) — Series v2.0 (Papers I–VII and Companion)"
+version: "v2.0"
+doi: "10.5281/zenodo.17434413"
+date-released: "2025-11-23"
 url: "https://github.com/stuart-hiles/UIF"
 repository-code: "https://github.com/stuart-hiles/UIF"
-license: "CC-BY-NC-4.0 and GPL-3.0"
+license: "GPL-3.0-or-later"
 keywords:
   - Unifying Information Field
   - informational physics
@@ -29,64 +29,46 @@ keywords:
 abstract: >
   The Unifying Information Field (UIF) establishes a unified theoretical and empirical
   framework linking physics, cosmology, biology, and cognition under collapse–return
-  informational dynamics. Series v1.1 consolidates Papers I–VII and the Companion
+  informational dynamics. Series v2.0 consolidates Papers I–VII and the Companion
   Experiments into a reproducible, open-science publication set, with updated repository
-  structure and Zenodo-linked documentation.
+  structure, LaTeX sources, datasets, and Zenodo-linked documentation.
 
 preferred-citation:
   type: software
-  title: "The Unifying Information Field (UIF) — Initial Publication Set (Papers I–VII and Companion)"
+  title: "The Unifying Information Field (UIF) — UIF Series (Papers I–VII and Companion)"
   authors:
     - family-names: Hiles
       given-names: Stuart E. N.
-  version: "v1.1"
+  version: "v2.0"
   year: 2025
-  doi: 10.5281/zenodo.17434413
-  url: "https://doi.org/10.5281/zenodo.17434413"
+  doi: "10.5281/zenodo.17434412"
+  url: "https://doi.org/10.5281/zenodo.17434412"
 
 references:
   - title: "UIF Paper I — Core Theory"
     type: article
-    version: v1.0
+    version: "v1.0"
   - title: "UIF Paper II — Symmetry Principles"
     type: article
-    version: v1.0
+    version: "v1.0"
   - title: "UIF Paper III — Field and Lagrangian Formalism"
     type: article
-    version: v1.0
+    version: "v1.0"
   - title: "UIF Paper IV — Cosmology and Astrophysical Case Studies"
     type: article
-    version: v1.0
+    version: "v1.0"
   - title: "UIF Paper V — Energy and the Potential Field"
     type: article
-    version: v1.0
+    version: "v1.0"
   - title: "UIF Paper VI — The Seven Pillars and Invariants"
     type: article
-    version: v1.0
+    version: "v1.0"
   - title: "UIF Paper VII — Predictions and Experiments (forthcoming)"
     type: article
-    version: planned v1.0 (2026)
+    version: "planned v1.0 (2026)"
   - title: "UIF Companion Experiments"
     type: dataset
-    version: v1.0
+    version: "v1.0"
 
 contact:
-  - email: stuart.hiles@unifying.info
-
-# ------------------------------
-# Recommended citation formats
-# ------------------------------
-# APA:
-# Hiles, S. E. N. (2025). The Unifying Information Field (UIF) — Series v1.1 (Papers I–VII and Companion)
-# (Version v1.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.17434413
-#
-# BibTeX:
-# @software{Hiles_UIF_Series_2025,
-#   author  = {Hiles, Stuart E. N.},
-#   title   = {{The Unifying Information Field (UIF) — Series v1.1 (Papers I–VII and Companion)}},
-#   version = {v1.1},
-#   year    = {2025},
-#   doi     = {10.5281/zenodo.17434413},
-#   url     = {https://github.com/stuart-hiles/UIF},
-#   license = {CC-BY-NC-4.0 and GPL-3.0}
-# }
+  - email: "stuart.hiles@unifying.info"
