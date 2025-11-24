@@ -90,8 +90,9 @@ Version v1.1 (October 2025). Zenodo. [https://doi.org/10.5281/zenodo.17434413](h
 
     /papers/                      → LaTeX sources for Papers I–VII and Companion Experiments
     /bib/                         → per-paper reference files
-    /output/                      → compiled PDFs
+    /data/                        → experiment data sets
     /code/                        → Python & analysis notebooks (EEG, CHREM, quasar fits)
+    /output/                      → experiement outputs
     /figures/                     → operator diagrams & empirical plots
 ---
 
