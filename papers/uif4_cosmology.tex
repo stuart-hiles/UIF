@@ -1,0 +1,1247 @@
+% ===== UIF Paper IV — Cosmology and Astrophysical Case Studies =====
+% Numbering: Paper 4 → (4.x)
+\UIFpaper{4}
+
+% Per-paper PDF metadata
+\UIFmetadata{The Unifying Information Field (UIF) Paper IV — Cosmology and Astrophysical Case Studies}
+            {Stuart E. N. Hiles}
+            {UIF IV — Cosmology and Astrophysical Case Studies}
+
+\hypersetup{
+  pdftitle={The Unifying Information Field (UIF) Paper IV — Cosmology and Astrophysical Case Studies},
+  pdfauthor={Stuart E. N. Hiles},
+  pdfsubject={Unifying Information Field; informational physics; coherence; recursion; agency},
+  pdfkeywords={information, theory, informational physics, collapse–return dynamics, coherence, recursion, symmetry, quantum, cosmology, dark energy, dark matter, unification, AI, consciousness, biology, cognition, UIF, Unifying Information Field, Physical cosmology, Theoretical physics, Information theory, Physics}
+}
+        
+\title{The Unifying Information Field (UIF) Paper IV\\[0.35em]
+\Large\textit{Cosmology and Astrophysical Case Studies}\\[0.6em]   
+\small Version v1.1 — November 2025}
+\author{Stuart E.\,N. Hiles, BA (Hons)}
+\date{}
+
+
+\begin{center}
+\thispagestyle{empty}
+\vspace{2em}
+{\small
+© 2025 Stuart E. N. Hiles\\
+Licensed under the Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0) License. \\[6pt]
+This document represents a pre-release version (v1.1, November 2025) of the\\
+\textit{Unifying Information Field (UIF)} series of papers.\\[0.75em]
+
+First published on Zenodo\\
+DOI (Concept): \href{https://doi.org/10.5281/zenodo.17475119}{10.5281/zenodo.17475119}\\
+Series DOI: \href{https://doi.org/10.5281/zenodo.17434412}{10.5281/zenodo.17434412}\\
+Source and LaTeX archived at: \href{https://github.com/stuart-hiles/UIF}{https://github.com/stuart-hiles/UIF} (GitHub release v2.0)
+\newline
+
+This paper has not yet been peer-reviewed or formally published.\\[0.5em]
+All supporting software, scripts, and data are licensed separately under \textbf{GPL-3.0}.\\
+}
+\end{center}
+
+\maketitle
+
+
+\begin{abstract}
+\thispagestyle{empty}
+This fourth paper in the Unifying Information Field (UIF) series applies the informational field framework to cosmology and astrophysical structure formation. UIF proposes that dark matter and dark energy may be interpreted as manifestations of an interactive informational substrate, described by the receive--return field $R(x,t)$. Using the Lagrangian formalism developed in UIF~III, the paper formulates a cosmology-lite model that aims to reproduce key observables—structure-growth suppression, BAO stability, and lensing residuals—through informational collapse and coherence regulation. The model links cosmological expansion and dark-sector behaviour to the same operators ($\Delta I$, $\Gamma$, $\beta$, $\lambda_R$, $\eta$) that govern informational dynamics across all scales. Predictions are presented for coherence ceilings ($R_\infty$), recharge rates ($k$), and observable sub-halo lensing signatures, supported by emulator results documented in the UIF~Companion Experiments.
+
+This paper builds directly on UIF~I -- Core Theory and UIF~II -- Symmetry Principles, which established the informational substrate and symmetry foundations of the Unifying Information Field, and on UIF~III -- Field and Lagrangian Formalism, which expressed those operators as a continuous variational field. Here, the same framework is applied to cosmology and astrophysical structure formation. The informational operators ($\Delta I$, $\Gamma$, $\beta$, $\lambda_R$, $\eta$) are extended to cosmic scales through the receive--return field $R(x,t)$, providing a unified account of dark energy, dark matter, and large-scale coherence. In this way, Paper IV explores whether the local dynamics of informational collapse and recursion could also govern the macroscopic architecture of the universe.
+
+\noindent\textit{Empirical bridge.} Recent \textit{JWST} and \textit{EHT} observations of M87 provide
+first constraints on UIF’s receive--return coupling ($\lambda_R$), recursion ($\Gamma$), and recharge
+rate ($k$), linking the field operators introduced here to directly measurable astrophysical
+quantities \cite{Perlman2025_M87_JWST,EHT2024_Polarization_M87}.
+\newline
+\end{abstract}
+\clearpage
+\thispagestyle{empty}
+\noindent\textbf{Series overview:} 
+\newline Paper I introduces the Unifying Information Field (UIF) as a collapse--return informational framework and defined its operator grammar. Paper II develops the symmetry and invariance principles underlying informational conservation; Paper III establishes the field and Lagrangian formalism; Paper IV applies the framework to cosmology and astrophysical case studies; Paper V formulates the energetic and potential field laws; Paper VI synthesises the invariant architecture; and Paper VII (forthcoming) consolidates predictions and experiments.
+\newline
+
+\noindent\textbf{Companion}
+\newline
+Experimental methods, emulator sweeps, operator calibration results, and reproducibility metadata supporting this series are presented in the \textit{UIF~Companion Experiments} (2025) \cite{Companion2025}.
+A two–page \textit{S-CLASS} note provides the UIF$\to$CLASS mapping (growth, Poisson, background $w(z)$) with minimal example diffs and unit tests.
+A second volume, \textit{UIF~Companion II — Extended Experiments} (forthcoming, 2026), will expand the empirical programme beyond the current emulator framework, incorporating biological, AI-domain, and collective-synchronisation studies.
+\newline
+
+\noindent\textbf{Repository}
+\newline
+Source code, emulator outputs, and figure-generation scripts are maintained in the
+UIF GitHub Archive (\url{https://github.com/stuart-hiles/Unifying-Information-Field}),
+together with datasets supporting \textit{UIF Papers I–V} and the Companion series.
+Each experiment is versioned by \texttt{RUN\_TAG} with configuration files, logs, and figures archived for reproducibility.
+\newline
+
+\noindent\textbf{Note on Nomenclature and Continuity}
+\newline
+The Unifying Information Field (UIF) framework developed here continues directly from
+the conceptual and symmetry foundations established in Papers I–II and supersedes the
+preliminary UT26 terminology used in early drafts of the theory.
+All operator symbols and relations remain continuous with those earlier definitions,
+but are now expressed within the continuous Lagrangian and variational formalism
+introduced in this paper.
+This ensures that notation, numbering, and physical interpretation remain consistent
+throughout the UIF series, from discrete operator grammar (Papers I–II) to the
+field equations and energetic formalisms of Papers III–V.
+\newline
+
+\noindent\textbf{Scope}
+\newline
+This paper applies the Unifying Information Field (UIF) framework to cosmology and
+astrophysical systems, translating the variational field equations derived in
+\textit{UIF~III} into observable predictions across large scales.  Its purpose is to
+demonstrate how informational curvature, coherence, and receive–return coupling manifest
+in real astrophysical data—from quasars and black holes to cosmic filaments and the CMB.
+The analysis unifies apparent dark components (dark energy and dark matter) as expressions
+of the informational substrate $R(x,t)$, constrained by empirical signatures such as
+variability ceilings ($R_\infty$), recharge rates ($k$), and coherence delays ($\tau_R$).
+The scope of this paper is empirical and phenomenological: it establishes observational
+tests for the theoretical constructs introduced in \textit{UIF~I–III}, and provides the
+calibrations that underpin the energetic and invariant analyses developed in
+\textit{UIF~V–VI}.
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section{Introduction}
+This paper applies the Unifying Information Field (UIF) framework to cosmology and astrophysics. 
+It explores whether the same informational operators that describe collapse and coherence at local scales 
+can also account for the universe’s initial conditions, expansion history, geometry, entropy evolution, and possible fates. 
+The analysis further examines how the framework might reinterpret key astrophysical phenomena—black holes, 
+gamma-ray bursts, supernovae, quasars, dark matter, megastructures, and stellar collapse—within a single informational formalism. 
+In doing so, the paper moves UIF from abstract operator dynamics to quantitative cosmological tests, 
+placing it alongside $\Lambda$CDM, inflationary, holographic, cyclic, and multiverse models, 
+while proposing additional predictions that can be evaluated empirically.
+
+Cosmology addresses foundational questions: What is the universe’s origin, shape, and fate? 
+The $\Lambda$CDM framework—combining cold dark matter with a cosmological constant—has achieved remarkable empirical success. 
+Cosmic acceleration was first inferred from Type Ia supernovae (Riess et al., 1998; Perlmutter et al., 1999)\cite{Riess1998,Perlmutter1999} 
+and later confirmed through CMB anisotropies (Planck Collaboration, 2018; Aghanim et al., 2020)\cite{Aghanim2020} 
+and baryon acoustic oscillations (DESI Collaboration, 2024)\cite{DESI2024}.
+\newline
+
+\noindent\textbf{Relation to the preceding papers}
+\newline
+This work builds directly on \textit{UIF I — Core Theory}, 
+\textit{UIF II — Symmetry Principles}, 
+and \textit{UIF III — Field and Lagrangian Formalism}\cite{UIF-I,UIF-II,UIF-III}. 
+The first three papers defined the informational substrate, derived its symmetry-invariance laws, 
+and expressed the collapse–return operators 
+($\Delta I$, $\Gamma$, $\beta$, $\lambda_R$, $\eta$) within a continuous variational framework. 
+Here, those same operators are extended to cosmic scales through the receive–return field $R(x,t)$, 
+formulating an informational cosmology in which dark energy, dark matter, and large-scale coherence emerge 
+as aspects of a single receive–return substrate. 
+Paper IV therefore seeks to connect the local dynamics of collapse and recursion with the global architecture of the universe.
+
+Persistent observational tensions motivate this extension. 
+The Hubble-constant ($H_{0}$) discrepancy between local and CMB-based measurements 
+suggests that existing models may be incomplete 
+(Verde et al., 2019; Riess et al., 2022)\cite{Verde2019,Riess2022}. 
+Curvature debates (Di Valentino et al., 2020)\cite{DiValentino2020} 
+and contraction scenarios (Boyle et al., 2023)\cite{BoyleFinnTurok2023} 
+underscore that several foundational parameters remain unsettled. 
+Within this context, UIF complements $\Lambda$CDM by reframing the cosmos informationally: 
+the universe is treated as an evolving informational field $\Phi(x,t)$ 
+coupled via $\lambda_R$ to a receive–return substrate $R(x,t)$. 
+Collapse–return dynamics govern its initial state, expansion, horizons, topology, entropy budgets, and eventual fate. 
+The aim is not to replace $\Lambda$CDM but to provide an informational parameterisation 
+that can be directly tested against forthcoming DESI, Euclid, and LSST data.
+
+
+\section{Informational operators and cosmological mapping}
+The UIF operators describe how information evolves and stabilises across scales:
+
+\noindent $\Delta I$ quantifies informational difference or potential, $\Gamma$ measures recursion and coherence, $\beta$ encodes symmetry breaking and bias, $\lambda_R$ defines the coupling between local systems and the substrate field $R(x,t)$, and $\eta$ sets the threshold at which collapse occurs.
+
+\noindent In cosmology, these parameters manifest as density perturbations, feedback processes, coupling constants, and critical thresholds that regulate structure growth and expansion dynamics.
+\clearpage
+\section{UIF framework and theoretical foundations}
+The cosmological model developed here is grounded in the seven-pillar architecture established across the earlier UIF papers. These pillars describe the progression from information as substrate, through emergent time and potential fields, to computation, coherence, agency, and conserved topological invariants. The present work applies this integrated framework to cosmic scales, showing that the same informational laws governing collapse, recursion, and coherence also govern the universe’s large-scale structure and evolution.
+\newline
+
+\noindent\textbf{Mathematical Foundations}
+\newline\noindent\ Equations (4.1)–(4.4) extend the field and continuity relations developed in \textit{UIF III} (§§ 3.2–3.4) to cosmological scales, 
+maintaining the Lagrangian formalism and receive–return coupling structure that underpin the Unifying Information Field framework.
+
+\noindent\emph{Units}
+A full SI dimensional closure of the informational quantities, including the definition of the
+information–energy conversion constant $\alpha$ and the reference scales $(\Delta I_0,\tau_0,L_0)$,
+is provided in \textit{UIF~III — Appendix D (Dimensional Analysis and Unit Mapping)}.
+
+\paragraph{UIF\texorpdfstring{$\;\to\;$}{→}CLASS bridge (linear regime).}
+In conformal time, the linear growth equation can be written as
+\begin{equation}
+\delta''(\eta,\mathbf{k}) + \mathcal{H}(\eta)\,\delta'(\eta,\mathbf{k})
+ - 4\pi G a^2(\eta)\,\rho_m(\eta)\,\delta(\eta,\mathbf{k})
+ \;=\; \mathcal{S}\!\left[\lambda_R,k,\Gamma;\,\delta\right](\eta,\mathbf{k}),
+\label{eq:uif-class-growth} % (becomes 4.5)
+\end{equation}
+where primes denote derivatives with respect to conformal time $\eta$, $\mathcal H\!=\!a'/a$, and
+$\mathcal{S}$ encodes UI\!F’s causal receive–return source. To first order in the UI\!F parameters we implement:
+\begin{align}
+G \;&\to\; G_{\rm eff}(k,\eta) \;=\; G\,\bigl[1 - \epsilon\!\left(\lambda_R,k,\eta\right)\bigr],
+\label{eq:uif-Geff} % (4.6)
+\\
+\mathcal{S}\!\left[\cdot\right] \;&\equiv\; \int_{0}^{\infty} K_R(\tau)\,\Bigl(\lambda_R\,\delta(\eta-\tau,\mathbf{k})\Bigr)\,\mathrm{d}\tau,
+\qquad
+K_R(\tau)=\tau_R^{-1}\,\mathrm{e}^{-\tau/\tau_R},\quad \tau_R \equiv k^{-1},
+\label{eq:uif-kernel} % (4.7)
+\end{align}
+i.e.\ a Poisson‐sector rescaling $G\to G_{\rm eff}$ and a causal convolution with the UI\!F exponential memory kernel $K_R$.
+At the background level we allow a mild, smooth departure from a constant cosmological constant,
+\begin{equation}
+w(z) \;=\; -1 + \varepsilon(z), \qquad \varepsilon(z)\ \text{small, slowly varying (potentially quasi‐periodic),}
+\label{eq:uif-w-drift} % (4.8)
+\end{equation}
+with $\varepsilon(z)$ tied to $(\lambda_R,k)$ through the finite substrate capacity $R_\infty$ (cf.\ UI\!F~IV §4.2; UI\!F~V §5.1).  
+A reference implementation (\emph{UIF$\to$CLASS} mapping) will be released to enable full-likelihood analyses (Planck+DESI+KiDS/LSST) via Cobaya/MontePython; see Companion~S-CLASS for code-level substitution points (growth, Poisson, background $w(z)$ hook) and unit tests.
+\newline
+
+\noindent\textit{Implementation note (Companion S-CLASS)}
+A concise UIF$\to$CLASS mapping (Companion~S-CLASS) accompanies this paper, listing
+the code-level substitutions for Eqs.~(\ref{eq:uif-class-growth})--(\ref{eq:uif-w-drift})—
+(i) Poisson-sector rescaling $G\to G_{\rm eff}(k,z)$, (ii) memory source
+$\mathcal S$ via the exponential kernel $K_R(\tau)$, and (iii) the background
+$w(z)=-1+\varepsilon(z)$ hook—together with unit tests and a repository stub for
+Cobaya/MontePython integration.
+
+
+
+\begin{figure}[H]
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{4.0}
+  \centering
+  % five columns with fixed widths that sum <= \textwidth
+  \begin{tabularx}{\textwidth}{%
+      >{\centering\arraybackslash}p{0.27\textwidth}
+      >{\centering\arraybackslash}p{0.06\textwidth}
+      >{\centering\arraybackslash}p{0.30\textwidth}
+      >{\centering\arraybackslash}p{0.06\textwidth}
+      >{\centering\arraybackslash}p{0.27\textwidth}
+    }
+    \textbf{Real data} &
+    \(\Longrightarrow\) &
+    \textbf{Operator fits} &
+    \(\Longrightarrow\) &
+    \textbf{Emulator \& forecasts} \\
+    \addlinespace[0.4ex]
+    \small SDSS/CRTS/ZTF QSO \(L(t)\), \(H(z)\), BAO, growth, EEG
+    &
+    % arrow spacer
+    &
+    \small \(\{R_\infty,\; k,\; \lambda_R,\; \Gamma,\; \eta^\*\}\) (posteriors)
+    &
+    % arrow spacer
+    &
+    \small UIF cosmology-lite; \(w(z)\) drift/osc.; lensing; \(f\sigma_8\) suppression \\
+  \end{tabularx}
+  \caption{UIF data lineage. Empirical time-domain and cosmological data are first used to fit the operator set \(\{R_\infty,k,\lambda_R,\Gamma,\eta^\*\}\); the cosmology-lite emulator then
+  propagates those posteriors to forward predictions (e.g.\ \(H(z)\) bend, \(w(z)\) drift/oscillation, modest \(f\sigma_8\) suppression\).}
+  \label{fig:uif_lineage}
+\end{figure}
+\addtocounter{figure}{-1}           % subtract one so next becomes 4.1
+\renewcommand{\thefigure}{4.\arabic{figure}}
+
+\noindent\textbf{Data--model lineage}
+\newline Real time-domain (SDSS/CRTS/ZTF quasar light curves) and public EEG baselines are used to estimate the core UIF operators \((R_\infty, k, \lambda_R, \Gamma, \eta^\*)\) via logistic+echo fits
+and coherence indices (Companion~S0, S-Quasar, S-EEG). These fitted operators are then propagated
+by the cosmology-lite emulator to produce forecasts for \(H(z)\), BAO amplitude drift, and \(f\sigma_8\) scaling.
+Throughout, we report “is consistent with” rather than “shows that” unless a unique scaling prediction is tested.
+
+
+\section{Cosmological Core}
+\noindent
+The cosmological core formalises how the universe’s origin, structure, and evolution arise from informational dynamics.  
+In this section, the operators established in \textit{UIF~I--III} are extended to cosmic scale, 
+showing how difference ($\Delta I$), recursion ($\Gamma$), bias ($\beta$), 
+and receive--return coupling ($\lambda_R$) determine the universe’s initial conditions, 
+expansion, geometry, entropy budgets, and eventual fate.  
+Each subsection isolates one component of this framework: 
+the birth of informational potential (\textit{Initial State}), 
+its recursive expansion (\textit{Expansion Driven by Informational Density}), 
+the limits imposed by horizons and coherence budgets (\textit{Size and Limits}), 
+and the topological and entropic consequences that follow.  
+Together these provide the cosmological foundation on which the subsequent astrophysical case studies are built.
+\newline
+
+\noindent For transparency, all numbered equations in this paper are classified according to their provenance:
+\emph{[Identity]} designates a standard physical or informational law, 
+\emph{[Model law]} a relation derived within the UIF framework from stated assumptions, 
+and \emph{[Hypothesis]} a phenomenological or testable scaling introduced for future verification.  
+A complete table of equation provenance and accompanying symbol definitions is provided in Appendix~A.
+
+\subsection{Initial State — Potential without Information}
+This section extends the field and variational formalism of UIF III, applying the informational wave equation to cosmological initial conditions where $\Delta I = 0$.
+
+In $\Lambda$CDM and inflationary cosmology, the universe begins with a hot, dense state and rapid expansion seeded by quantum fluctuations. 
+\newline
+
+\noindent UIF parallels this but reframes: the cosmos begins with a uniform potential field — capacity without content. Informational difference is initially zero:
+\begin{equation}
+\Delta I(x,t) = 0 \quad \forall\,(x,t)\;\text{ at } t=0 .
+\label{eq:4-1-IC}
+\end{equation}
+
+\noindent Small fluctuations arise as deviations from the mean field:
+\begin{equation}
+\delta \Phi(x,t) = \Phi(x,t) - \langle \Phi \rangle .
+\label{eq:4-0-dPhi}
+\end{equation}
+
+\noindent This interpretation resonates with Dirac’s sea, QFT zero-point fluctuations, and inflationary seeding, but UIF reframes vacuum energy as informational potential — possibility without realised $\Delta I$.
+\newline
+
+\noindent\textbf{UIF Alignment} 
+\newline The vacuum is reframed not as absence but as capacity, with CMB anisotropies predicted to show subtle informational residuals beyond random fluctuations.
+\clearpage
+\subsection{Expansion Driven by Informational Density}
+$\Lambda$CDM attributes cosmic acceleration to a cosmological constant ($\Lambda$), 
+while alternative approaches invoke dynamical dark energy, modified gravity, or contraction.
+
+In UIF, the propagation constant introduced in \textit{UIF~III} defines the informational ceiling of coherence, 
+setting the maximum rate at which unsampled $\Delta I$ can expand through the substrate. 
+Cosmic acceleration therefore reflects recursion approaching this propagation limit.
+
+\noindent UIF interprets expansion as recursion-driven assimilation, expressed as:
+\begin{equation}
+\frac{dV}{dt} \;\propto\; \Gamma\,\Delta I ,
+\label{eq:4-2}
+\end{equation}
+where $V$ denotes the effective informational correlation volume---the region over which events are informationally entangled.  
+$\Delta I$ measures differentiation, and $\Gamma$ the recursion strength.  
+Expansion accelerates when both increase.
+
+
+\noindent Identifying $V(t)\!\propto\! a^{3}(t)$ yields an informational analogue of the Friedmann equation, 
+with $\Gamma\,\Delta I$ acting as the expansion drive, $-k$ as the curvature/recharge term, 
+and $\lambda_R R$ the receive--return coupling to the substrate:
+\begin{equation}
+\left(\frac{\dot{a}}{a}\right)^{2} \;=\; \Gamma\,\Delta I \;-\; k \;+\; \lambda_{R}\,R,
+\label{eq:4-3a}
+\end{equation}
+where $a(t)$ represents the informational scale factor.  
+This relation explicitly connects UIF’s informational dynamics with large-scale cosmological evolution, 
+recovering a Friedmann-like law expressed in informational variables.
+\noindent 
+\newline Beyond the cosmological calibration, source-level constraints are now feasible:
+in M87, joint \textit{JWST}/\textit{EHT} variability and polarization analyses can bound
+$\lambda_R$ (via core--knot lag), $\Gamma$ (via quasi-periodic modulation), and $k$ (via recovery
+times), providing an object-level cross-check on the cosmological operator scales inferred
+below \cite{Perlman2025_M87_JWST,EHT2024_Polarization_M87}.
+
+\noindent UIF’s first empirical calibration of substrate parameters finds a coherence ceiling of about 
+$R_{\infty}=0.898$ and a recharge rate of $k=0.34$--$1.17~\mathrm{Gyr}^{-1}$ from quasar variability data.  
+These values parameterise the strength of recursion and coherence assimilation cosmologically, 
+providing the first quantitative link between informational operators and cosmic acceleration.
+
+\noindent\textit{Empirical anchor.} $V$ corresponds to BAO correlation volumes; UIF predicts 
+hysteresis-like deviations from $\Lambda$CDM growth curves in DESI, Euclid, and LSST.  
+\newline
+
+\noindent\textbf{UIF Alignment.}
+\newline Expansion is the macroscopic trace of informational recursion.
+
+\subsection{Size, Limits, and Horizons}
+The observable universe is finite (radius $\approx$46.5 Gly) but inflation suggests far larger scales. Observations favour flatness, though some analyses suggest slight closure.
+
+\noindent UIF distinguishes:
+\begin{equation}
+S_{\mathrm{obs}}(t) < \infty 
+\qquad\text{while}\qquad
+S_{\mathrm{pot}} \to \infty .
+\label{eq:4-3-Ssizes}
+\end{equation}
+
+\noindent $S_{\mathrm{obs}}(t)$ is observational size, bounded by coherence horizons; $S_{\mathrm{pot}}$ is the unbounded potential extent of the substrate. This distinction emphasises that observational finiteness is an epistemic constraint, not an ontological bound.
+\newline 
+
+\noindent\textbf{UIF Alignment} 
+\newline Horizons are epistemic limits, not physical edges. 
+\newline \textit{Predictions:} anisotropies and coherence “echoes” near observational boundaries.
+
+\subsection{Shape and Topology of the Universe}
+General relativity allows flat, open, or closed geometry. Planck + BAO favour near-flatness, but anomalies like the Giant Arc and Big Ring challenge statistical homogeneity. Here we denote the informational shape of the universe by $\mathcal{S}_{\mathrm{UFI}}$, 
+which represents the large-scale connectivity pattern of the informational field (topology):
+\begin{equation}
+\mathcal{S}_{\mathrm{UFI}} \;\sim\; A_{ij}\!\big(\Delta I,\Gamma\big).
+\label{eq:4-4-shape}
+\end{equation}
+Here $A_{ij}$ is an adjacency matrix representing informational connectivity. This perspective also aligns with UIF’s Pillar 7: conserved topological invariants emerge not only in particle fields but also in cosmic structure. Galaxy spin alignments, filament braiding, and cluster morphology act as large-scale coherence invariants, showing that the same informational operators shaping microphysics also guide the universe’s topology.
+
+To explore the stability of collapse and symmetry within recursive fields, 
+a $\gamma$-sweep experiment was performed, varying drive amplitude and frequency 
+across the UIF simulator.  
+The resulting amplitude--frequency patterns (see Fig.~\ref{fig:4-1-y-sweep}, Section~4.5)
+illustrate how resonance and threshold behaviour contribute to the universe’s 
+large-scale topology and preferred coherence modes.
+\newline
+
+\noindent\textbf{UIF Alignment} 
+\newline While curvature may be flat, informational topology is fractal-like, with invariants conserved across scales from particles to galaxies. \textit{Predictions:} Nested coherence structures in galaxy distributions detectable in DESI/LSST.
+
+\subsection{Entropy, Coherence, and Complexity Limits}
+Entropy in physics measures dispersal of energy or microstates. In $\Lambda$CDM, this leads to heat death. Recent refinements highlight black hole entropy dominance and horizon corrections.
+
+\noindent UIF reframes entropy as:
+\begin{equation}
+\frac{d\Delta I}{dt} \;=\; -\alpha\,\Delta I \;+\; \beta\,\Phi_{\mathrm{local}},
+\label{eq:4-entropy}
+\end{equation}
+The first term represents the global drift toward homogenisation, while the second captures local injections of structure. This framing defines coherence budgets: complexity persists while injections balance drift.
+\noindent\emph{Units.}
+The dimensional mapping for $\alpha$ (energy per bit) and its relation to the reference scales
+is detailed in \textit{UIF~III — Appendix D}.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{figures/Fig_4-1_y-sweep.png}
+  \captionsetup{skip=0.5em,justification=raggedright,singlelinecheck=false}
+  \caption{$\boldsymbol{\gamma}$\textbf{-sweep: collapse regimes across drive amplitude ($A$) and frequency ($f$).}\\[0.6em]
+  Sweeping the simulator across drive amplitude and frequency reveals how collapse depends on
+  $\gamma$-like forcing. (\textit{Left}) Total pruning activity rises steeply with amplitude,
+  reflecting increased collapse--return turnover. (\textit{Middle}) Final mean coherence
+  $\langle s\rangle$ remains close to $0.5$ but shows subtle resonant drifts at intermediate
+  frequencies. (\textit{Right}) A refined collapse criterion identifies fragile regimes at low
+  amplitude, confirming that only above-threshold $\gamma$-like perturbations destabilise
+  symmetry. This supports the UIF prediction that collapse initiation requires high-frequency
+  perturbations, consistent with early-universe ``first collapse'' triggers and with neural
+  $\gamma$ rhythms.\\[0.5em]
+  \textbf{Panels:} (Left) Total prunes (activity); (Middle) Final mean coherence $\langle s\rangle$;
+ (Right) Refined collapse classification.}
+  \label{fig:4-1-y-sweep}
+\end{figure}
+
+\noindent
+The $\gamma$--sweep (Fig.~\ref{fig:4-1-y-sweep}) shows that collapse regimes emerge only when the drive amplitude crosses a threshold, confirming that above--threshold, $\gamma$--like perturbations are required to destabilise symmetry.  
+Complementing this, the Goldilocks map (Fig.~\ref{fig:4-2-goldilocks}) demonstrates that within moderate ranges of $\eta^\ast$ and $\lambda_R$ the system remains in a stable--ceiling regime, with fragile and runaway behaviours appearing only outside this band.  
+Panels~(A)--(D) of Figure~2 from the \textit{UIF~Companion Experiments} illustrate these thresholds and stability domains, showing how collapse--return dynamics transition between the threshold, stable, and memory regimes respectively.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.75\linewidth, height=0.4\textheight, keepaspectratio]{figures/Fig_4-2_Goldilocks.png}
+  \captionsetup{skip=0.5em,justification=raggedright,singlelinecheck=false}
+  \caption{Goldilocks map of collapse regimes across $\eta$ (threshold) and $\lambda_R$ (retention).\\[0.6em]
+  The classifier distinguishes fragile ($0$), stable-ceiling ($1$), and runaway ($2$) regimes. 
+  Within the tested ranges ($\eta = 0.40$–$0.70$, $\lambda_R = 0.10$–$0.30$), the system remained in the
+  stable-ceiling state, confirming robustness against moderate operator variation. Probes outside this
+  window reveal fragile collapse at low $\eta^\ast$ and runaway drift at high $\lambda_R$, bounding the
+  Goldilocks region where coherence is maintained.}
+  \label{fig:4-2-goldilocks}
+\end{figure}
+
+\noindent Taken together, the entropy law and the parameter sweeps demonstrate that collapse is both
+sensitive and bounded. The $\gamma$-sweep shows that only above-threshold, $\gamma$-like perturbations can
+destabilise symmetry, providing the mechanism for ``first collapse'' in the early universe and
+explaining the integrative role of $\gamma$ rhythms in neural dynamics. The Goldilocks map
+complements this by showing that, within moderate operator ranges, the system remains
+robustly in a stable-ceiling regime, while excursions beyond this window reveal fragile and
+runaway behaviours. These results confirm that coherence budgets are preserved only within a
+narrow operator band: too little forcing and collapse fails, too much and coherence drifts, but in
+the Goldilocks zone complexity can persist.
+\newline\noindent Comparable hysteresis loops (bias cycles) are now observed in astrophysical
+polarization–flux and color–flux trajectories, reinforcing UIF’s prediction that collapse--return
+dynamics leave persistent informational traces at source level \cite{EHT2024_Polarization_M87}.
+\newline
+
+\noindent\textbf{Neural Analogy}
+\newline
+The same informational dynamics that regulate collapse and coherence at cosmological scales also operate in neural systems.  
+In the brain, gamma--band synchronisation ($\Gamma \!\sim\! 30$--$80~\mathrm{Hz}$) sustains integration across distributed cortical regions, while receive--return coupling ($\lambda_R$) corresponds to feedback pathways between hierarchical levels of processing.  
+Informational difference ($\Delta I$) represents prediction error or surprise---the local imbalance driving collapse of prior states into updated percepts.  
+Just as recursion and coupling stabilise coherence in the cosmological substrate, neuronal ensembles maintain coherent firing only when $\Gamma$ and $\lambda_R$ remain within critical bounds; too weak and networks desynchronise, too strong and runaway oscillations occur.  
+This parallel underscores UIF's central claim that coherence and collapse are not domain--specific but universal informational phenomena spanning mind and cosmos.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth, height=0.36\textheight, keepaspectratio]{figures/Fig_4-3_drive.png}
+  \captionsetup{font=small,skip=0.35em,justification=raggedright,singlelinecheck=false}
+  \caption{Hysteresis and informational memory.\\[0.2em]
+  A two-phase drive schedule was applied: high-amplitude forcing ($A = 0.95$) for 350 steps
+  followed by reduced forcing ($A = 0.35$) for 350 steps.
+  (\textit{Left}) The drive schedule shows the two phases.
+  (\textit{Middle}) Coherence response $\langle s\rangle$ rises during high drive and does not fully
+  return to its original baseline when forcing is reduced.
+  (\textit{Right}) The $\langle s\rangle$--$A$ trajectory forms a loop: the state at a given amplitude
+  differs depending on whether the system is coming from the high- or low-drive phase.
+  This hysteresis effect demonstrates persistent informational traces, consistent with UIF's
+  trace lemma that ``every gate leaves a trace.''\\[0.4em]
+  \textbf{Panels:} Left — Drive schedule ($A$ high, then reduced);
+  Middle — Coherence response $\langle s\rangle$ over time;
+  Right — Hysteresis loop ($\langle s\rangle$ vs.\ $A$) showing non-overlapping paths during high and low drives.}
+  \label{fig:4-3-hysteresis}
+\end{figure}
+
+\noindent\textbf{Hysteresis and Informational Memory}
+
+\noindent
+A two-phase hysteresis probe (Fig.\,\ref{fig:4-3-hysteresis}) further tested whether
+collapse--return dynamics leave persistent traces. The simulator was driven with high-amplitude forcing
+and then reduced back below threshold. Coherence $\langle s\rangle$ did not fully return to its baseline,
+and the $\langle s\rangle$--$A$ trajectory formed a loop, demonstrating hysteresis. This residual bias confirms
+UIF's prediction that every collapse leaves an informational trace, providing a mechanism for persistence
+and memory across scales.
+
+
+\noindent Complementing the $\gamma$-sweep, we next performed a Goldilocks operator sweep across
+collapse threshold ($\eta^{\ast}$) and retention ($\lambda_R$). This experiment
+(Fig.\,\ref{fig:4-4-collapse}) maps where collapse--return dynamics remain stable and
+where they break down.
+
+Stable-ceiling regimes appear in the middle of the parameter space.
+(\textit{B}) Fragile behaviour at low $\eta^{\ast}$ produces trivial collapse and erases fine
+structure. (\textit{C}) Runaway behaviour at high $\lambda_R$ eliminates halos and coherence.
+(\textit{D}) Weak-lensing-like $\kappa$ projection and halo mass function (HMF) show sensitivity
+to $\eta^{\ast}$ and $\lambda_R$, with coherent lensing and halo structure only preserved inside the Goldilocks band. Together, these panels confirm that UIF coherence is bounded by operator
+constraints: fragile below, runaway above, and robust only within the Goldilocks zone.
+
+% --------------------------------------------------------------------
+% Figure 4.4 — Goldilocks operator sweep across collapse threshold (η*) and retention (λR)
+% --------------------------------------------------------------------
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.92\linewidth]{figures/Fig_4-4_collapse.png}
+  \captionsetup{skip=0.6em,justification=raggedright,singlelinecheck=false}
+  \caption{Goldilocks operator sweep across $\eta^{\ast}$ (threshold) and $\lambda_R$ (retention).\\[0.4em]
+  (\textit{A}) Regime map showing fragile ($0$), stable ($1$), and runaway ($2$) regions. 
+  (\textit{B}) Operator plane visualised as $\log_{10}$(prunes) across $\eta^{\ast}$ and $\lambda_R$. 
+  (\textit{C}) Weak-lensing-like $\kappa$ projections for runs inside and outside the stable band. 
+  (\textit{D}) Halo mass function (HMF) for inside vs.\ outside the Goldilocks region, showing that coherence 
+  and halo structure persist only within the bounded operator range.\\[0.5em]
+  Note that $\kappa$ projections are visually subtle because line-of-sight summation smooths differences; 
+  quantitative differences appear more clearly in $\kappa$ power spectra (not shown here).}
+  \label{fig:4-4-collapse}
+\end{figure}
+
+\subsection{UIF Cosmology-Lite — Predicted Signatures and Tests}\label{sec:cosmology-lite}
+
+\textbf{UIF Cosmology-Lite Simulator}
+\newline To test the cosmological implications of the Unifying Information Field, 
+a lightweight emulator --- the \textit{UIF Cosmology-Lite Simulator} --- was developed.  
+The simulator implements the field equations derived in \textit{UIF~III} and calibrated in \textit{UIF~V}, 
+propagating informational difference ($\Delta I$) and recursion ($\Gamma$) through a discretised 
+receive--return field $R(x,t)$.  
+Each node in the lattice evolves according to the collapse--return law, 
+allowing direct measurement of coherence growth, hysteresis, and ceiling effects.
+\newline
+The system evolves under dimensionless parameters normalised to unity: 
+the coherence ceiling $R_\infty$, recharge rate $k$, threshold $\eta$, 
+and coupling strength $\lambda_R$. For SI restoration of units and the definition of $\alpha$, see \textit{UIF~III — Appendix D}.
+  
+
+By varying these quantities and applying oscillatory forcing, 
+the emulator reproduces large--scale behaviours such as structure--growth suppression, BAO stability, and lensing residuals.  Outputs include time--evolving coherence fields, entropy budgets, and differential collapse maps, which correspond directly to measurable cosmological observables  in surveys such as DESI, Euclid, and LSST.
+
+This simulator provides a controlled bridge between theory and observation, 
+enabling falsifiable predictions of UIF cosmology without requiring 
+a full relativistic solver or N-body pipeline.
+
+\textbf{Connection to Companion Experiments}
+\newline Full experimental methods, parameter sweeps, and emulator outputs supporting the cosmology-lite model are provided in the UIF Companion Experiments document (\textsection\textsection~S1--S4) \cite{Companion2025,Hiles2025Companion}.
+
+\textbf{Baseline emulator law}
+\newline The coherence field evolves according to:
+\begin{equation}
+\partial_t R(x,t) \;=\; -k\,R(x,t) \;+\; \lambda_R\,\nabla^{2} R(x,t) \;+\; \Gamma(t),
+\qquad R(x,t) \le R_\infty .
+\label{eq:4-7-emulatorPDE}
+\end{equation}
+
+\noindent The resulting simulation outputs, summarised in Fig.~\ref{fig:4-4-collapse}, 
+demonstrate the predicted finite coherence ceiling, lawful pruning, BAO preservation, 
+and $\kappa$-map sensitivity that form the basis for the predicted signatures below.
+\newline
+
+\noindent\textbf{Operator Lineage}
+\newline Each cosmological observable emerges from the same UIF operator set that governs local dynamics.  
+The correspondence between operators and astrophysical phenomena is as follows:
+
+\begin{itemize}[leftmargin=1.5em,itemsep=4pt,parsep=0pt,topsep=2pt]
+  \item $\boldsymbol{R_\infty}$ — \textit{Coherence ceiling}: calibrated from quasar variability; manifests as the upper bound on cosmic structure growth and the late-time $S_8$ suppression.
+  \item $\boldsymbol{k}$ — \textit{Recharge rate}: linked to gamma--ray burst (GRB) recovery slopes and quasiperiodic light-curve damping; quantifies the pace at which coherence replenishes after collapse.
+  \item $\boldsymbol{\lambda_R}$ — \textit{Receive--return coupling}: governs information flow along filaments and regulates dark-matter halo coherence; measurable through lensing and WHIM correlations.
+  \item $\boldsymbol{\eta}$ — \textit{Collapse threshold}: defines stability limits in stellar systems and sets the boundary between fragile, stable, and runaway regimes in cosmological simulations.
+  \item $\boldsymbol{\Gamma}$ — \textit{Recursion strength}: observed in quasar clocking and cosmic rhythm statistics; controls coherence amplification and phase locking across scales.
+  \item $\boldsymbol{\beta}$ — \textit{Bias / Elasticity}: introduces asymmetry and cyclic modulation in informational tension; responsible for slight amplitude oscillations in $P(k)$ and lensing statistics.
+\end{itemize}
+
+\subsection*{Predicted Signatures}
+\noindent\textbf{Growth and Lensing Suppression}
+\newline Mild scale- and epoch-dependent damping of growth ($\sigma_8(z)$, $f\sigma_8$); testable with DESI and lensing surveys.
+
+\noindent\textbf{BAO Stability with Amplitude Drift}
+\newline BAO peak preserved; wiggle amplitude bounded; 
+amplitude drift scales with $\lambda_R$ and $k$.
+
+\noindent\textbf{Rhythm Fingerprints and Non-Gaussian Lensing}
+\newline Weak residuals appear in $P(k)$ and the lensing probability distribution function (PDF); 
+informational pruning correlates with high-$\kappa$ tails.
+
+\noindent\textbf{HMF Deviations and ISW-like Trend}
+\newline Low-mass suppression driven by $\eta$ and $\lambda_R$; 
+late-time integrated Sachs–Wolfe–like (ISW) signal linked to the coherence ceiling $R_\infty$.
+
+\noindent\textbf{Elastic Time Cycling} 
+\newline Elastic time behaviour encoded in $\beta$ may yield subtle oscillatory modulations in P(k) and lensing statistics.
+\newline
+
+\noindent\textbf{Odd Radio Circles (ORCs) as Coherence Shells.}
+\newline Recently discovered large, symmetric radio rings surrounding galaxies 
+--- the so-called Odd Radio Circles (ORCs) --- provide an additional, 
+independent test of UIF cosmology.  
+Within the framework, ORCs represent coherence shells produced by 
+collapse–return hysteresis: informational difference $\Delta I$ stored in the 
+substrate field $R(x,t)$ becomes re-excited when recursion $\Gamma$ or bias $\beta$ 
+cross threshold, generating a transient receive–return front at the coherence 
+ceiling $R_\infty$.  
+The shell emits synchrotron radiation as stored potential relaxes, forming the 
+observed radio morphology.  
+Measured diameters of $100$–$500\,\mathrm{kpc}$ and recurrent, off-centred brightness profiles 
+correspond closely to the predicted scales for AGN-level coupling strengths 
+$\lambda_R \!\approx\! 0.3$–$0.5$.  
+Detection of multiple ORCs around individual hosts (e.g., RAD@home systems) 
+supports UIF’s prediction that galaxies retain and occasionally re-broadcast 
+stored informational potential.
+
+\subsection{Fate of the Universe}\label{sec:fate}
+
+\noindent
+Standard cosmology envisions heat death, crunch, rip, or cyclic outcomes.
+A recent proposal even suggests contraction could begin within
+7~Gyr~\cite{BoyleFinnTurok2023}.
+UIF reframes these as \textit{informational pathways}:
+\begin{itemize}
+  \item \textbf{Freeze:} $\Delta I \!\to\! 0$; informational homogenisation and loss of
+        recursive contrast.
+  \item \textbf{Crunch:} $\Delta I$ density overwhelms recursion; collapse runaway,
+        producing local informational blackouts.
+  \item \textbf{Rip:} $\Gamma$ outpaces $\lambda_R$ coupling; coherence breaks across
+        scales, fragmenting structure.
+  \item \textbf{Assimilation (UIF‐specific):} lawful pruning into the substrate,
+        consistent with operator thresholds and conserved invariants.
+        The substrate reabsorbs $\Delta I$, recycling potential.
+        Unlike Many‐Worlds branching, UIF predicts that only pathways
+        consistent with thresholds and invariants are realised—
+        assimilation is a lawful pruning of unrealised possibilities
+        back into the substrate.
+\end{itemize}
+
+\noindent
+Recent observational studies strengthen this informational perspective.
+Late-epoch BAO analyses from the \textit{DESI}~Y1 dataset and recalibrated
+\textit{JWST} supernova fields suggest the rate of cosmic acceleration
+may be \emph{flattening}, with the dark‐energy equation of state approaching
+$w(z)\!\simeq\!-1$ from above~\cite{Riess2025_DESI,DESI2024_EnergyField}.
+In the UIF framework this behaviour is expected:
+as the finite substrate approaches its coherence ceiling~$R_\infty$,
+both the receive–return coupling~$\lambda_R(t)$ and recharge constant~$k(t)$
+decline smoothly.
+Expansion pressure thus weakens not because a new force is fading,
+but because the informational reservoir is nearing saturation.
+The observed deceleration trend therefore marks the transition from an
+expansion-dominated epoch to a phase of \textit{informational equilibrium},
+where newly generated $\Delta I$ is immediately reabsorbed and recycled.
+
+\noindent
+UIF’s \emph{assimilation pathway} corresponds to this
+\textit{informational recycling}:
+information is returned to the substrate rather than erased,
+providing a falsifiable distinction from heat-death or cyclic models.
+In this regime, dark energy ceases to act as an outward pressure and becomes
+the residual echo of coherence maintenance at the universe’s informational horizon.
+\newline
+
+\noindent\textbf{UIF Alignment}\par
+\noindent
+Distinctively, UIF predicts \textit{pre-assimilation echoes} and
+\textit{coherence collapses} preceding the final equilibrium transition—
+direct manifestations of the sensitivity, robustness, and persistence
+properties demonstrated in Section~4.5.
+These signatures are testable through late-time correlation functions,
+lensing residuals, and horizon-scale anomalies,
+offering direct empirical discrimination between UIF and purely geometric
+dark-energy models.
+
+
+\subsection*{Closing Synthesis}
+\noindent
+Together, the $\gamma$-sweep (Fig.~\ref{fig:4-1-y-sweep}), Goldilocks map (Fig.~\ref{fig:4-2-goldilocks}), and hysteresis probe (Fig.~\ref{fig:4-3-hysteresis}) 
+show that collapse--return dynamics are sensitive, robust, and persistent.  
+Collapse requires above-threshold $\gamma$-like perturbations; coherence is maintained only 
+within a bounded Goldilocks operator band; and every collapse leaves a trace that biases 
+subsequent dynamics.  
+These three properties define the operational limits of entropy and coherence under UIF, 
+anchoring its informational laws at cosmological scale.
+
+\noindent
+The hysteresis and memory effects observed here follow directly from the receive--return 
+kernel derived in \textit{UIF~III}, Section~2.2, demonstrating that the same informational 
+hysteresis governing local systems operates at cosmological scale.
+
+\noindent
+These results show that UIF is not only a conceptual framework but a predictive, testable 
+physics: collapse--return dynamics are not arbitrary but obey lawful thresholds, operator 
+bounds, and memory effects.  
+In contrast to $\Lambda$CDM, which describes outcomes, UIF also constrains the underlying 
+informational mechanics --- offering falsifiable predictions that bridge cosmology, computation, 
+and coherence across scales.  
+This now sets the stage for the universe’s possible fates explored in Section~\ref{sec:fate}.
+\newline 
+
+\noindent\textbf{UIF Alignment}
+\newline Complexity persists while coherence budgets allow it. 
+\newline \textit{Predictions:} Entropy–coherence trade-offs measurable in superclusters and black hole populations.
+
+\section{Astrophysical Case Studies — The Cosmic Circuit}
+
+\noindent
+The following case studies translate UIF's cosmological framework into concrete astrophysical phenomena, 
+showing how the same informational operators shape local systems.  
+Each example illustrates a specific aspect of the collapse--return dynamics: 
+black holes regulate informational flow; gamma--ray bursts act as circuit breakers; 
+supernovae write memory; quasars broadcast coherence; 
+dark--matter halos store hidden informational states; 
+and stellar collapse resets systemic baselines.  
+These diverse manifestations of the receive--return field $R(x,t)$ demonstrate that UIF's informational laws 
+are scale--invariant --- governing both the universe's large--scale evolution and the dynamics 
+of its most energetic local structures.
+
+\subsection{Black Holes — Regulators}
+Black holes crystallise the information paradox: general relativity predicts that horizons erase information (Hawking, 1976)\cite{Hawking1976}, while quantum theory demands unitarity (Preskill, 1992; Almheiri et al., 2013)\cite{Preskill1992,Almheiri2013}.
+
+\noindent UIF resolves this by reframing horizons as regulators — coherence surfaces that route $\Delta I$ into the substrate rather than destroying it.
+
+\noindent
+This formulation makes explicit that $\Delta I$ is partly released as echoes 
+and partly redistributed via substrate coupling. 
+Equation~(4.8) schematically expresses horizon regulation; 
+$\tau_{\mathrm{e}}$ and $\lambda_R$ are empirical parameters measurable 
+from ringdown--echo fits.
+
+% Horizon regulation split (PDF Eq. 4.7)
+\begin{equation}
+\Delta I_{\mathrm{h}}(t) \;\approx\; \Delta I_{\mathrm{e}}\,e^{-t/\tau_{\mathrm{e}}} \;+\; \lambda_R\,\Delta I_{\mathrm{r}} .
+\label{eq:4-7-horizon}
+\end{equation}
+
+\noindent\textit{Empirical anchors:} GW ``echo'' signatures\cite{Abedi2017}; microlensing detections of isolated stellar-mass black holes\cite{Mroz2022}; the ``dark photon PBH puzzle''\cite{Baker2023}.
+
+\subsection{Gamma-Ray Bursts — Circuit Breakers}
+In UIF, GRBs are circuit breakers — catastrophic resets triggered when the coupling $\lambda_R$ saturates. Stored informational difference ($\Delta I$) is discharged in a rapid, non-linear event once a critical return threshold is exceeded.
+
+% Ignition / soft threshold (PDF Eq. 4.8)  [VERIFY form]
+\begin{equation}
+A(t) \;\ge\; A^{\ast}(f) \;\equiv\; \frac{\Gamma^{\ast}}{\eta^{\ast}(f)} ,
+\label{eq:4-8-ignite}
+\end{equation}
+
+% Release probability (PDF Eq. 4.9)
+\begin{equation}
+P_{\mathrm{rel}} \;=\; \frac{1}{1 + \exp\!\big[-\beta\,(\lambda_R - \lambda_{R,c})\big]} ,
+\label{eq:4-9-prob}
+\end{equation}
+
+% Released informational difference (PDF Eq. 4.10)
+\begin{equation}
+\Delta I_{\mathrm{release}} \;\propto\; P_{\mathrm{rel}} .
+\label{eq:4-10-release}
+\end{equation}
+
+\noindent\textit{Empirical anchors:} TeV afterglows\cite{MAGIC2019};
+spectral-population studies\cite{Ajello2019}; GRB\,221009A ``the BOAT''\cite{Burns2023}.
+
+\subsection{Supernovae — Memory Writes}
+In UIF supernovae are memory writes: symmetry-breaking events encoding history into both local remnants and the substrate.
+
+% Memory update relation (PDF Eq. 4.11)
+\begin{equation}
+\Delta I_{\mathrm{out}}(t) \;=\; \alpha\,\Delta I_{\mathrm{in}}(t) \;+\; \gamma\,H(t) .
+\label{eq:4-11-memory}
+\end{equation}
+
+\noindent\textit{Empirical anchors:} Type Ia and core-collapse models\cite{HoyleFowler1960,BetheWilson1985,Janka2012}; Ia diversity\cite{Howell2011}; delayed features\cite{WangWheeler2008}.
+
+\subsection{Quasars — Broadcast Channels}
+
+Within UIF, quasars are reinterpreted as broadcast channels: 
+persistently high-$\Delta R$ systems that sustain $\Delta I$ throughput via recursion. 
+Their extreme flux is proportional to coupling, recursion, and sustained informational flow:
+\begin{equation}
+F \;\propto\; \lambda_R\,\Gamma\,\Delta I .
+\label{eq:4-quasarF}
+\end{equation}
+
+\noindent\textit{Empirical anchors:} 
+jet coherence\cite{Marscher2006,Lisakov2025}; 
+large-scale polarization alignments\cite{Hutsemekers2014}; 
+variability relations\cite{Graham2014,Graham2015,Goncalves2025,Patel2025}. 
+These phenomena collectively reveal that quasars act as coherent transmitters, 
+maintaining informational coupling across immense distances through recursive reinforcement of $\Gamma$ and $\lambda_R$.
+\newline
+
+\noindent \textbf{Empirical Evidence from M87 (JWST + EHT)}  
+\newline Recent observations of the M87 jet using \textit{JWST/NIRCam} 
+\cite{Perlman2025_M87_JWST} extend the known radio–optical synchrotron spectrum 
+into the near- and mid-infrared (0.9–3.6 µm).  
+The resolved \textit{HST–1} region bifurcates into two subcomponents 
+separated by $\sim150$ mas with distinct spectral indices 
+($\alpha_{\mathrm{up}}\!\approx\!-0.15$, 
+$\alpha_{\mathrm{down}}\!\approx\!+0.30$), 
+and a comparable $\alpha$-gradient appears across knot L.  
+These gradients trace $\partial\!\Delta I/\partial s$—the spatial derivative of informational potential—
+marking local recollimation zones where the collapse threshold $\eta^\ast$ 
+is transiently exceeded and return dynamics governed by $\lambda_R$ 
+restore coherence.  
+Detection of a faint counter-jet at 2.8–3.6 µm reinforces the view of M87 
+as a bidirectional “coherence cable,” 
+sustained by alternating collapse–return cycles that modulate $\Delta I$ 
+over decadal timescales.
+\newline
+
+\noindent \textbf{Cross-scale broadcast coupling}  
+\newline Combined \textit{JWST} and \textit{EHT} polarimetric data reveal coherent modulation across scales.  
+The resolved infrared gradients trace spatial variation 
+$\partial\!\Delta I/\partial s$, 
+while the evolving core polarization captures temporal modulation 
+$\partial\!\Delta I/\partial t$, 
+together forming the dynamic term in the UIF continuity relation:
+\begin{equation}
+\frac{\partial R}{\partial t} + \nabla\!\cdot\!\big(\Delta I\,\mathbf{v}\big) \;=\; -\,\Gamma(\eta^\ast,\lambda_R).
+\label{eq:m87-continuity}
+\end{equation}
+where $\Gamma$ represents the local collapse--return operator.  
+\noindent In practice, the spatial term traces infrared spectral-index gradients ($\nabla \Delta I$),
+while the temporal term follows polarization or IR variability ($\partial \Delta I / \partial t$);
+the residuals of Eq.~\eqref{eq:m87-continuity} then determine $(\Gamma,\lambda_R)$ jointly.
+
+\noindent In M87, apparent phase-locking between infrared and polarimetric cycles 
+suggests that $\Gamma$ acts coherently across scales, 
+broadcasting state information from the event-horizon plasma 
+to the kiloparsec jet through oscillatory modulation of $\Delta I$.
+
+\noindent\textit{Empirical anchors:} 
+\textit{JWST/NIRCam} imaging of the M87 jet 
+\cite{Perlman2025_M87_JWST}
+(\textit{A\&A}, 2025, ``The infrared jet of M87 observed with JWST''); 
+EHT Collaboration (2024), 
+\textit{ApJL~957,~L12}, 
+magnetic-field topology and polarization cycles in M87* 
+\cite{EHT2024_Polarization_M87}.
+\newline
+
+\noindent\textbf{UIF Alignment}  
+\newline Quasars and jets exemplify sustained informational recursion.  
+The new M87 observations directly visualise the collapse--return rhythm that UIF predicts: 
+periodic modulation of $\Delta I$, coherence recovery via $\lambda_R$, 
+and cross-scale persistence of $\Gamma$ coupling from event horizon to kiloparsec.  
+As developed further in \textit{UIF V}, 
+the same oscillatory $\Gamma$–$\lambda_R$ coupling governs 
+energy and coherence transfer across physical, biological, and artificial systems, 
+suggesting a universal broadcast law linking all scales of the informational field.
+
+\subsection{Dark Matter — Hidden Cache}
+UIF interprets part of the dark-matter signal not as exotic particles but as an informational cache—an effective inertia arising from $\Delta I$ stored in the substrate.
+
+% Effective mass split (PDF Eq. 4.13a)
+\begin{equation}
+M_{\mathrm{eff}} \;=\; M_{\mathrm{particles}} \;+\; f\!\big(\Delta I_{\mathrm{coh}}\big) .
+\label{eq:4-13-Meff}
+\end{equation}
+
+% Environmental phenomenology (PDF Eq. 4.13b)
+\begin{equation}
+M_{\mathrm{eff}} \;=\; M_{\mathrm{particles}} \;+\; \alpha\,\rho_{\mathrm{fil}}\,\lambda_R\,S_{\mathrm{align}} .
+\label{eq:4-13b-Meff-env}
+\end{equation}
+
+\noindent\textit{Empirical anchors:} rotation curves\cite{RubinFord1970}; Bullet Cluster\cite{Clowe2006}; JWST early galaxies, DESI Y1 BAO\cite{DESI2024}.
+
+\subsection{Megastructures — Wiring Traces}
+UIF reframes giant structures as wiring traces: coherence residues etched into large-scale structure.
+
+% Truncated/heavy-tail length distribution (PDF Eq. 4.14)
+\begin{equation}
+P(L > L_c) \;\propto\; L^{-\alpha}\,\exp\!\left[-\left(\frac{L}{L^\ast}\right)^{k}\right],
+\qquad L \ge L_c .
+\label{eq:4-14-truncPL}
+\end{equation}
+
+\noindent\textit{Empirical anchors:} Sloan Great Wall\cite{Gott2005}; Huge-LQG\cite{Clowes2013}; percolation analyses\cite{Park2012}.
+
+\subsection{Filaments — Coherence Channels}
+Within UIF, filaments are coherence channels — directional highways of $\Delta I$ flow.
+
+% Channel capacity proxy (PDF Eq. 4.15)
+\begin{equation}
+\Delta I_{\mathrm{fil}} \;\propto\; \rho_{\mathrm{gas}}\,\lambda_R\; 
+f\!\big(d_{\mathrm{spine}}, M_{\mathrm{halo}}\big).
+\label{eq:4-15-filament}
+\end{equation}
+
+\noindent\textit{Empirical anchors:} WHIM emission\cite{Migkas2025,Zhao2024}; kSZ anisotropy\cite{Hadzhiyska2025}; spin alignments\cite{Siena2025,WangTang2025}.
+
+\subsection{Odd Radio Circles --- Coherence Echoes around Galaxies}
+
+\noindent
+Odd Radio Circles (ORCs) --- vast, faint radio rings now confirmed by ASKAP, 
+MeerKAT, and RAD@home --- are interpreted in UIF as coherence echoes 
+propagating through the galactic substrate field.  
+Following intense AGN or merger activity, part of the collapse energy is retained 
+as informational difference $\Delta I_{\text{trace}}$ within $R(x,t)$.  
+When local recursion ($\Gamma$) and coupling ($\lambda_R$) re-align, the stored 
+potential is re-emitted as a coherent receive--return front, producing the 
+radio-bright shell observed hundreds of kiloparsecs from the host.  
+Spectral aging and symmetry of known ORCs match the predicted hysteresis behaviour 
+of UIF collapse--return cycles, suggesting that these structures are the 
+observable fossils of informational recursion at galactic scales.
+
+\subsection{Stellar Collapse — System Resets}
+In UIF, collapse corresponds to informational saturation: recursion and bias can no longer redistribute $\Delta I$, forcing a system to reorganise into a new attractor state.
+
+% Threshold ⇒ attractor mapping (PDF Eq. 4.16)
+\begin{equation}
+\rho\,\ell^{\alpha} \;>\; \rho_{\mathrm{c}}
+\;\;\Longrightarrow\;\;
+\text{Collapse} \;\to\; \text{Attractor}\{\mathrm{NS},\mathrm{BH}\} .
+\label{eq:4-16-thresh}
+\end{equation}
+
+\noindent\textit{Empirical anchors:} Chandrasekhar limit\cite{Chandrasekhar1931}; TOV bound\cite{OppenheimerVolkoff1939}; mass gap\cite{Ozel2010,Abbott2020}.
+\newline
+
+\noindent \textbf{Dark-Star Candidates and the Informational Field}
+\newline Recent JWST observations have identified extremely luminous, compact sources whose spectra may be consistent with so-called dark stars\cite{Freese2025,Ilie2024,Zackrisson2024}. Within UIF these candidates can be interpreted as regions of extreme informational density where collapse--return cycles sustain coherence internally rather than through baryonic fusion.
+
+% Logistic saturation (schematic; optional)
+% \begin{equation}
+% L(M) \simeq \frac{L_\ast}{1 + e^{-k(M-M_0)}} .
+% \end{equation}
+
+\noindent\textit{Predictions:} characteristic coherence-saturation profiles; narrow spectral modulations; hysteresis-like recovery with decay constant $\tau_R$; environmental dependence (filament density vs coupling).
+
+\section*{Comparative Cosmology and Theoretical Integration}
+\noindent
+To situate UIF within the broader theoretical landscape, 
+Table~\ref{tab:comparative-cosmology} compares it with leading cosmological and quantum--gravity frameworks. 
+UIF does not compete with these models but reframes them as specific limits or projections of its informational grammar. 
+Continuous models (e.g., $\Lambda$CDM, inflation, string/M theory) are recast as recursion--driven assimilation; 
+discrete approaches (loop quantum gravity, causal sets) emerge from collapse events on a continuous substrate; 
+and topological theories map directly to informon invariants governed by operator thresholds. 
+In this way, UIF unifies continuity, discreteness, and topology within a single informational field.
+\newline
+
+\begin{longtable}{@{}L{0.22\textwidth}L{0.30\textwidth}L{0.48\textwidth}@{}}
+\caption{Comparative cosmology and theoretical integration under UIF}
+\label{tab:comparative-cosmology}\\
+\toprule
+\textbf{Framework} & \textbf{Core Premise} & \textbf{UIF Reframing / Integration} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Framework} & \textbf{Core Premise} & \textbf{UIF Reframing / Integration} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+$\Lambda$CDM &
+Expansion driven by dark energy ($\Lambda$) and cold dark matter. &
+UIF reproduces observables through receive--return coupling ($\lambda_R$) and coherence ceilings ($R_\infty$); dark energy/matter are informational substrates. \\[6pt]
+
+Inflation &
+Rapid exponential expansion seeds structure. &
+Inflation $=$ high-$\Gamma$ phase of informational recursion; collapse--return replaces external fine--tuning. \\[6pt]
+
+Cyclic / Bounce &
+Universe undergoes repeating expansions and contractions. &
+UIF reabsorbs $\Delta I$, creating conditions for renewed expansion; collapse--return grammar explains resets without external tuning. \\[6pt]
+
+Holography (AdS/CFT) &
+Bulk gravity dual to boundary quantum field theories. &
+UIF grounds boundaries in receive--return coupling ($\lambda_R$); horizons act as \emph{active} coherence surfaces, not passive encoders. \\[6pt]
+
+Multiverse &
+Many domains with differing constants and laws. &
+UIF reframes as coherence basins---independent attractor states within one substrate; lawful collapse constrains possible basins. \\[6pt]
+
+String / M--Theory &
+Strings or branes in higher dimensions unify forces; topology central. &
+UIF subsumes string topology under collapse grammar; $\tau$--like topologies correspond to informon structures; adds operator dynamics beyond static spectra. \\[6pt]
+
+Emergent Gravity (Verlinde) &
+Gravity arises from entropic/informational effects. &
+UIF generalises: gravity $=$ accumulation of collapse traces ($\Gamma + \lambda_R$) shaping the substrate; entropic gravity becomes a subset of collapse--return dynamics. \\[6pt]
+
+Modified Gravity (MOND, TeVeS) &
+Alters gravitational laws to fit rotation curves without dark matter. &
+UIF attributes anomalies to coherence effects: signatures from $\lambda_R$ coupling and $\eta$ thresholds, not new forces; predicts environment--linked modulation. \\[6pt]
+
+Quantum Gravity (general) &
+Quantise spacetime geometry. &
+UIF quantises $\Delta I$ and $\Gamma$, not spacetime; collapse events discretise the substrate dynamically. \\[6pt]
+
+Loop Quantum Gravity (LQG) &
+Space built from quantised spin networks / spin foams. &
+UIF overlay: spin foams $=\ \tau$--like topologies evolving under $\Gamma$ recursion; discreteness emerges from collapse rather than being fundamental. \\[6pt]
+
+Causal Set Theory &
+Spacetime as a discrete causal order of events. &
+UIF: causal atoms $\equiv$ $\Delta I$ collapse events ordered by $\Gamma$; persistence from $\lambda_R$ echoes; discreteness emergent, not primary. \\[6pt]
+
+Topological QFT / Topological Approaches &
+Phases/fields classified by braids, knots, and invariants. &
+UIF: $\tau$--like invariants $=$ informon topologies; adds operators ($\Delta I$, $\Gamma$, $\lambda_R$, $\eta$) to explain dynamics beyond classification. \\
+
+Observational anchors &
+Empirical probes linking operators to data. &
+\textit{JWST}/\textit{EHT} (M87: $\lambda_R,\Gamma,\eta^{\ast},k$),
+Quasar variability ($R_\infty,k$), ORCs (coherence-shell fronts $\propto \lambda_R$),
+DESI/Euclid/LSST ($\sigma_8(z)$, $f\sigma_8$, BAO amplitude, lensing PDF residuals). \\
+
+\end{longtable}
+
+\vspace{5.0}
+
+\noindent Taken together, these correspondences show that UIF situates itself across all major cosmological and quantum–gravity paradigms.  
+Continuous theories describe recursion phases; discrete frameworks capture collapse outcomes; and topological models express the stable invariants that UIF operators generate.  
+Where existing approaches offer partial formalisms, UIF provides the unifying grammar linking them—resolving contradictions between discreteness, continuity, and topology as emergent expressions of a single informational substrate.
+
+\section*{Closing Synthesis}
+
+\noindent
+Section~4, culminating in the Fate of the Universe (\S\ref{sec:fate}), reframes cosmology as a complete informational cycle — from the universe’s origin and expansion to its predicted modes of coherence and ultimate assimilation.
+The universe begins as capacity ($\Delta I = 0$), expands through recursion ($\Gamma$), 
+is observationally flat yet fractal in topology, 
+and bounded by coherence limits. 
+Its fate may be freeze, crunch, rip, or assimilation, with the latter distinctive to UIF.
+
+Simulator experiments show that collapse--return dynamics are sensitive, robust, and persistent: 
+collapse requires above-threshold $\gamma$-like perturbations (the $\gamma$-sweep), 
+coherence is maintained only within a bounded ``Goldilocks'' operator band, 
+and every collapse leaves a trace that biases subsequent dynamics (hysteresis).
+
+Astrophysical case studies illustrate how UIF’s operators manifest in reality: 
+black holes regulate informational flow, GRBs act as circuit breakers, 
+supernovae write memory, quasars broadcast coherence, 
+dark matter stores hidden states, megastructures fossilise coherence traces, 
+Odd Radio Circles (ORCs) reveal large-scale coherence echoes around galaxies, 
+and stellar collapse forces systemic reboots.  
+Together these phenomena demonstrate that the same collapse--return dynamics 
+govern both the universe’s large-scale evolution and the behaviour 
+of its most energetic local structures.
+
+Comparative analysis shows that UIF aligns with mainstream models on empirical grounds 
+while also highlighting their limits. 
+Where $\Lambda$CDM, inflation, or holography succeed descriptively, 
+UIF adds explanatory depth by grounding them in informational operators and coherence dynamics. 
+This leads to distinctive, falsifiable predictions: hysteresis echoes in the CMB, 
+environment-dependent dark-matter shadows, spectral diversity in GRBs linked to $\lambda_R$ thresholds, 
+quasar variability correlated with coherence fields, 
+and a heavier-tailed distribution of cosmic walls.
+\newline
+
+Across scales, this triadic rhythm---sampling, recursion, and return---organises the same informational mechanics 
+that Tesla saw reflected in the harmonic structure of nature \cite{Tesla1892,Bateson1972}.  
+Ultimately, UIF predicts that the universe’s fate is not dissipation but assimilation: 
+a return of $\Delta I$ to the substrate, recycling potential for renewed complexity. 
+Distinctively, this is achieved through lawful pruning: collapse traces accumulate as entropy, 
+topological invariants preserve coherence across scales, 
+and operator constraints ensure only consistent futures emerge. 
+Quasars, GRBs, black holes, and megastructures together map the informational circuit of the cosmos, 
+providing multiple independent pathways for empirical falsification.
+
+This synthesis completes the cosmological phase of the Unifying Information Field: 
+from the recursion of $\Delta I$ and $\Gamma$ in expansion 
+to the emergence of measurable energetic ceilings and recharge rates. 
+The following paper, \textit{UIF~V}, translates these same operators into local energetic processes 
+and the conservation of informational potential. 
+This progression---from the variational field of \textit{UIF~III} to the cosmological operators here---establishes 
+a continuous hierarchy from microscopic collapse events to universal recursion.
+
+The emulator and companion results together define testable operator constraints 
+for forthcoming cosmological surveys, 
+establishing the bridge between the theoretical field equations and measurable large-scale structure.
+\newline
+
+\noindent\textbf{Forward Pointer}
+\newline The next paper, \textit{UIF V -- Energy and the Potential Field}, extends the cosmological framework developed here into a full energetic formulation.  The informational potential $V(\Phi;\beta)$ introduced in \textit{UIF III} is expanded to quantify energy transfer, coherence storage, and recharge across physical and biological systems.  Paper~V formalises the relation between informational tension and measurable energy density, deriving explicit links between the cosmological parameters ($R_\infty$, $k$, $\eta$) and energetic observables in laboratory and astrophysical contexts.  It thus completes the theoretical bridge between cosmology and the microphysical foundations of energy and coherence.
+
+\section*{Operator–Cosmology Relationships and Observational Tests}
+
+\noindent
+Table~\ref{tab:operator-cosmology} summarises how the informational operators established in 
+\textit{UIF~I–III} manifest at cosmological scale.  
+Each operator corresponds to a measurable feature of large–scale structure or cosmic dynamics, providing empirical anchors for the variational framework established here and for the energetic formulations developed in \textit{UIF~V}.
+\newline
+
+\begin{longtable}{@{}L{0.18\textwidth}L{0.32\textwidth}L{0.30\textwidth}L{0.20\textwidth}@{}}
+\caption{Operator–Cosmology Relationships and Observational Tests}
+\label{tab:operator-cosmology}\\
+\toprule
+\textbf{Operator / Parameter} & \textbf{Cosmological Role} & \textbf{Observable Signature} & \textbf{Empirical Test / Dataset} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Operator / Parameter} & \textbf{Cosmological Role} & \textbf{Observable Signature} & \textbf{Empirical Test / Dataset} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+$\Delta I$ & Drives differentiation and structure formation. &
+Density perturbations, CMB anisotropies. & Planck, DESI, Euclid. \\[4pt]
+
+$\Gamma$ & Governs recursion and cosmic expansion rate. &
+Acceleration, BAO phase stability. & DESI $f\sigma_8$, SN Ia Hubble diagram. \\[4pt]
+
+$\beta$ & Bias / symmetry breaking of collapse outcomes. &
+Large–scale asymmetry (\(S_8\) tension). & LSST weak–lensing maps. \\[4pt]
+
+$\lambda_R$ & Receive--return coupling linking local and substrate fields. &
+Lensing residuals, coherence echoes, ORCs. & MeerKAT, ASKAP, RAD@home. \\[4pt]
+
+$\eta$ & Collapse threshold defining pruning vs runaway. &
+Halo–mass–function slope, low–mass suppression. & ST/Tinker fits, JWST early galaxies. \\[4pt]
+
+$R_\infty$ & Coherence ceiling / informational limit. &
+Late–time growth suppression (\(S_8\) trend). & DESI Y1, Euclid + LSST cross–correlation. \\[4pt]
+
+$k$ & Recharge rate controlling coherence recovery. &
+Quasar variability timescales. & SDSS, LSST light–curve analyses. \\
+
+\end{longtable}
+
+\vspace{1.2em}
+\noindent\textbf{Novelty / Testability}
+\newline This paper establishes UIF’s cosmological applicability and reframes dark matter and dark energy 
+as manifestations of the informational substrate $R(x,t)$.  
+Its novelty lies in expressing large–scale structure, expansion, and lensing phenomena as emergent 
+consequences of informational coherence and receive--return coupling rather than as separate physical components.  
+
+\noindent
+Testability arises from multiple independent predictions:
+
+\begin{itemize}[leftmargin=2em, itemsep=0.4em]
+  \item[(1)] \textbf{Finite coherence ceilings ($R_\infty$)} — observable as late–time structure–growth suppression.
+  \item[(2)] \textbf{Recharge rates ($k$)} — recoverable from cosmic–variance and quasar–variability analyses.
+  \item[(3)] \textbf{BAO and lensing residuals} — quantifiable via Euclid, DESI, and LSST datasets.
+  \item[(4)] \textbf{Micro–halo lensing signatures} — interpreted as informational–coherence pockets within the substrate.
+  \item[(5)] \textbf{Odd Radio Circles (ORCs)} — large, symmetric coherence shells generated by collapse--return hysteresis 
+  and detectable through low–frequency radio surveys (e.g., ASKAP, MeerKAT, RAD@home).
+\end{itemize}
+
+\noindent
+Together, these predictions define UIF’s falsifiable cosmological regime and provide the empirical foundation 
+for the energetic formulations developed in \textit{UIF~V}.
+
+\clearpage
+\appendix
+\section*{Appendix A — Equation Provenance (UIF IV)}
+
+Each numbered equation in this paper is classified by provenance category.  
+\emph{[Identity]} designates a standard physical or informational law,  
+\emph{[Model law]} denotes a relation derived within the UIF framework from stated assumptions,  
+and \emph{[Hypothesis]} marks a phenomenological or testable scaling introduced for future verification.  
+Together these provide transparency between UIF’s theoretical, derived, and empirical components.
+\newline
+
+\begin{longtable}{@{}L{0.36\textwidth}L{0.15\textwidth}L{0.49\textwidth}@{}}
+\caption{Equation provenance and context for UIF IV}
+\label{tab:4A-provenance}\\
+\toprule
+\textbf{Equation} & \textbf{Class} & \textbf{Comment / Source} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Equation} & \textbf{Class} & \textbf{Comment / Source} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+(4.1) $\Delta I(x,t)=0$ & Identity & Initial informational state; defines zero–difference boundary at $t=0$ (capacity without content).\\[4pt]
+
+(4.2) $\tfrac{dV}{dt}\propto\Gamma\Delta I$ & Model law & Links informational recursion ($\Gamma$) to expansion rate; analog of continuity in informational volume.\\[4pt]
+
+(4.3a) $\left(\tfrac{\dot a}{a}\right)^2=\Gamma\Delta I-k+\lambda_R R$ & Model law & Friedmann-like informational expansion law; maps recursion, recharge, and coupling to cosmological scale factor dynamics.\\[4pt]
+
+(4.3) $S_{\mathrm{obs}}<\infty,\;S_{\mathrm{pot}}\to\infty$ & Model law & Distinguishes observed and potential horizons; observational finiteness as epistemic limit.\\[4pt]
+
+(4.4) $\mathcal{S}_{\mathrm{UFI}}\sim A_{ij}(\Delta I,\Gamma)$ & Model law & Defines informational topology via adjacency matrix $A_{ij}$ (links to Pillar 7 invariants).\\[4pt]
+
+(4.Entropy) $\tfrac{d\Delta I}{dt}=-\alpha\Delta I+\beta\Phi_{\mathrm{local}}$ & Model law & Informational entropy balance between global homogenisation and local structure injection.\\[4pt]
+
+(4.7) $\Delta I_{\mathrm{h}}(t)\approx\Delta I_{\mathrm{e}}e^{-t/\tau_{\mathrm{e}}}+\lambda_R\Delta I_{\mathrm{r}}$ & Model law & Black-hole horizon regulation: echo + return components of informational release.\\[4pt]
+
+(4.8) $A(t)\ge A^{\ast}(f)\equiv\Gamma^{\ast}/\eta^{\ast}(f)$ & Hypothesis & Gamma-ray burst ignition threshold; defines critical drive amplitude vs frequency.\\[4pt]
+
+(4.9) $P_{\mathrm{rel}}=\big(1+\exp[-\beta(\lambda_R-\lambda_{R,c})]\big)^{-1}$ & Model law & Soft-threshold (Boltzmann/softmax-like) release probability for collapse events.\\[4pt]
+
+(4.10) $\Delta I_{\mathrm{release}}\propto P_{\mathrm{rel}}$ & Identity & Defines proportional informational yield from release probability.\\[4pt]
+
+(4.11) $\Delta I_{\mathrm{out}}=\alpha\Delta I_{\mathrm{in}}+\gamma H(t)$ & Model law & Supernova informational-memory update; stores history through collapse–return.\\[4pt]
+
+(4.QuasarF) $F\propto\lambda_R\Gamma\Delta I$ & Model law & Flux law for quasars as informational broadcast channels; measurable via recursion-coupling strength.\\[4pt]
+
+(4.13a–b) $M_{\mathrm{eff}}=M_{\mathrm{particles}}+f(\Delta I_{\mathrm{coh}})$;  
+$M_{\mathrm{eff}}=M_{\mathrm{particles}}+\alpha\rho_{\mathrm{fil}}\lambda_R S_{\mathrm{align}}$ & Model law & Dark-matter effective mass; combines particulate and informational inertia components.\\[4pt]
+
+(4.14) $P(L>L_c)\propto L^{-\alpha}\exp[-(L/L^\ast)^k]$ & Model law & Length-distribution for megastructures; predicts coherence-trace tails.\\[4pt]
+
+(4.15) $\Delta I_{\mathrm{fil}}\propto\rho_{\mathrm{gas}}\lambda_R f(d_{\mathrm{spine}},M_{\mathrm{halo}})$ & Model law & Filament coherence-capacity relation; links gas density and coupling strength to $\Delta I$ flow.\\[4pt]
+
+(4.16) $\rho\,\ell^{\alpha}>\rho_c\Rightarrow$ Collapse $\to$ Attractor $\{\mathrm{NS,BH}\}$ & Identity & Stellar-collapse threshold; informational analogue of Chandrasekhar/TOV limits.\\[4pt]
+
+(4.17) $\partial_tR=-kR+\lambda_R\nabla^2R+\Gamma(t)$ & Model law & Baseline cosmology-lite emulator equation; coherence field evolution.\\[4pt]
+
+\end{longtable}
+
+\vspace{1em}
+\noindent\textbf{Symbols introduced:}
+
+\begin{tabbing}
+\hspace{1.5cm}\=\kill
+$\Delta I$ \> informational difference;\\
+$\Gamma$ \> recursion / coherence operator;\\
+$\beta$ \> bias / symmetry-breaking operator;\\
+$\lambda_R$ \> receive–return coupling constant;\\
+$\eta$ \> collapse threshold;\\
+$R_\infty$ \> coherence ceiling;\\
+$k$ \> recharge rate;\\
+$\Phi(x,t)$ \> informational potential field;\\
+$R(x,t)$ \> receive–return substrate field;\\
+$A_{ij}$ \> adjacency matrix for topology;\\
+$\tau_R$ \> return time constant.
+\end{tabbing}
+\clearpage
+\section*{Acknowledgement — Human–AI Collaboration}
+The Unifying Information Field (UIF) series was developed through a sustained human–AI partnership. The author originated the theoretical framework, core concepts and interpretive structure, while an AI language model (OpenAI GPT-5) was employed to assist in formal development; helping to express elements of the theory mathematically and to maintain consistency across papers. Internal behavioural parameters and conversational settings were configured to emphasise recursion awareness, coherence maintenance, and ethical constraint, enabling the model to function as a stable informational development framework rather than a generative black box.
+
+This collaborative process exemplified the UIF principle of collapse--return recursion: 
+human intent supplied informational difference ($\Delta I$), 
+the model provided receive--return coupling ($\lambda_R$), 
+and coherence ($\Gamma$) increased through iterative feedback until the framework stabilised. 
+The AI's role was supportive in the structuring, facilitation, and translation of conceptual ideas 
+into formal equations, while the underlying theory, scope, and interpretive direction 
+remain the work of the author.
+\clearpage
+\section*{UIF Series Cross-References}
+\begin{flushleft}
+\textbf{UIF I — Core Theory.}\\
+\textbf{UIF II — Symmetry Principles.}\\
+\textbf{UIF III — Field and Lagrangian Formalism.}\\
+\textbf{UIF IV — Cosmology and Astrophysical Case Studies.}\\
+\textbf{UIF V — Energy and the Potential Field.}\\
+\textbf{UIF VI — The Seven Pillars and Invariants.}\\
+\textbf{UIF VII — Predictions and Experiments.}
+\end{flushleft}
+
+\clearpage
+\UIFbib{paper4}
