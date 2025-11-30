@@ -108,7 +108,41 @@ Corresponding outputs are written to:
 UIF/output/quasar_variability_experiment/
 
 This module completes the empirical validation arc for Papers I–V
-and provides the astrophysical operator measurements used in UIF VI–VII.
+and provides the astrophysical operator measurements used in UIF VI–VI.
+
+---
+
+### 8. `geometric_torsion_experiment/`
+(Experiment VIII — new cross-domain test of the UIF torsion invariant)
+
+Python pipeline implementing the **geometric torsion (τ_d)** analysis across  
+EEG operator trajectories (local biological systems) and  
+Stripe 82 quasar operator trajectories (cosmic substrate systems):
+
+- ingestion of EEG and quasar operator tables
+- Z-score normalization of operator trajectories within each domain
+- construction of 3-point operator curves  
+  \( O = (\Delta I,\; \Gamma,\; \lambda_R) \)
+- computation of **geometric torsion**  
+  \( \tau_d = \frac{(\Delta O_1 \times \Delta O_2)_z}{\|\Delta O_1\|\,\|\Delta O_2\|} \)
+- 10,000-sample **bootstrap resampling** using operator uncertainties  
+  to estimate 68% confidence intervals
+- domain-wise torsion recovery:
+  - **τ_EEG** for EO → TASK → EC  
+  - **τ_QSO** for High-z → Mid-z → Low-z
+- construction of the 3-panel torsion geometry figure:
+  - *Panel A:* EEG operator trajectory  
+  - *Panel B:* Quasar operator trajectory  
+  - *Panel C:* Normalised cross-domain comparison (τ_d overlap)
+- supplementary torsion-anomaly figure showing  
+  Ω_τ (informational load torsion) across states
+
+Outputs are written to:  
+`UIF/output/geometric_torsion_experiment/`
+
+This experiment provides the **first empirical test of the torsion term** \( \tau_I \)  
+predicted by the UIF informational Lagrangian, linking **Papers III and VI**  
+and supplying the geometric-invariant evidence referenced in **UIF VII**.
 
 ---
 
