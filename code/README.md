@@ -142,7 +142,7 @@ Outputs are written to:
 
 This experiment provides the **first empirical test of the torsion term** \( \tau_I \)  
 predicted by the UIF informational Lagrangian, linking **Papers III and VI**  
-and supplying the geometric-invariant evidence referenced in **UIF VII**.
+and supplying any geometric-invariant evidence referenced in **UIF VII**.
 
 ---
 
